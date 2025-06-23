@@ -1,0 +1,91 @@
+import {
+  Play,
+  BookOpen,
+  Gamepad2,
+  Code,
+  HelpCircle,
+} from "lucide-react";
+
+export default function LearningUniversesSection() {
+  return (
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <div className="flex justify-center mb-4"></div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Our Learning Universes
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            With thousands of videos, games, books and quizzes at their
+            fingertips,
+            <br />
+            your child will never want to stop learning
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="text-center space-y-4">
+            <div className="w-20 h-20 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto">
+              <Play className="w-10 h-10 text-purple-600" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900">Videos</h3>
+            <p className="text-gray-600 text-sm">
+              Bite-sized animations that simplify complex topics and keep
+              learning fun.
+            </p>
+          </div>
+
+          <div className="text-center space-y-4">
+            <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto">
+              <Gamepad2 className="w-10 h-10 text-blue-600" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900">Games</h3>
+            <p className="text-gray-600 text-sm">
+              Exciting missions that turn math, language, and science concepts
+              into unforgettable adventures.
+            </p>
+          </div>
+
+          <div className="text-center space-y-4">
+            <div className="w-20 h-20 bg-yellow-100 rounded-2xl flex items-center justify-center mx-auto">
+              <BookOpen className="w-10 h-10 text-yellow-600" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900">Books</h3>
+            <p className="text-gray-600 text-sm">
+              Reimagined classics and historical tales that spark creativity
+              and critical thinking.
+            </p>
+          </div>
+
+          <div className="text-center space-y-4">
+            <div className="w-20 h-20 bg-cyan-100 rounded-2xl flex items-center justify-center mx-auto">
+              <Code className="w-10 h-10 text-cyan-600" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900">Coding</h3>
+            <p className="text-gray-600 text-sm">
+              Beginner-friendly coding challenges that nurture creativity and
+              problem-solving skills.
+            </p>
+          </div>
+
+          <div className="text-center space-y-4">
+            <div className="w-20 h-20 bg-indigo-100 rounded-2xl flex items-center justify-center mx-auto">
+              <HelpCircle className="w-10 h-10 text-indigo-600" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900">Quizzes</h3>
+            <p className="text-gray-600 text-sm">
+              Cleverly designed quizzes that reinforce learning, helping your
+              child retain concepts with ease.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center mt-12">
+          <button className="bg-eklavya-purple hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+            Try for Free
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+} 
