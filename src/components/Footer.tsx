@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-10">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* Column 1: Reach us */}
+    <footer className="bg-[#35113D]  text-white py-10">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-8">
+        {/* Column 1: Logo */}
         <div>
           <div className="mb-4">
             <Image
@@ -16,15 +16,20 @@ const Footer = () => {
               className="h-12 w-12 bg-green-600 p-2 rounded"
             />
           </div>
+        </div>
+
+        {/* Column 2: Reach us */}
+        <div>
+          <h3 className="font-semibold mb-4">Reach Us</h3>
           <div className="space-y-3 text-sm">
             <div className="flex items-center gap-2">
-              <span>📞</span> <span>+1012 3456 789</span>
+              <span className="text-white">📞</span> <span>+1012 3456 789</span>
             </div>
             <div className="flex items-center gap-2">
-              <span>✉️</span> <span>demo@gmail.com</span>
+              <span className="text-white">✉️</span> <span>demo@gmail.com</span>
             </div>
             <div className="flex items-start gap-2">
-              <span>📍</span>
+              <span className="text-white">📍</span>
               <span>
                 132 Dartmouth Street
                 <br />
@@ -36,7 +41,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Column 2: Company */}
+        {/* Column 3: Company */}
         <div>
           <h3 className="font-semibold mb-4">Company</h3>
           <ul className="space-y-2 text-sm">
@@ -52,7 +57,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Column 3: Legal */}
+        {/* Column 4: Legal */}
         <div>
           <h3 className="font-semibold mb-4">Legal</h3>
           <ul className="space-y-2 text-sm">
@@ -68,7 +73,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Column 4: Help & Support */}
+        {/* Column 5: Help & Support */}
         <div>
           <h3 className="font-semibold mb-4">Help & Support</h3>
           <ul className="space-y-2 text-sm">
