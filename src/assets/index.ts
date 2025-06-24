@@ -15,3 +15,5 @@ export { default as atomImage } from './atom.svg';
 export { default as earningBg } from './earning-bg.svg';
 export { default as trophyImage } from './trophy.png';
 export { default as differenceImage } from './difference.svg';
+export { default as tabletsImage } from './tablets.png';
+export { default as tabletBg } from './tablet-bg.svg';

@@ -1,7 +1,20 @@
+import Image from 'next/image';
+import { tabletsImage, tabletBg } from '@/assets';
+
 export default function TabletsDesignSection() {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
+    <section className="mt-20 py-20 bg-gray-50 relative">
+      <div 
+        className="absolute inset-0 -mx-[50vw] left-1/2"
+        style={{
+          backgroundImage: `url(${tabletBg.src})`,
+          backgroundSize: 'auto 100%',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'repeat-x',
+          width: '100vw'
+        }}
+      />
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Tablets Designed for Learning: Your Child&apos;s Personal Learning Companion
@@ -12,29 +25,15 @@ export default function TabletsDesignSection() {
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Tablet mockup placeholder */}
+          {/* Left side - Tablet image */}
           <div className="flex justify-center">
-            <svg
-              width="400"
-              height="300"
-              viewBox="0 0 400 300"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="border-2 border-dashed border-gray-300 rounded-lg"
-            >
-              <rect width="400" height="300" fill="#f9fafb"/>
-              <rect x="150" y="100" width="100" height="80" rx="8" fill="#374151" stroke="#6b7280" strokeWidth="2"/>
-              <rect x="155" y="105" width="90" height="60" fill="#e5e7eb"/>
-              <circle cx="200" cy="175" r="4" fill="#6b7280"/>
-              <rect x="120" y="120" width="80" height="60" rx="6" fill="#9ca3af" opacity="0.5"/>
-              <rect x="200" y="120" width="80" height="60" rx="6" fill="#9ca3af" opacity="0.5"/>
-              <text x="200" y="220" textAnchor="middle" className="fill-gray-600 text-sm">
-                Tablet Design Banner
-              </text>
-              <text x="200" y="240" textAnchor="middle" className="fill-gray-600 text-xs">
-                Coming Soon
-              </text>
-            </svg>
+            <Image 
+              src={tabletsImage}
+              alt="Learning Tablets"
+              width={400}
+              height={300}
+              className="object-contain"
+            />
           </div>
 
           {/* Right side - Features */}
