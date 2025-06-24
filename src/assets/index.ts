@@ -19,3 +19,4 @@ export { default as tabletsImage } from './tablets.png';
 export { default as tabletBg } from './tablet-bg.svg';
 export { default as blueSwirlImage } from './blue-swirl.svg';
 export { default as yellowBlobImage } from './yellow-blob.svg';
+export { default as ctaBg } from './cta-bg.png';
