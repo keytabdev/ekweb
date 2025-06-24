@@ -49,13 +49,13 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute -bottom-20 right-50 z-30 border-0 outline-0">
+      <div className="absolute -bottom-10 sm:-bottom-16 md:-bottom-20 right-4 sm:right-20 md:right-32 lg:right-50 z-30 border-0 outline-0">
         <Image
           src={childImage}
           alt="Child"
           width={750}
           height={1000}
-          className="h-[750px] w-auto object-cover rounded-lg border-0 outline-0"
+          className="h-[300px] sm:h-[450px] md:h-[600px] lg:h-[750px] w-auto object-cover rounded-lg border-0 outline-0"
           priority
         />
 
