@@ -2,54 +2,102 @@ import BulletIcon from "@/components/BulletIcon";
 
 export default function CallToActionSection() {
   return (
-    <section className="py-24 bg-blue-100">
-      <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold text-blue-900 mb-8">
-          Ready to Transform Learning Time?
-        </h2>
-        <p className="text-xl text-gray-700 mb-12">
-          Begin 7 days of free adventure No wands required (though excitement
-          is highly encouraged)
-        </p>
-        <p className="text-xl text-gray-700 mb-8">
-          Because we believe every child deserves to: 
-        </p>
-        
-        <div className="max-w-4xl mx-auto mb-12">
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Left Column - 3 items */}
-            <ul className="text-left space-y-3">
-              <li className="flex items-center">
-                <BulletIcon />
-                <span className="text-cyan-400 text-lg">Dream bigger</span>
-              </li>
-              <li className="flex items-center">
-                <BulletIcon />
-                <span className="text-cyan-400 text-lg">Learn easier</span>
-              </li>
-              <li className="flex items-center">
-                <BulletIcon />
-                <span className="text-cyan-400 text-lg">Stay curious</span>
-              </li>
-            </ul>
-            
-            {/* Right Column - 2 items */}
-            <ul className="text-left space-y-3">
-              <li className="flex items-center">
-                <BulletIcon />
-                <span className="text-cyan-400 text-lg">Smile wider</span>
-              </li>
-              <li className="flex items-center">
-                <BulletIcon />
-                <span className="text-cyan-400 text-lg">Grow confident</span>
-              </li>
-            </ul>
+    <section className="py-24 bg-gray-50 relative overflow-hidden">
+      {/* Background decorative elements placeholder */}
+      <div className="absolute inset-0">
+        {/* Teal shape placeholder */}
+        <div className="absolute left-0 top-0 w-96 h-96 bg-teal-500 rounded-full opacity-20 -translate-x-1/2 -translate-y-1/4"></div>
+        {/* Yellow elements placeholder */}
+        <div className="absolute right-10 top-10 w-16 h-16 bg-yellow-400 rounded-full opacity-30"></div>
+        <div className="absolute right-20 bottom-20 w-12 h-12 bg-yellow-400 opacity-20"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+          {/* Left side - Image placeholder */}
+          <div className="flex justify-center lg:justify-start">
+            <div className="relative">
+              {/* Circular image placeholder with decorative border */}
+              <div className="w-80 h-80 rounded-full border-4 border-dashed border-teal-400 bg-gray-200 flex items-center justify-center relative overflow-hidden">
+                <span className="text-gray-500 text-center px-4">
+                  Children Image
+                  <br />
+                  Placeholder
+                  <br />
+                  (Circular)
+                </span>
+                {/* Decorative elements around the circle */}
+                <div className="absolute -top-4 -left-4 w-8 h-8 bg-yellow-400 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right side - Content */}
+          <div className="text-left">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Ready to Transform
+              <br />
+              Learning Time?
+            </h2>
+
+            <p className="text-xl text-gray-700 mb-6">
+              <span className="text-blue-500 underline cursor-pointer">
+                Begin 7-Day Free Adventure
+              </span>{" "}
+              No wands required (though excitement is highly encouraged!)
+            </p>
+
+            <p className="text-xl text-[#FF5F71] mb-8 font-medium">
+              Because we believe every child deserves to:
+            </p>
+
+            <div className="mb-8">
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Left Column - 3 items */}
+                <ul className="space-y-4">
+                  <li className="flex items-center">
+                    <BulletIcon />
+                    <span className="text-teal-500 text-lg font-medium">
+                      Dream bigger
+                    </span>
+                  </li>
+                  <li className="flex items-center">
+                    <BulletIcon />
+                    <span className="text-teal-500 text-lg font-medium">
+                      Learn easier
+                    </span>
+                  </li>
+                  <li className="flex items-center">
+                    <BulletIcon />
+                    <span className="text-teal-500 text-lg font-medium">
+                      Stay curious
+                    </span>
+                  </li>
+                </ul>
+
+                {/* Right Column - 2 items */}
+                <ul className="space-y-4">
+                  <li className="flex items-center">
+                    <BulletIcon />
+                    <span className="text-teal-500 text-lg font-medium">
+                      Smile Wider
+                    </span>
+                  </li>
+                  <li className="flex items-center">
+                    <BulletIcon />
+                    <span className="text-teal-500 text-lg font-medium">
+                      Grow confident
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <button className="bg-[#FF5F71] hover:bg-[#FF5F71] text-white font-bold py-4 px-8 rounded-full text-lg transition-colors">
+              Sign up for free
+            </button>
           </div>
         </div>
-        
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full">
-          Sign up for free
-        </button>
       </div>
     </section>
   );

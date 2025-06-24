@@ -10,6 +10,10 @@ import LearningUniversesSection from "@/components/LearningUniversesSection";
 import WhatMakesEklavyaDifferentSection from "@/components/WhatMakesEklavyaDifferentSection";
 import FAQSection from "@/components/FAQSection";
 import CallToActionSection from "@/components/CallToActionSection";
+import TheEarningLearningSystemSection from "@/components/TheEarningLearningSystemSection";
+import MeetEkAiSection from "@/components/MeetEkAiSection";
+import TabletsDesignSection from "@/components/TabletsDesignSection";
+
 
 export default function Home() {
   return (
@@ -18,7 +22,10 @@ export default function Home() {
       <WhyEklavyaSection />
       <AdventureLearningSection />
       <LearningUniversesSection />
+      <MeetEkAiSection />
+      <TheEarningLearningSystemSection />
       <WhatMakesEklavyaDifferentSection />
+      <TabletsDesignSection />
       <FAQSection />
       <CallToActionSection />
       <Footer />
