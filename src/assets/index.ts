@@ -5,4 +5,11 @@ export { default as heroSectionSvg } from './hero-section.svg';
 export { default as helloImage } from './hello.png';
 export { default as chatbotImage } from './chatbot.png';
 export { default as smileyImage } from './smiley.svg';
-
+export { default as booksImage } from './books.png';
+export { default as gamesImage } from './games.png';
+export { default as quizImage } from './quiz.png';
+export { default as videosImage } from './videos.png';
+export { default as codeImage } from './code.png';
+export { default as learningUniBg } from './learning-uni-bg.svg';
+export { default as atomImage } from './atom.svg';
+export { default as earningBg } from './earning-bg.svg';
