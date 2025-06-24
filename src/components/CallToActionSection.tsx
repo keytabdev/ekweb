@@ -4,7 +4,7 @@ import { ctaBg } from "@/assets";
 
 export default function CallToActionSection() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-40 relative overflow-hidden min-h-screen">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -25,8 +25,8 @@ export default function CallToActionSection() {
         <div className="absolute right-20 bottom-20 w-12 h-12 bg-yellow-400 opacity-20"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+      <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto w-full">
           {/* Left side - Space for the image that's now in background */}
           <div className="flex justify-center lg:justify-start">
             <div className="w-80 h-80">
