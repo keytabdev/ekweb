@@ -13,3 +13,5 @@ export { default as codeImage } from './code.png';
 export { default as learningUniBg } from './learning-uni-bg.svg';
 export { default as atomImage } from './atom.svg';
 export { default as earningBg } from './earning-bg.svg';
+export { default as trophyImage } from './trophy.png';
+export { default as differenceImage } from './difference.svg';
