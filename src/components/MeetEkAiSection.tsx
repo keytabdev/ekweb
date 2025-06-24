@@ -1,34 +1,62 @@
+import Image from 'next/image';
+import { helloImage, chatbotImage, smileyImage } from '@/assets';
+
 export default function MeetEkAiSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-28 bg-white   relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Meet Ek AI
-          </h2>
+                {/* Hello bubble positioned at top left */}
+        <div className="absolute top-10 left-200 z-35">
+          <Image 
+            src={helloImage} 
+            alt="Hello speech bubble"
+            width={160}
+            height={120}
+            className="drop-shadow-lg"
+          />
         </div>
-        
-        <div className="flex justify-center">
-          <svg
-            width="400"
-            height="300"
-            viewBox="0 0 400 300"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="border-2 border-dashed border-gray-300 rounded-lg"
-          >
-            <rect width="400" height="300" fill="#ffffff"/>
-            <rect x="160" y="110" width="80" height="80" rx="40" fill="#10b981"/>
-            <circle cx="180" cy="130" r="8" fill="white"/>
-            <circle cx="220" cy="130" r="8" fill="white"/>
-            <path d="M180 160 Q200 175 220 160" stroke="white" strokeWidth="3" fill="none"/>
-            <text x="200" y="220" textAnchor="middle" className="fill-gray-600 text-sm">
-              AI Assistant Banner
-            </text>
-            <text x="200" y="240" textAnchor="middle" className="fill-gray-600 text-xs">
-              Coming Soon
-            </text>
-          </svg>
+
+        {/* Smiley decoration - top left corner */}
+        <div className="absolute top-12 left-32 z-35">
+          <Image 
+            src={smileyImage} 
+            alt="Smiley decoration"
+            width={80}
+            height={80}
+          />
+        </div>
+
+                {/* Blue rounded container for text only */}
+        <div className="bg-[#002A42] rounded-3xl p-12 shadow-2xl relative z-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+            {/* Left side - Text content */}
+            <div className="lg:w-1/2 space-y-6">
+              <h2 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
+                Meet <span className="text-white">AskEk</span>, your 24/7 AI
+              </h2>
+              <p className="text-xl text-blue-100 leading-relaxed">
+                Buddy to answer all your questions, help with homework, and
+                inspire curiosity.
+              </p>
+            </div>
+
+            {/* Right side - Empty space for layout */}
+            <div className="lg:w-1/2">
+            </div>
+          </div>
+        </div>
+
+        {/* Chatbot positioned absolutely on top */}
+        <div className="absolute top-1/2 right-80 transform -translate-y-3/8 z-30">
+          <div className="w-150 h-150">
+            <Image 
+              src={chatbotImage} 
+              alt="AskEk AI Chatbot"
+              width={880}
+              height={880}
+              className="drop-shadow-2xl"
+            />
+          </div>
         </div>
       </div>
     </section>
