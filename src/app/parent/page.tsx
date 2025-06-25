@@ -11,7 +11,7 @@ export default function Parent() {
       <section className="bg-gradient-to-br from-purple-700 via-purple-600 to-purple-800 text-white py-20">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="pl-10">
               <h1 className="text-5xl text-green-300 font-bold mb-6">
                 Happier Kids, <br />
                 <span className="italic text-white">Smarter Learning!</span>
@@ -298,7 +298,7 @@ export default function Parent() {
           </div>
 
           <div className="max-w-4xl mx-auto space-y-8">
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-orange-200">
+            <div className="bg-orange-50 p-8 rounded-[60px] shadow-[4px_4px_12px_rgba(0,0,0,0.1)] border border-orange-200">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
                 Custom Screen Time Schedules
               </h3>
@@ -308,7 +308,7 @@ export default function Parent() {
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-blue-200">
+            <div className="bg-orange-50 p-8 rounded-[60px] shadow-[4px_4px_12px_rgba(0,0,0,0.1)] border border-orange-200">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
                 Learning-Only Mode
               </h3>
@@ -317,7 +317,7 @@ export default function Parent() {
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-green-200">
+            <div className="bg-orange-50 p-8 rounded-[60px] shadow-[4px_4px_12px_rgba(0,0,0,0.1)] border border-orange-200">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
                 Flexible Management
               </h3>
