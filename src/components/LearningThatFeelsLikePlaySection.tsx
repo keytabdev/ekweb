@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { gamesImage, comicsImage, learningImage, rocketImage, greenSwirlImage, redCloudImage } from '@/assets'
+import { gamesImage2, comicsImage, learningImage, rocketImage, greenSwirlImage, redCloudImage } from '@/assets'
 
 export default function LearningThatFeelsLikePlaySection() {
   return (
@@ -39,7 +39,7 @@ export default function LearningThatFeelsLikePlaySection() {
           {/* Engaging Games */}
           <div className="relative p-6 md:p-12 rounded-xl overflow-hidden min-h-[300px] md:min-h-[400px]">
             <Image
-              src={gamesImage}
+              src={gamesImage2}
               alt="Engaging games background"
               fill
               className="object-cover"

@@ -4,7 +4,7 @@ export { default as eklavyaLogo } from './eklavya.png';
 export { default as waveImage } from './wave.svg';
 export { default as parentHeroPic } from './parent-hero-pic.png';
 export { default as parentHeroSvg } from './parent-hero.svg';
-export { default as gamesImage } from './games.png';
+export { default as gamesImage2 } from "./games2.png";
 export { default as comicsImage } from './comics.png';
 export { default as learningImage } from './lessons.png';
 export { default as rocketImage } from './rocket.png';
