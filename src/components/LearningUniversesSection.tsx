@@ -1,17 +1,32 @@
-import {
-  Play,
-  BookOpen,
-  Gamepad2,
-  Code,
-  HelpCircle,
-} from "lucide-react";
+import Image from 'next/image';
+import { videosImage, gamesImage, booksImage, codeImage, quizImage, learningUniBg, atomImage } from '@/assets';
 
 export default function LearningUniversesSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+    <section className="pt-20 pb-8 relative">
+      <div 
+        className="absolute inset-0 -mx-[50vw] left-1/2"
+        style={{
+          backgroundImage: `url(${learningUniBg.src})`,
+          backgroundSize: 'auto 100%',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'repeat-x',
+          width: '100vw'
+        }}
+      />
+        <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-16 relative">
           <div className="flex justify-center mb-4"></div>
+          {/* Atom decoration positioned to the left of heading */}
+          <div className="absolute left-1/4 top-1/2 transform -translate-x-96 -translate-y-1/2">
+            <Image 
+              src={atomImage} 
+              alt="Atom decoration" 
+              width={60} 
+              height={60} 
+              className="object-contain opacity-70"
+            />
+          </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Our Learning Universes
           </h2>
@@ -25,8 +40,14 @@ export default function LearningUniversesSection() {
 
         <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
           <div className="text-center space-y-4">
-            <div className="w-20 h-20 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto">
-              <Play className="w-10 h-10 text-purple-600" />
+            <div className="flex justify-center mb-4">
+              <Image 
+                src={videosImage} 
+                alt="Videos" 
+                width={160} 
+                height={160} 
+                className="object-contain"
+              />
             </div>
             <h3 className="text-xl font-semibold text-gray-900">Videos</h3>
             <p className="text-gray-600 text-sm">
@@ -36,8 +57,14 @@ export default function LearningUniversesSection() {
           </div>
 
           <div className="text-center space-y-4">
-            <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto">
-              <Gamepad2 className="w-10 h-10 text-blue-600" />
+            <div className="flex justify-center mb-4">
+              <Image 
+                src={gamesImage} 
+                alt="Games" 
+                width={160} 
+                height={160} 
+                className="object-contain"
+              />
             </div>
             <h3 className="text-xl font-semibold text-gray-900">Games</h3>
             <p className="text-gray-600 text-sm">
@@ -47,8 +74,14 @@ export default function LearningUniversesSection() {
           </div>
 
           <div className="text-center space-y-4">
-            <div className="w-20 h-20 bg-yellow-100 rounded-2xl flex items-center justify-center mx-auto">
-              <BookOpen className="w-10 h-10 text-yellow-600" />
+            <div className="flex justify-center mb-4">
+              <Image 
+                src={booksImage} 
+                alt="Books" 
+                width={160} 
+                height={160} 
+                className="object-contain"
+              />
             </div>
             <h3 className="text-xl font-semibold text-gray-900">Books</h3>
             <p className="text-gray-600 text-sm">
@@ -58,8 +91,14 @@ export default function LearningUniversesSection() {
           </div>
 
           <div className="text-center space-y-4">
-            <div className="w-20 h-20 bg-cyan-100 rounded-2xl flex items-center justify-center mx-auto">
-              <Code className="w-10 h-10 text-cyan-600" />
+            <div className="flex justify-center mb-4">
+              <Image 
+                src={codeImage} 
+                alt="Coding" 
+                width={160} 
+                height={160} 
+                className="object-contain"
+              />
             </div>
             <h3 className="text-xl font-semibold text-gray-900">Coding</h3>
             <p className="text-gray-600 text-sm">
@@ -69,8 +108,14 @@ export default function LearningUniversesSection() {
           </div>
 
           <div className="text-center space-y-4">
-            <div className="w-20 h-20 bg-indigo-100 rounded-2xl flex items-center justify-center mx-auto">
-              <HelpCircle className="w-10 h-10 text-indigo-600" />
+            <div className="flex justify-center mb-4">
+              <Image 
+                src={quizImage} 
+                alt="Quizzes" 
+                width={160} 
+                height={160} 
+                className="object-contain"
+              />
             </div>
             <h3 className="text-xl font-semibold text-gray-900">Quizzes</h3>
             <p className="text-gray-600 text-sm">

@@ -1,4 +1,3 @@
-//export named assets
 export { default as childImage } from './child.png';
 export { default as eklavyaLogo } from './eklavya.png';
 export { default as waveImage } from './wave.svg';
@@ -18,3 +17,22 @@ export { default as controlBgImage } from './control-bg.svg';
 export { default as noAdIcon } from './no-ad.svg';
 export { default as noWifiIcon } from './no-wifi.svg';
 export { default as privacyIcon } from './privacy.svg';
+export { default as heroSectionSvg } from './hero-section.svg';
+export { default as helloImage } from './hello.png';
+export { default as chatbotImage } from './chatbot.png';
+export { default as smileyImage } from './smiley.svg';
+export { default as booksImage } from './books.png';
+export { default as gamesImage } from './games.png';
+export { default as quizImage } from './quiz.png';
+export { default as videosImage } from './videos.png';
+export { default as codeImage } from './code.png';
+export { default as learningUniBg } from './learning-uni-bg.svg';
+export { default as atomImage } from './atom.svg';
+export { default as earningBg } from './earning-bg.svg';
+export { default as trophyImage } from './trophy.png';
+export { default as differenceImage } from './difference.svg';
+export { default as tabletsImage } from './tablets.png';
+export { default as tabletBg } from './tablet-bg.svg';
+export { default as blueSwirlImage } from './blue-swirl.svg';
+export { default as yellowBlobImage } from './yellow-blob.svg';
+export { default as ctaBg } from './cta-bg.png';

@@ -1,9 +1,22 @@
+import Image from 'next/image';
 import BulletIcon from "@/components/BulletIcon";
+import { ctaBg } from "@/assets";
 
 export default function CallToActionSection() {
   return (
-    <section className="py-24 bg-gray-50 relative overflow-hidden">
-      {/* Background decorative elements placeholder */}
+    <section className="py-40 relative overflow-hidden min-h-screen">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src={ctaBg}
+          alt="Happy children"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
+      {/* Background decorative elements */}
       <div className="absolute inset-0">
         {/* Teal shape placeholder */}
         <div className="absolute left-0 top-0 w-96 h-96 bg-teal-500 rounded-full opacity-20 -translate-x-1/2 -translate-y-1/4"></div>
@@ -12,23 +25,12 @@ export default function CallToActionSection() {
         <div className="absolute right-20 bottom-20 w-12 h-12 bg-yellow-400 opacity-20"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-          {/* Left side - Image placeholder */}
+      <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto w-full">
+          {/* Left side - Space for the image that's now in background */}
           <div className="flex justify-center lg:justify-start">
-            <div className="relative">
-              {/* Circular image placeholder with decorative border */}
-              <div className="w-80 h-80 rounded-full border-4 border-dashed border-teal-400 bg-gray-200 flex items-center justify-center relative overflow-hidden">
-                <span className="text-gray-500 text-center px-4">
-                  Children Image
-                  <br />
-                  Placeholder
-                  <br />
-                  (Circular)
-                </span>
-                {/* Decorative elements around the circle */}
-                <div className="absolute -top-4 -left-4 w-8 h-8 bg-yellow-400 rounded-full"></div>
-              </div>
+            <div className="w-80 h-80">
+              {/* Empty space since image is now background */}
             </div>
           </div>
 

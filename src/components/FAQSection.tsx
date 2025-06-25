@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
+import { blueSwirlImage, yellowBlobImage } from "@/assets";
 
 const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,17 +10,17 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
   return (
     <div className="bg-white border border-black rounded-lg">
       <button
-        className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors touch-manipulation"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="text-lg font-medium text-gray-900">{question}</span>
-        <div className="text-black text-xl font-bold">
+        <span className="text-base sm:text-lg font-medium text-gray-900 pr-4">{question}</span>
+        <div className="text-black text-xl font-bold flex-shrink-0 min-w-[24px] flex items-center justify-center">
           {isOpen ? "−" : "+"}
         </div>
       </button>
       {isOpen && (
-        <div className="px-6 pb-4">
-          <p className="text-gray-600">{answer}</p>
+        <div className="px-4 sm:px-6 pb-3 sm:pb-4">
+          <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{answer}</p>
         </div>
       )}
     </div>
@@ -27,13 +29,35 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
 
 export default function FAQSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Blue swirl on left edge - hidden on mobile */}
+        <div className="hidden md:block absolute left-0 top-0" style={{ transform: 'translateX(-80%)' }}>
+          <Image 
+            src={blueSwirlImage}
+            alt="Blue swirl decoration"
+            width={80}
+            height={80}
+            className="lg:w-[100px] lg:h-[100px] object-contain opacity-70"
+          />
+        </div>
+
+        {/* Yellow blob on right edge - hidden on mobile */}
+        <div className="hidden md:block absolute right-0 top-0" style={{ transform: 'translateX(80%)' }}>
+          <Image 
+            src={yellowBlobImage}
+            alt="Yellow blob decoration"
+            width={96}
+            height={96}
+            className="lg:w-[120px] lg:h-[120px] object-contain opacity-70"
+          />
+        </div>
+
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-8 sm:mb-10 lg:mb-12 px-4">
           Frequently Asked Questions
         </h2>
 
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="max-w-3xl mx-auto space-y-3 sm:space-y-4">
           <FAQItem
             question="What ages is Eklavya for?"
             answer="Eklavya is designed for children from PreK to 6th grade (ages 3-12). Our content is carefully curated and adapted to match the developmental stages and learning capabilities of each age group."
