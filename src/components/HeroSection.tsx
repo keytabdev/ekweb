@@ -5,7 +5,7 @@ import { childImage, heroSectionSvg } from "@/assets";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-gray-900 overflow-hidden min-h-[80vh]">
+    <section className="relative bg-white overflow-hidden min-h-[100vh]">
       <div className="absolute inset-0">
         {/* Hero Section SVG Background */}
         <div className="absolute inset-0 z-20">
