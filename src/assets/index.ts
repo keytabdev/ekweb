@@ -36,3 +36,18 @@ export { default as tabletBg } from './tablet-bg.svg';
 export { default as blueSwirlImage } from './blue-swirl.svg';
 export { default as yellowBlobImage } from './yellow-blob.svg';
 export { default as ctaBg } from './cta-bg.png';
+export { default as classroom1Image } from './classroom1.svg';
+export { default as classroom2Image } from './classroom2.svg';
+export { default as monitorGrowthContainers } from './monitor-growth-containers.svg';
+export { default as monitorGrowthContainer1 } from './monitor-growth-container1.svg';
+export { default as monitorGrowthContainer2 } from './monitor-growth-container2.svg';
+export { default as monitorGrowthContainer3 } from './monitor-growth-container3.svg';
+export { default as paperAirplaneImage } from './paper-airplane.svg';
+export { default as saveTimeBg } from './save-time-bg.svg';
+export { default as saveTime1Image } from './save-time1.png';
+export { default as saveTime2Image } from './save-time2.png';
+export { default as saveTime3Image } from './save-time3.png';
+export { default as teacherHeroImage } from './teacher-hero.svg';
+export { default as transformLessonsPic } from './transform-lessons-pic.png';
+export { default as transformLessonsBg } from './transfrom-lessons-bg.svg';
+
