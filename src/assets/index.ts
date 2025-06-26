@@ -1,6 +1,22 @@
 export { default as childImage } from './child.png';
 export { default as eklavyaLogo } from './eklavya.png';
 export { default as waveImage } from './wave.svg';
+export { default as parentHeroPic } from './parent-hero-pic.png';
+export { default as parentHeroSvg } from './parent-hero.svg';
+export { default as gamesImage2 } from "./games2.png";
+export { default as comicsImage } from './comics.png';
+export { default as learningImage } from './lessons.png';
+export { default as rocketImage } from './rocket.png';
+export { default as greenSwirlImage } from './green-swirl.svg';
+export { default as redCloudImage } from './red-cloud.svg';
+export { default as panesImage } from './4panes.png';
+export { default as safeSecureImage } from './safe-secure-bg.svg';
+export { default as cloudImage } from './cloud.png';
+export { default as celebrateImage } from './celebrate.png';
+export { default as controlBgImage } from './control-bg.svg';
+export { default as noAdIcon } from './no-ad.svg';
+export { default as noWifiIcon } from './no-wifi.svg';
+export { default as privacyIcon } from './privacy.svg';
 export { default as heroSectionSvg } from './hero-section.svg';
 export { default as helloImage } from './hello.png';
 export { default as chatbotImage } from './chatbot.png';
@@ -34,4 +50,4 @@ export { default as saveTime3Image } from './save-time3.png';
 export { default as teacherHeroImage } from './teacher-hero.svg';
 export { default as transformLessonsPic } from './transform-lessons-pic.png';
 export { default as transformLessonsBg } from './transfrom-lessons-bg.svg';
-export { default as cloudImage } from './cloud.png';
+
