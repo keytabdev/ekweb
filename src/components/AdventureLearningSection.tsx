@@ -6,9 +6,7 @@ import {
   ChevronDown,
   Play,
   BookOpen,
-  Gamepad2,
   Code,
-  HelpCircle,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";

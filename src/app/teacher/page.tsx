@@ -1,9 +1,16 @@
+import { Metadata } from 'next';
 import Footer from '@/components/Footer';
 import React from 'react'
 import { teacherHeroImage, transformLessonsPic, transformLessonsBg, classroom1Image, classroom2Image, saveTimeBg, cloudImage, saveTime1Image, saveTime2Image, saveTime3Image, monitorGrowthContainers, paperAirplaneImage } from '@/assets';
 import Image from 'next/image';
 
 export const dynamic = "force-static"
+
+export const metadata: Metadata = {
+  title: 'Eklavya for Teachers - Smarter Tools, Inspired Teaching',
+  description: 'Empower your teaching with AI-powered lesson creation, automated grading, gamified learning paths, and real-time analytics. Save time and inspire students with Eklavya.',
+  keywords: ['teaching tools', 'AI lesson creation', 'automated grading', 'classroom management', 'educational technology', 'teacher resources', 'lesson planning', 'student analytics'],
+};
 
 export default function Teacher() {
   return (
