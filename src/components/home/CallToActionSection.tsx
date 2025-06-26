@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import BulletIcon from "@/components/shared/BulletIcon";
-import ctaBg from "@/assets/images/ctaBg.png";
+import { ctaBg } from "@/assets";
 
 export default function CallToActionSection() {
   return (

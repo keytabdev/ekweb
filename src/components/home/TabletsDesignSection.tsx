@@ -1,7 +1,5 @@
 import Image from 'next/image';
-import tabletsImage from '@/assets/tablets-image.png';
-import tabletBg from '@/assets/tablet-bg.png';
-import React from 'react';
+import { tabletsImage, tabletBg } from '@/assets';
 
 export default function TabletsDesignSection() {
   return (

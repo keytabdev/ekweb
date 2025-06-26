@@ -1,17 +1,17 @@
 export const dynamic = "force-static";
 
 import { Metadata } from 'next';
-import Footer from "@/components/Footer";
-import HeroSection from "@/components/HeroSection";
-import WhyEklavyaSection from "@/components/WhyEklavyaSection";
-import AdventureLearningSection from "@/components/AdventureLearningSection";
-import LearningUniversesSection from "@/components/LearningUniversesSection";
-import WhatMakesEklavyaDifferentSection from "@/components/WhatMakesEklavyaDifferentSection";
-import FAQSection from "@/components/FAQSection";
-import CallToActionSection from "@/components/CallToActionSection";
-import TheEarningLearningSystemSection from "@/components/TheEarningLearningSystemSection";
-import MeetEkAiSection from "@/components/MeetEkAiSection";
-import TabletsDesignSection from "@/components/TabletsDesignSection";
+import Footer from "@/components/shared/Footer";
+import HeroSection from "@/components/home/HeroSection";
+import WhyEklavyaSection from "@/components/home/WhyEklavyaSection";
+import AdventureLearningSection from "@/components/home/AdventureLearningSection";
+import LearningUniversesSection from "@/components/home/LearningUniversesSection";
+import WhatMakesEklavyaDifferentSection from "@/components/home/WhatMakesEklavyaDifferentSection";
+import FAQSection from "@/components/home/FAQSection";
+import CallToActionSection from "@/components/home/CallToActionSection";
+import TheEarningLearningSystemSection from "@/components/home/TheEarningLearningSystemSection";
+import MeetEkAiSection from "@/components/home/MeetEkAiSection";
+import TabletsDesignSection from "@/components/home/TabletsDesignSection";
 
 export const metadata: Metadata = {
   title: 'Eklavya - Transforming Learning Through Innovation',

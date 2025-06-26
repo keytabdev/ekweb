@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
-import Footer from '@/components/Footer';
-import ParentHeroSection from '@/components/ParentHeroSection';
-import LearningThatFeelsLikePlaySection from '@/components/LearningThatFeelsLikePlaySection';
-import SafeAndSecureSection from '@/components/SafeAndSecureSection';
-import StayInvolvedSection from '@/components/StayInvolvedSection';
-import CelebrateAchievementSection from '@/components/CelebrateAchievementSection';
-import BeInControlSection from '@/components/BeInControlSection';
+import Footer from '@/components/shared/Footer';
+import ParentHeroSection from '@/components/parent/ParentHeroSection';
+import LearningThatFeelsLikePlaySection from '@/components/parent/LearningThatFeelsLikePlaySection';
+import SafeAndSecureSection from '@/components/parent/SafeAndSecureSection';
+import StayInvolvedSection from '@/components/parent/StayInvolvedSection';
+import CelebrateAchievementSection from '@/components/parent/CelebrateAchievementSection';
+import BeInControlSection from '@/components/parent/BeInControlSection';
 import React from 'react'
 
 export const dynamic = "force-static"
