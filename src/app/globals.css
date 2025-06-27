@@ -36,6 +36,8 @@
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
   --color-eklavya-purple: #35113d;
+  --color-eklavya-dark-green: #5FBE7A;
+  --color-eklavya-text-primary: #101828;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
