@@ -81,114 +81,136 @@ export default function AdventureLearningSection() {
     return 3; // default for SSR
   };
 
-  const [cardsPerSlide, setCardsPerSlide] = useState(getCardsPerSlide);
 
-  // Update cards per slide on window resize
+
+  // Update for responsive behavior
   React.useEffect(() => {
     const handleResize = () => {
-      setCardsPerSlide(getCardsPerSlide());
+      // Force re-render for responsive calculation
+      setCurrentSlide(0);
     };
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const totalSlides = Math.ceil(gameCards.length / cardsPerSlide);
+  const totalSlides = gameCards.length;
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    setCurrentSlide((prev) => Math.min(prev + 1, totalSlides - 3)); // Allow last cards to be partially visible
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+    setCurrentSlide((prev) => Math.max(prev - 1, 0));
   };
 
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8">
+          <h2 className="text-4xl font-bold mb-8" style={{ color: '#3D3D3D' }}>
             Every Adventure Is a Lesson in Disguise
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            <button className="px-4 py-2 bg-eklavya-purple text-white rounded-full font-medium">
-              PreK
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
+            <button className="px-4 py-2 bg-eklavya-purple text-white rounded-2xl font-medium border-2" style={{ borderColor: '#3D3D3D' }}>
+              Prek
             </button>
-            <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300">
+            <button className="px-5 py-2 bg-white rounded-3xl hover:bg-neutral-50 border-2" style={{ borderColor: '#3D3D3D', color: '#3D3D3D' }}>
               K
             </button>
             {[1, 2, 3, 4, 5, 6].map((grade) => (
               <button
                 key={grade}
-                className="px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300"
+                className="px-5 py-2 bg-white rounded-3xl hover:bg-neutral-50 border-2"
+                style={{ borderColor: '#3D3D3D', color: '#3D3D3D' }}
               >
                 {grade}
               </button>
             ))}
 
-            <div className="ml-8 pl-8 border-l border-gray-300">
-              <button className="flex items-center gap-2 px-8 py-2 border border-gray-300 bg-white hover:bg-gray-50 min-w-[120px]">
-                Subject
+            <div className="ml-12 pl-12 border-l border-neutral-300">
+              <button className="flex items-center justify-between px-8 py-2 border-2 rounded bg-white hover:bg-neutral-50 min-w-[240px]" style={{ borderColor: '#3D3D3D', color: '#3D3D3D' }}>
+                <span className="text-left">Subject</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
             </div>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
             <button
               onClick={() => setSelectedTab("Interactive courses")}
-              className={`px-6 py-2 rounded-full transition-colors ${
+              className={`px-6 py-2 rounded-full transition-colors border-2 ${
                 selectedTab === "Interactive courses"
                   ? "bg-eklavya-purple text-white"
-                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                  : "bg-white hover:bg-neutral-50"
               }`}
+              style={{ 
+                borderColor: '#3D3D3D',
+                color: selectedTab === "Interactive courses" ? 'white' : '#3D3D3D'
+              }}
             >
               Interactive courses
             </button>
             <button
               onClick={() => setSelectedTab("Videos")}
-              className={`px-6 py-2 rounded-full transition-colors ${
+              className={`px-6 py-2 rounded-full transition-colors border-2 ${
                 selectedTab === "Videos"
                   ? "bg-eklavya-purple text-white"
-                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                  : "bg-white hover:bg-neutral-50"
               }`}
+              style={{ 
+                borderColor: '#3D3D3D',
+                color: selectedTab === "Videos" ? 'white' : '#3D3D3D'
+              }}
             >
               Videos
             </button>
             <button
               onClick={() => setSelectedTab("Games")}
-              className={`px-6 py-2 rounded-full transition-colors ${
+              className={`px-6 py-2 rounded-full transition-colors border-2 ${
                 selectedTab === "Games"
                   ? "bg-eklavya-purple text-white"
-                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                  : "bg-white hover:bg-neutral-50"
               }`}
+              style={{ 
+                borderColor: '#3D3D3D',
+                color: selectedTab === "Games" ? 'white' : '#3D3D3D'
+              }}
             >
               Games
             </button>
             <button
               onClick={() => setSelectedTab("Books")}
-              className={`px-6 py-2 rounded-full transition-colors ${
+              className={`px-6 py-2 rounded-full transition-colors border-2 ${
                 selectedTab === "Books"
                   ? "bg-eklavya-purple text-white"
-                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                  : "bg-white hover:bg-neutral-50"
               }`}
+              style={{ 
+                borderColor: '#3D3D3D',
+                color: selectedTab === "Books" ? 'white' : '#3D3D3D'
+              }}
             >
               Books
             </button>
             <button
               onClick={() => setSelectedTab("Code")}
-              className={`px-6 py-2 rounded-full transition-colors ${
+              className={`px-6 py-2 rounded-full transition-colors border-2 ${
                 selectedTab === "Code"
                   ? "bg-eklavya-purple text-white"
-                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                  : "bg-white hover:bg-neutral-50"
               }`}
+              style={{ 
+                borderColor: '#3D3D3D',
+                color: selectedTab === "Code" ? 'white' : '#3D3D3D'
+              }}
             >
               Code
             </button>
           </div>
 
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg max-w-3xl mx-auto" style={{ color: '#3D3D3D' }}>
             Math missions, language expeditions, and science challenges make
             academic concepts unforgettable.
           </p>
@@ -196,26 +218,19 @@ export default function AdventureLearningSection() {
 
         {/* Dynamic Content Based on Selected Tab */}
         {selectedTab === "Games" && (
-          <div className="relative max-w-7xl mx-auto">
+          <div className="relative">
             {/* Carousel Container */}
             <div className="overflow-hidden">
               <div
-                className="flex transition-transform duration-300 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                className="flex gap-8 px-8 transition-transform duration-300 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 320}px)` }}
               >
-                {Array.from({ length: totalSlides }).map((_, slideIndex) => (
-                  <div key={slideIndex} className="w-full flex-shrink-0">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 px-8">
-                      {gameCards
-                        .slice(
-                          slideIndex * cardsPerSlide,
-                          slideIndex * cardsPerSlide + cardsPerSlide
-                        )
-                        .map((game) => (
-                          <div
-                            key={game.id}
-                            className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                          >
+                {gameCards.map((game) => (
+                  <div
+                    key={game.id}
+                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex-shrink-0"
+                    style={{ width: '280px' }}
+                  >
                             <div
                               className={`h-40 bg-gradient-to-br ${game.gradient} relative`}
                             >
@@ -224,11 +239,15 @@ export default function AdventureLearningSection() {
                                   <div className="text-5xl">{game.emoji}</div>
                                 )}
                                 {game.numbers && (
-                                  <div className="flex space-x-2">
+                                  <div className="flex gap-4">
                                     {game.numbers.map((num, index) => (
                                       <div
                                         key={index}
-                                        className="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xl"
+                                        className="px-3 py-2 bg-white rounded-full font-bold text-xl border-2"
+                                        style={{ 
+                                          borderColor: '#3D3D3D',
+                                          color: 'black'
+                                        }}
                                       >
                                         {num}
                                       </div>
@@ -237,11 +256,11 @@ export default function AdventureLearningSection() {
                                 )}
                                 {game.dots && (
                                   <div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center">
-                                    <div className="grid grid-cols-3 gap-1">
+                                    <div className="flex flex-wrap justify-center gap-2 max-w-[40px]">
                                       {[...Array(game.dots)].map((_, i) => (
                                         <div
                                           key={i}
-                                          className="w-2 h-2 bg-gray-800 rounded-full"
+                                          className="w-2 h-2 bg-neutral-800 rounded-full"
                                         ></div>
                                       ))}
                                     </div>
@@ -258,11 +277,15 @@ export default function AdventureLearningSection() {
                               )}
 
                               {game.numberSequence && (
-                                <div className="absolute bottom-3 left-4 flex space-x-1">
+                                <div className="absolute bottom-3 left-4 flex gap-2">
                                   {game.numberSequence.map((num) => (
                                     <div
                                       key={num}
-                                      className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-xs font-bold"
+                                      className="px-2 py-1 bg-white rounded-full text-xs font-bold border-2"
+                                      style={{ 
+                                        borderColor: '#3D3D3D',
+                                        color: '#3D3D3D'
+                                      }}
                                     >
                                       {num}
                                     </div>
@@ -278,24 +301,14 @@ export default function AdventureLearningSection() {
                             </div>
 
                             <div className="p-2">
-                              <h3 className="text-xl font-bold text-gray-900 mb-1">
+                              <h3 className="text-xl font-bold mb-1" style={{ color: '#3D3D3D' }}>
                                 {game.title}
                               </h3>
-                              <div className="flex flex-wrap gap-2">
+                              <div className="flex flex-wrap gap-3">
                                 {game.tags.map((tag, index) => (
                                   <span
                                     key={index}
-                                    className={`px-3 py-1 rounded-full text-sm ${
-                                      tag.includes("Adventure")
-                                        ? "bg-green-100 text-green-800"
-                                        : tag.includes("Addition")
-                                        ? "bg-blue-100 text-blue-800"
-                                        : tag.includes("Logic")
-                                        ? "bg-purple-100 text-purple-800"
-                                        : tag.includes("Pattern")
-                                        ? "bg-orange-100 text-orange-800"
-                                        : "bg-gray-100 text-gray-800"
-                                    }`}
+                                    className="px-3 py-1 rounded-full text-sm bg-green-100 text-green-800"
                                   >
                                     {tag}
                                   </span>
@@ -304,53 +317,37 @@ export default function AdventureLearningSection() {
                             </div>
                           </div>
                         ))}
-                    </div>
-                  </div>
-                ))}
               </div>
             </div>
 
             {/* Navigation Buttons */}
             <button
               onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-10"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-neutral-700 hover:bg-neutral-600 rounded-full p-2 shadow-lg hover:shadow-xl transition-all z-10"
               disabled={currentSlide === 0}
             >
               <ChevronLeft
                 className={`w-6 h-6 ${
-                  currentSlide === 0 ? "text-gray-400" : "text-gray-600"
+                  currentSlide === 0 ? "text-neutral-400" : "text-white"
                 }`}
               />
             </button>
 
             <button
               onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-10"
-              disabled={currentSlide === totalSlides - 1}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-neutral-700 hover:bg-neutral-600 rounded-full p-2 shadow-lg hover:shadow-xl transition-all z-10"
+              disabled={currentSlide >= totalSlides - 3}
             >
               <ChevronRight
                 className={`w-6 h-6 ${
-                  currentSlide === totalSlides - 1
-                    ? "text-gray-400"
-                    : "text-gray-600"
+                  currentSlide >= totalSlides - 3
+                    ? "text-neutral-400"
+                    : "text-white"
                 }`}
               />
             </button>
 
-            {/* Slide Indicators */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {Array.from({ length: totalSlides }).map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    currentSlide === index
-                      ? "bg-eklavya-purple"
-                      : "bg-gray-300"
-                  }`}
-                />
-              ))}
-            </div>
+
           </div>
         )}
 
@@ -359,10 +356,10 @@ export default function AdventureLearningSection() {
             <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <BookOpen className="w-10 h-10 text-blue-600" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold mb-4" style={{ color: '#3D3D3D' }}>
               Interactive Courses
             </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="max-w-2xl mx-auto" style={{ color: '#3D3D3D' }}>
               Comprehensive interactive courses that guide your child through
               step-by-step learning experiences, complete with hands-on
               activities and real-time feedback.
@@ -375,10 +372,10 @@ export default function AdventureLearningSection() {
             <div className="w-20 h-20 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Play className="w-10 h-10 text-purple-600" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold mb-4" style={{ color: '#3D3D3D' }}>
               Educational Videos
             </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="max-w-2xl mx-auto" style={{ color: '#3D3D3D' }}>
               Engaging animated videos that break down complex concepts into
               bite-sized, easy-to-understand lessons that keep children
               entertained while they learn.
@@ -391,10 +388,10 @@ export default function AdventureLearningSection() {
             <div className="w-20 h-20 bg-yellow-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <BookOpen className="w-10 h-10 text-yellow-600" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold mb-4" style={{ color: '#3D3D3D' }}>
               Digital Books
             </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="max-w-2xl mx-auto" style={{ color: '#3D3D3D' }}>
               Interactive digital books with stunning illustrations and
               immersive storytelling that bring classic tales and educational
               content to life.
@@ -407,10 +404,10 @@ export default function AdventureLearningSection() {
             <div className="w-20 h-20 bg-cyan-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Code className="w-10 h-10 text-cyan-600" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold mb-4" style={{ color: '#3D3D3D' }}>
               Coding Adventures
             </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="max-w-2xl mx-auto" style={{ color: '#3D3D3D' }}>
               Fun, beginner-friendly coding challenges and programming puzzles
               designed to introduce children to computational thinking and
               problem-solving skills.

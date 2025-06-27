@@ -83,7 +83,6 @@ function Header() {
             className="text-eklavya-text-primary hover:text-green-600 font-medium"
             style={{
               fontSize: "16px",
-              fontFamily: "Inter",
               fontWeight: 400,
               lineHeight: "24px",
             }}

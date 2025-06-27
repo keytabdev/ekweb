@@ -8,13 +8,18 @@ const Footer = () => {
         {/* Column 1: Logo */}
         <div>
           <div className="mb-4">
-            <Image
-              src={eklavyaLogo.src}
-              alt="Logo"
-              width={48}
-              height={48}
-              className="h-12 w-12 bg-green-600 p-2 rounded"
-            />
+            <div 
+              className="rounded-lg flex items-center justify-center bg-eklavya-dark-green"
+              style={{ width: '50px', height: '50px', borderRadius: '9.23px' }}
+            >
+              <Image
+                src={eklavyaLogo}
+                alt="Eklavya Logo"
+                width={39}
+                height={37}
+                className="brightness-0 invert"
+              />
+            </div>
           </div>
         </div>
 
