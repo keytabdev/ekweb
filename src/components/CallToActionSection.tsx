@@ -6,12 +6,14 @@ export default function CallToActionSection() {
   return (
     <section className="pt-20 pb-40 relative overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 h-[600px] flex items-center justify-center overflow-hidden">
         <Image
           src={ctaBg}
           alt="Happy children"
-          fill
-          className="object-cover"
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="h-full w-auto min-w-full object-cover object-center"
           priority
         />
       </div>

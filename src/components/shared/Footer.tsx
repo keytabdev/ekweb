@@ -1,36 +1,90 @@
-import { eklavyaLogo } from "@/assets";
+import { eklavyaLogo, phoneCallIcon, sharpEmailIcon, locationFilledIcon } from "@/assets";
 import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#35113D]  text-white py-10">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-8">
+    <footer className="bg-[#35113D] text-white pt-6 pb-10">
+      <div 
+        className="mx-auto flex justify-center items-start"
+        style={{ 
+          width: '1924px', 
+          padding: '64px 144px',
+          gap: '114px'
+        }}
+      >
         {/* Column 1: Logo */}
-        <div>
+        <div className="flex flex-col items-start">
           <div className="mb-4">
-            <Image
-              src={eklavyaLogo.src}
-              alt="Logo"
-              width={48}
-              height={48}
-              className="h-12 w-12 bg-green-600 p-2 rounded"
-            />
+            <div 
+              className="rounded-lg flex items-center justify-center bg-eklavya-dark-green"
+              style={{ width: '50px', height: '50px', borderRadius: '9.23px' }}
+            >
+              <Image
+                src={eklavyaLogo}
+                alt="Eklavya Logo"
+                width={39}
+                height={37}
+                className="brightness-0 invert"
+              />
+            </div>
           </div>
         </div>
 
         {/* Column 2: Reach us */}
-        <div>
+        <div className="flex flex-col items-start">
           <h3 className="font-semibold mb-4">Reach Us</h3>
-          <div className="space-y-3 text-sm">
-            <div className="flex items-center gap-2">
-              <span className="text-white">📞</span> <span>+1012 3456 789</span>
+          <div className="space-y-6">
+            <div className="flex items-center" style={{ gap: '25px' }}>
+              <Image 
+                src={phoneCallIcon} 
+                alt="Phone" 
+                width={24} 
+                height={24} 
+              />
+              <span style={{
+                color: '#FFF',
+                fontFamily: 'Graphie',
+                fontSize: '16px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                letterSpacing: '0.16px'
+              }}>+1012 3456 789</span>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-white">✉️</span> <span>demo@gmail.com</span>
+            <div className="flex items-center" style={{ gap: '25px' }}>
+              <Image 
+                src={sharpEmailIcon} 
+                alt="Email" 
+                width={24} 
+                height={24} 
+              />
+              <span style={{
+                color: '#FFF',
+                fontFamily: 'Graphie',
+                fontSize: '16px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                letterSpacing: '0.16px'
+              }}>demo@gmail.com</span>
             </div>
-            <div className="flex items-start gap-2">
-              <span className="text-white">📍</span>
-              <span>
+            <div className="flex items-start" style={{ gap: '25px' }}>
+              <Image 
+                src={locationFilledIcon} 
+                alt="Location" 
+                width={24} 
+                height={24} 
+                className="mt-1"
+              />
+              <span style={{
+                color: '#FFF',
+                fontFamily: 'Graphie',
+                fontSize: '16px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                letterSpacing: '0.16px'
+              }}>
                 132 Dartmouth Street
                 <br />
                 Boston, Massachusetts 02156
@@ -42,46 +96,110 @@ const Footer = () => {
         </div>
 
         {/* Column 3: Company */}
-        <div>
+        <div className="flex flex-col items-start">
           <h3 className="font-semibold mb-4">Company</h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-6">
             <li>
-              <a href="#">About</a>
+              <a href="#" style={{
+                color: '#FFF',
+                fontFamily: 'Graphie',
+                fontSize: '16px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                letterSpacing: '0.16px'
+              }}>About</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#" style={{
+                color: '#FFF',
+                fontFamily: 'Graphie',
+                fontSize: '16px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                letterSpacing: '0.16px'
+              }}>Contact</a>
             </li>
             <li>
-              <a href="#">FAQs</a>
+              <a href="#" style={{
+                color: '#FFF',
+                fontFamily: 'Graphie',
+                fontSize: '16px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                letterSpacing: '0.16px'
+              }}>FAQs</a>
             </li>
           </ul>
         </div>
 
         {/* Column 4: Legal */}
-        <div>
+        <div className="flex flex-col items-start">
           <h3 className="font-semibold mb-4">Legal</h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-6">
             <li>
-              <a href="#">Privacy Policy</a>
+              <a href="#" style={{
+                color: '#FFF',
+                fontFamily: 'Graphie',
+                fontSize: '16px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                letterSpacing: '0.16px'
+              }}>Privacy Policy</a>
             </li>
             <li>
-              <a href="#">Terms & Services</a>
+              <a href="#" style={{
+                color: '#FFF',
+                fontFamily: 'Graphie',
+                fontSize: '16px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                letterSpacing: '0.16px'
+              }}>Terms & Services</a>
             </li>
             <li>
-              <a href="#">Terms of Use</a>
+              <a href="#" style={{
+                color: '#FFF',
+                fontFamily: 'Graphie',
+                fontSize: '16px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                letterSpacing: '0.16px'
+              }}>Terms of Use</a>
             </li>
           </ul>
         </div>
 
         {/* Column 5: Help & Support */}
-        <div>
+        <div className="flex flex-col items-start">
           <h3 className="font-semibold mb-4">Help & Support</h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-6">
             <li>
-              <a href="#">Parents</a>
+              <a href="#" style={{
+                color: '#FFF',
+                fontFamily: 'Graphie',
+                fontSize: '16px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                letterSpacing: '0.16px'
+              }}>Parents</a>
             </li>
             <li>
-              <a href="#">Teachers</a>
+              <a href="#" style={{
+                color: '#FFF',
+                fontFamily: 'Graphie',
+                fontSize: '16px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                letterSpacing: '0.16px'
+              }}>Teachers</a>
             </li>
           </ul>
         </div>

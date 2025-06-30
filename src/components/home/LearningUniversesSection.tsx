@@ -3,14 +3,14 @@ import { videosImage, gamesImage, booksImage, codeImage, quizImage, learningUniB
 
 export default function LearningUniversesSection() {
   return (
-    <section className="pt-20 pb-8 relative">
+    <section className="mt-20 pt-20 pb-8 relative">
       <div 
-        className="absolute inset-0 -mx-[50vw] left-1/2"
+        className="absolute -inset-20 -mx-[50vw] left-1/2 transform scale-x-50 sm:scale-x-65 md:scale-x-75 lg:scale-x-80 xl:scale-x-90 2xl:scale-x-100"
         style={{
           backgroundImage: `url(${learningUniBg.src})`,
-          backgroundSize: 'auto 100%',
+          backgroundSize: '1920px 731px',
           backgroundPosition: 'center',
-          backgroundRepeat: 'repeat-x',
+          backgroundRepeat: 'no-repeat',
           width: '100vw'
         }}
       />
@@ -18,7 +18,7 @@ export default function LearningUniversesSection() {
         <div className="text-center mb-16 relative">
           <div className="flex justify-center mb-4"></div>
           {/* Atom decoration positioned to the left of heading */}
-          <div className="absolute left-1/4 top-1/2 transform -translate-x-96 -translate-y-1/2">
+          <div className="absolute left-1/3 top-1/2 transform -translate-x-96 -translate-y-1/2">
             <Image 
               src={atomImage} 
               alt="Atom decoration" 
@@ -126,7 +126,7 @@ export default function LearningUniversesSection() {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-eklavya-purple hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+          <button className="bg-eklavya-purple hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-3xl transition-colors">
             Try for Free
           </button>
         </div>
