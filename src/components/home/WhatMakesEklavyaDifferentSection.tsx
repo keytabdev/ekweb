@@ -1,4 +1,4 @@
-import { learningUniBg, differenceImage } from '@/assets';
+import { learningUniBg, differenceImage, bubblesImage } from '@/assets';
 
 export default function WhatMakesEklavyaDifferentSection() {
   return (
@@ -13,15 +13,57 @@ export default function WhatMakesEklavyaDifferentSection() {
           width: '100vw'
         }}
       />
+      
+      {/* Bubble decorations */}
+      {/* Top right bubble - 600px from center */}
+      <div 
+        className="absolute top-30 z-20"
+        style={{
+          width: '26px',
+          height: '26px',
+          rotate: '40deg',
+          left: 'calc(50% + 600px)',
+          backgroundImage: `url(${bubblesImage.src})`,
+          backgroundSize: 'contain',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      
+      {/* Bottom left bubble - 600px from center */}
+      <div 
+        className="absolute bottom-20 z-20"
+        style={{
+          width: '30px',
+          height: '40px',
+          left: 'calc(50% - 650px)',
+          backgroundImage: `url(${bubblesImage.src})`,
+          backgroundSize: 'contain',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      
       <div className="container mx-auto px-6 relative z-10">
-        <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">
+        <h2 
+          className="text-center mb-16"
+          style={{
+            color: '#1A1A1A',
+            fontFamily: 'Graphie',
+            fontSize: '36px',
+            fontStyle: 'normal',
+            fontWeight: 700,
+            lineHeight: '44px',
+            letterSpacing: '0.36px'
+          }}
+        >
           What Makes Eklavya Different?
         </h2>
         
         <div className="max-w-6xl mx-auto relative">
           {/* Single difference SVG background containing both containers */}
           <div 
-            className="w-full min-h-[400px] relative"
+            className="w-full min-h-[480px] relative"
             style={{
               backgroundImage: `url(${differenceImage.src})`,
               backgroundSize: 'contain',
@@ -31,24 +73,78 @@ export default function WhatMakesEklavyaDifferentSection() {
           >
             {/* For Kids Content - Left Side */}
             <div className="absolute left-[5%] top-[15%] w-[40%] p-6">
-              <h3 className="text-2xl font-bold mb-6 text-black">
+              <h3 
+                className="mb-6"
+                style={{
+                  color: '#1A1A1A',
+                  fontFamily: 'Graphie',
+                  fontSize: '21px',
+                  fontStyle: 'normal',
+                  fontWeight: 600,
+                  lineHeight: '24px'
+                }}
+              >
                 For Kids: They Think They&apos;re Playing
               </h3>
               
-              <ul className="space-y-4 text-lg text-black">
-                <li className="flex items-start">
+              <ul className="space-y-2">
+                <li 
+                  className="flex items-start"
+                  style={{
+                    color: '#1A1A1A',
+                    fontFamily: 'Graphie',
+                    fontSize: '21px',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: '28px',
+                    letterSpacing: '0.21px'
+                  }}
+                >
                   <span className="mr-3 mt-1">•</span>
                   <span>Battling number ninjas while mastering multiplication.</span>
                 </li>
-                <li className="flex items-start">
+                <li 
+                  className="flex items-start"
+                  style={{
+                    color: '#1A1A1A',
+                    fontFamily: 'Graphie',
+                    fontSize: '21px',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: '28px',
+                    letterSpacing: '0.21px'
+                  }}
+                >
                   <span className="mr-3 mt-1">•</span>
                   <span>Saving kingdoms while improving grammar.</span>
                 </li>
-                <li className="flex items-start">
+                <li 
+                  className="flex items-start"
+                  style={{
+                    color: '#1A1A1A',
+                    fontFamily: 'Graphie',
+                    fontSize: '21px',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: '28px',
+                    letterSpacing: '0.21px'
+                  }}
+                >
                   <span className="mr-3 mt-1">•</span>
                   <span>Building castles while developing creativity.</span>
                 </li>
-                <li className="flex items-start">
+                <li 
+                  className="flex items-start"
+                  style={{
+                    color: '#1A1A1A',
+                    fontFamily: 'Graphie',
+                    fontSize: '21px',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: '28px',
+                    letterSpacing: '0.21px'
+                  }}
+                >
                   <span className="mr-3 mt-1">•</span>
                   <span>Exploring galaxies while unlocking scientific discoveries.</span>
                 </li>
@@ -57,20 +153,63 @@ export default function WhatMakesEklavyaDifferentSection() {
 
             {/* For Parents & Teachers Content - Right Side */}
             <div className="absolute right-[5%] top-[15%] w-[40%] p-6">
-              <h3 className="text-2xl font-bold mb-6 text-black">
+              <h3 
+                className="mb-6"
+                style={{
+                  color: '#1A1A1A',
+                  fontFamily: 'Graphie',
+                  fontSize: '21px',
+                  fontStyle: 'normal',
+                  fontWeight: 600,
+                  lineHeight: '24px'
+                }}
+              >
                 For Parents & Teachers: You Know They&apos;re Learning
               </h3>
               
-              <ul className="space-y-4 text-lg text-black">
-                <li className="flex items-start">
+              <ul className="space-y-2">
+                <li 
+                  className="flex items-start"
+                  style={{
+                    color: '#1A1A1A',
+                    fontFamily: 'Graphie',
+                    fontSize: '21px',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: '28px',
+                    letterSpacing: '0.21px'
+                  }}
+                >
                   <span className="mr-3 mt-1">•</span>
                   <span>Curriculum-aligned lessons ensure they stay on track with school requirements</span>
                 </li>
-                <li className="flex items-start">
+                <li 
+                  className="flex items-start"
+                  style={{
+                    color: '#1A1A1A',
+                    fontFamily: 'Graphie',
+                    fontSize: '21px',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: '28px',
+                    letterSpacing: '0.21px'
+                  }}
+                >
                   <span className="mr-3 mt-1">•</span>
                   <span>Skill-building quests develop critical thinking, creativity, and problem-solving</span>
                 </li>
-                <li className="flex items-start">
+                <li 
+                  className="flex items-start"
+                  style={{
+                    color: '#1A1A1A',
+                    fontFamily: 'Graphie',
+                    fontSize: '21px',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: '28px',
+                    letterSpacing: '0.21px'
+                  }}
+                >
                   <span className="mr-3 mt-1">•</span>
                   <span>Progress reports show measurable improvement in academics and confidence</span>
                 </li>

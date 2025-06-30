@@ -35,6 +35,7 @@ export { default as tabletsImage } from './tablets.png';
 export { default as tabletBg } from './tablet-bg.svg';
 export { default as blueSwirlImage } from './blue-swirl.svg';
 export { default as yellowBlobImage } from './yellow-blob.svg';
+export { default as bubblesImage } from './bubbles.svg';
 export { default as ctaBg } from './cta-bg.png';
 export { default as classroom1Image } from './classroom1.svg';
 export { default as classroom2Image } from './classroom2.svg';
