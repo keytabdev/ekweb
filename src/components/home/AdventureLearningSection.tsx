@@ -60,7 +60,7 @@ export default function AdventureLearningSection() {
 
   // Create infinite loop by tripling the array
   const infiniteGameCards = [...gameCards, ...gameCards, ...gameCards];
-  const cardWidth = 320; // 280px card + 40px gap (approx)
+  const cardWidth = 320; // 280px card + 40px gap
   const totalCards = gameCards.length;
 
   // Update for responsive behavior
@@ -148,7 +148,7 @@ export default function AdventureLearningSection() {
             ))}
 
             <div className="ml-12 pl-12 border-l border-neutral-300">
-              <button className="flex items-center justify-between px-8 py-2 border-2 rounded bg-white hover:bg-neutral-50 min-w-[240px]" style={{ borderColor: '#3D3D3D', color: '#000000' }}>
+              <button className="flex items-center justify-between px-8 py-2 border-2 rounded bg-white hover:bg-neutral-50 min-w-[240px]" style={{ borderColor: '#3D3D3D', color: '#1A1A1A' }}>
                 <span className="text-left">Subject</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
@@ -165,7 +165,7 @@ export default function AdventureLearningSection() {
               }`}
               style={{ 
                 borderColor: '#3D3D3D',
-                color: selectedTab === "Interactive courses" ? 'white' : '#000000'
+                color: selectedTab === "Interactive courses" ? 'white' : '#1A1A1A'
               }}
             >
               Interactive courses
@@ -179,7 +179,7 @@ export default function AdventureLearningSection() {
               }`}
               style={{ 
                 borderColor: '#3D3D3D',
-                color: selectedTab === "Videos" ? 'white' : '#000000'
+                color: selectedTab === "Videos" ? 'white' : '#1A1A1A'
               }}
             >
               Videos
@@ -193,7 +193,7 @@ export default function AdventureLearningSection() {
               }`}
               style={{ 
                 borderColor: '#3D3D3D',
-                color: selectedTab === "Games" ? 'white' : '#000000'
+                color: selectedTab === "Games" ? 'white' : '#1A1A1A'
               }}
             >
               Games
@@ -207,7 +207,7 @@ export default function AdventureLearningSection() {
               }`}
               style={{ 
                 borderColor: '#3D3D3D',
-                color: selectedTab === "Books" ? 'white' : '#000000'
+                color: selectedTab === "Books" ? 'white' : '#1A1A1A'
               }}
             >
               Books
@@ -221,16 +221,28 @@ export default function AdventureLearningSection() {
               }`}
               style={{ 
                 borderColor: '#3D3D3D',
-                color: selectedTab === "Code" ? 'white' : '#000000'
+                color: selectedTab === "Code" ? 'white' : '#1A1A1A'
               }}
             >
               Code
             </button>
           </div>
 
-          <p className="text-lg max-w-3xl mx-auto" style={{ color: '#3D3D3D' }}>
-            Math missions, language expeditions, and science challenges make
-            academic concepts unforgettable.
+          <p 
+            className="max-w-3xl mx-auto" 
+            style={{ 
+              color: '#1A1A1A',
+              fontFamily: 'Graphie',
+              fontSize: '21px',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              lineHeight: '28px',
+              textAlign: 'center',
+              whiteSpace: 'nowrap'
+            }}
+          >
+            Math missions, language expeditions, and science challenges make academic concepts unforgettable.
+           
           </p>
         </div>
       </div>
@@ -241,16 +253,23 @@ export default function AdventureLearningSection() {
           {/* Carousel Container */}
           <div className="overflow-hidden">
             <div
-              className={`flex gap-8 px-6 ${isTransitioning ? 'transition-transform duration-300 ease-in-out' : ''}`}
+              className={`flex gap-10 px-6 ${isTransitioning ? 'transition-transform duration-300 ease-in-out' : ''}`}
               style={{ transform: `translateX(-${currentSlide * cardWidth}px)` }}
             >
               {infiniteGameCards.map((game, index) => (
                 <div
                   key={`${game.id}-${index}`}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex-shrink-0"
+                  className="bg-white rounded-xl overflow-hidden flex-shrink-0 border-2 border-green-200"
                   style={{ width: '280px' }}
                 >
-                  <div className="h-40 relative overflow-hidden rounded-t-xl">
+                  <div 
+                    className="relative overflow-hidden rounded-t-xl"
+                    style={{
+                      height: '213px',
+                      flexShrink: 0,
+                      alignSelf: 'stretch'
+                    }}
+                  >
                     <Image 
                       src={game.image}
                       alt={game.title}
@@ -260,7 +279,18 @@ export default function AdventureLearningSection() {
                   </div>
 
                   <div className="p-2">
-                    <h3 className="text-xl font-bold mb-1" style={{ color: '#3D3D3D' }}>
+                    <h3 
+                      className="mb-1" 
+                      style={{ 
+                        color: '#1A1A1A',
+                        fontFamily: 'Graphie',
+                        fontSize: '32px',
+                        fontStyle: 'normal',
+                        fontWeight: 600,
+                        lineHeight: '26px',
+                        textTransform: 'capitalize'
+                      }}
+                    >
                       {game.title}
                     </h3>
                     <div className="flex flex-wrap gap-3">
