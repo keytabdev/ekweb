@@ -51,3 +51,11 @@ export { default as teacherHeroImage } from './teacher-hero.svg';
 export { default as transformLessonsPic } from './transform-lessons-pic.png';
 export { default as transformLessonsBg } from './transfrom-lessons-bg.svg';
 
+// Game card images and icons from home/adventure
+export { default as geometryGameCard } from './home/adventure/geometry-game-card.png';
+export { default as countingMoneyGameCard } from './home/adventure/counting-money-game-card.png';
+export { default as timeGameCard } from './home/adventure/time-game-card.png';
+export { default as shapesGameCard } from './home/adventure/shapes-game-card.png';
+export { default as someGameCard } from './home/adventure/some-game-card.png';
+export { default as blueStar } from './home/adventure/blue-star.svg';
+

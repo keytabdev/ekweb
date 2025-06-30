@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import * as React from "react";
+import Image from "next/image";
 import {
   ChevronDown,
   Play,
@@ -10,109 +11,126 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import { 
+  geometryGameCard,
+  countingMoneyGameCard,
+  timeGameCard,
+  shapesGameCard,
+  someGameCard,
+  blueStar
+} from "../../assets";
 
 export default function AdventureLearningSection() {
   const [selectedTab, setSelectedTab] = useState("Games");
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const gameCards = [
     {
       id: 1,
       title: "Geometry",
-      emoji: "🐷",
-      gradient: "from-cyan-400 to-purple-500",
-      symbol: "+",
-      symbolColor: "bg-green-500",
+      image: geometryGameCard,
       tags: ["Adventure Game", "Addition", "Subtraction"]
     },
     {
       id: 2,
       title: "Counting Money",
-      emoji: null,
-      gradient: "from-green-400 to-yellow-400",
-      numbers: [4, 6],
+      image: countingMoneyGameCard,
       tags: ["Adventure Game", "Addition", "Subtraction"]
     },
     {
       id: 3,
       title: "Time",
-      emoji: "⏰",
-      gradient: "from-teal-500 to-green-600",
-      numberSequence: [1, 2, 3, 4, 5],
+      image: timeGameCard,
       tags: ["Adventure Game", "Addition", "Subtraction"]
     },
     {
       id: 4,
       title: "Shapes",
-      emoji: null,
-      gradient: "from-indigo-500 to-purple-600",
-      dots: 6,
-      number: "9",
+      image: shapesGameCard,
       tags: ["Adventure Game", "Subtraction"]
     },
     {
       id: 5,
       title: "Math Puzzles",
-      emoji: "🧩",
-      gradient: "from-pink-400 to-red-500",
-      symbol: "=",
-      symbolColor: "bg-blue-500",
+      image: someGameCard,
       tags: ["Logic Game", "Problem Solving"]
     },
-    {
-      id: 6,
-      title: "Number Patterns",
-      emoji: "🔢",
-      gradient: "from-blue-400 to-indigo-500",
-      symbol: "∞",
-      symbolColor: "bg-yellow-500",
-      tags: ["Pattern Game", "Sequences"]
-    }
   ];
 
-  const getCardsPerSlide = () => {
-    if (typeof window !== 'undefined') {
-      if (window.innerWidth >= 1536) return 5; // 2xl screens: 5 cards
-      if (window.innerWidth >= 1280) return 4; // xl screens: 4 cards
-      if (window.innerWidth >= 1024) return 3; // lg screens: 3 cards
-      if (window.innerWidth >= 768) return 2;  // md screens: 2 cards
-      return 1; // sm screens: 1 card
-    }
-    return 3; // default for SSR
-  };
-
-
+  // Create infinite loop by tripling the array
+  const infiniteGameCards = [...gameCards, ...gameCards, ...gameCards];
+  const cardWidth = 320; // 280px card + 40px gap (approx)
+  const totalCards = gameCards.length;
 
   // Update for responsive behavior
   React.useEffect(() => {
     const handleResize = () => {
-      // Force re-render for responsive calculation
-      setCurrentSlide(0);
+      // Reset to middle section for responsive calculation
+      setCurrentSlide(totalCards);
     };
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [totalCards]);
 
-  const totalSlides = gameCards.length;
+  // Initialize at the middle section for seamless infinite scroll
+  React.useEffect(() => {
+    setCurrentSlide(totalCards);
+  }, [totalCards]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => Math.min(prev + 1, totalSlides - 3)); // Allow last cards to be partially visible
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentSlide((prev) => prev + 1);
+    
+    // Reset to beginning of middle section when reaching end
+    setTimeout(() => {
+      if (currentSlide + 1 >= totalCards * 2) {
+        setCurrentSlide(totalCards);
+      }
+      setIsTransitioning(false);
+    }, 300);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => Math.max(prev - 1, 0));
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentSlide((prev) => prev - 1);
+    
+    // Reset to end of middle section when reaching beginning
+    setTimeout(() => {
+      if (currentSlide - 1 < totalCards) {
+        setCurrentSlide(totalCards * 2 - 1);
+      }
+      setIsTransitioning(false);
+    }, 300);
   };
 
   return (
     <section className="py-20 bg-white">
+      {/* Header content in container */}
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-8" style={{ color: '#3D3D3D' }}>
+        <div className="text-center mb-12 relative">
+          <Image 
+            src={blueStar} 
+            alt="Blue star" 
+            width={90.814} 
+            height={91.762}
+            className="absolute left-1/2"
+            style={{ 
+              width: '160px',
+              height: '160px',
+              flexShrink: 0,
+              transform: 'translateX(calc(-440%))',
+              top: '-40%'
+            }}
+          />
+          <h2 className="text-4xl font-bold mb-18" style={{ color: '#3D3D3D' }}>
             Every Adventure Is a Lesson in Disguise
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
+          <div className="flex flex-wrap justify-center gap-6 mb-16">
             <button className="px-4 py-2 bg-eklavya-purple text-white rounded-2xl font-medium border-2" style={{ borderColor: '#3D3D3D' }}>
               Prek
             </button>
@@ -130,7 +148,7 @@ export default function AdventureLearningSection() {
             ))}
 
             <div className="ml-12 pl-12 border-l border-neutral-300">
-              <button className="flex items-center justify-between px-8 py-2 border-2 rounded bg-white hover:bg-neutral-50 min-w-[240px]" style={{ borderColor: '#3D3D3D', color: '#3D3D3D' }}>
+              <button className="flex items-center justify-between px-8 py-2 border-2 rounded bg-white hover:bg-neutral-50 min-w-[240px]" style={{ borderColor: '#3D3D3D', color: '#000000' }}>
                 <span className="text-left">Subject</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
@@ -147,7 +165,7 @@ export default function AdventureLearningSection() {
               }`}
               style={{ 
                 borderColor: '#3D3D3D',
-                color: selectedTab === "Interactive courses" ? 'white' : '#3D3D3D'
+                color: selectedTab === "Interactive courses" ? 'white' : '#000000'
               }}
             >
               Interactive courses
@@ -161,7 +179,7 @@ export default function AdventureLearningSection() {
               }`}
               style={{ 
                 borderColor: '#3D3D3D',
-                color: selectedTab === "Videos" ? 'white' : '#3D3D3D'
+                color: selectedTab === "Videos" ? 'white' : '#000000'
               }}
             >
               Videos
@@ -175,7 +193,7 @@ export default function AdventureLearningSection() {
               }`}
               style={{ 
                 borderColor: '#3D3D3D',
-                color: selectedTab === "Games" ? 'white' : '#3D3D3D'
+                color: selectedTab === "Games" ? 'white' : '#000000'
               }}
             >
               Games
@@ -189,7 +207,7 @@ export default function AdventureLearningSection() {
               }`}
               style={{ 
                 borderColor: '#3D3D3D',
-                color: selectedTab === "Books" ? 'white' : '#3D3D3D'
+                color: selectedTab === "Books" ? 'white' : '#000000'
               }}
             >
               Books
@@ -203,7 +221,7 @@ export default function AdventureLearningSection() {
               }`}
               style={{ 
                 borderColor: '#3D3D3D',
-                color: selectedTab === "Code" ? 'white' : '#3D3D3D'
+                color: selectedTab === "Code" ? 'white' : '#000000'
               }}
             >
               Code
@@ -215,142 +233,73 @@ export default function AdventureLearningSection() {
             academic concepts unforgettable.
           </p>
         </div>
+      </div>
 
-        {/* Dynamic Content Based on Selected Tab */}
-        {selectedTab === "Games" && (
-          <div className="relative">
-            {/* Carousel Container */}
-            <div className="overflow-hidden">
-              <div
-                className="flex gap-8 px-8 transition-transform duration-300 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 320}px)` }}
-              >
-                {gameCards.map((game) => (
-                  <div
-                    key={game.id}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex-shrink-0"
-                    style={{ width: '280px' }}
-                  >
-                            <div
-                              className={`h-40 bg-gradient-to-br ${game.gradient} relative`}
-                            >
-                              <div className="absolute inset-0 flex items-center justify-center">
-                                {game.emoji && (
-                                  <div className="text-5xl">{game.emoji}</div>
-                                )}
-                                {game.numbers && (
-                                  <div className="flex gap-4">
-                                    {game.numbers.map((num, index) => (
-                                      <div
-                                        key={index}
-                                        className="px-3 py-2 bg-white rounded-full font-bold text-xl border-2"
-                                        style={{ 
-                                          borderColor: '#3D3D3D',
-                                          color: 'black'
-                                        }}
-                                      >
-                                        {num}
-                                      </div>
-                                    ))}
-                                  </div>
-                                )}
-                                {game.dots && (
-                                  <div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center">
-                                    <div className="flex flex-wrap justify-center gap-2 max-w-[40px]">
-                                      {[...Array(game.dots)].map((_, i) => (
-                                        <div
-                                          key={i}
-                                          className="w-2 h-2 bg-neutral-800 rounded-full"
-                                        ></div>
-                                      ))}
-                                    </div>
-                                  </div>
-                                )}
-                              </div>
+      {/* Games section - full width */}
+      {selectedTab === "Games" && (
+        <div className="relative w-full">
+          {/* Carousel Container */}
+          <div className="overflow-hidden">
+            <div
+              className={`flex gap-8 px-6 ${isTransitioning ? 'transition-transform duration-300 ease-in-out' : ''}`}
+              style={{ transform: `translateX(-${currentSlide * cardWidth}px)` }}
+            >
+              {infiniteGameCards.map((game, index) => (
+                <div
+                  key={`${game.id}-${index}`}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex-shrink-0"
+                  style={{ width: '280px' }}
+                >
+                  <div className="h-40 relative overflow-hidden rounded-t-xl">
+                    <Image 
+                      src={game.image}
+                      alt={game.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
 
-                              {game.symbol && (
-                                <div
-                                  className={`absolute top-4 left-4 w-8 h-8 ${game.symbolColor} rounded-full flex items-center justify-center text-white font-bold`}
-                                >
-                                  {game.symbol}
-                                </div>
-                              )}
-
-                              {game.numberSequence && (
-                                <div className="absolute bottom-3 left-4 flex gap-2">
-                                  {game.numberSequence.map((num) => (
-                                    <div
-                                      key={num}
-                                      className="px-2 py-1 bg-white rounded-full text-xs font-bold border-2"
-                                      style={{ 
-                                        borderColor: '#3D3D3D',
-                                        color: '#3D3D3D'
-                                      }}
-                                    >
-                                      {num}
-                                    </div>
-                                  ))}
-                                </div>
-                              )}
-
-                              {game.number && (
-                                <div className="absolute bottom-3 left-4 text-white text-2xl font-bold">
-                                  {game.number}
-                                </div>
-                              )}
-                            </div>
-
-                            <div className="p-2">
-                              <h3 className="text-xl font-bold mb-1" style={{ color: '#3D3D3D' }}>
-                                {game.title}
-                              </h3>
-                              <div className="flex flex-wrap gap-3">
-                                {game.tags.map((tag, index) => (
-                                  <span
-                                    key={index}
-                                    className="px-3 py-1 rounded-full text-sm bg-green-100 text-green-800"
-                                  >
-                                    {tag}
-                                  </span>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
-                        ))}
-              </div>
+                  <div className="p-2">
+                    <h3 className="text-xl font-bold mb-1" style={{ color: '#3D3D3D' }}>
+                      {game.title}
+                    </h3>
+                    <div className="flex flex-wrap gap-3">
+                      {game.tags.map((tag, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 rounded-full text-sm bg-green-100 text-green-800"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-
-            {/* Navigation Buttons */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-neutral-700 hover:bg-neutral-600 rounded-full p-2 shadow-lg hover:shadow-xl transition-all z-10"
-              disabled={currentSlide === 0}
-            >
-              <ChevronLeft
-                className={`w-6 h-6 ${
-                  currentSlide === 0 ? "text-neutral-400" : "text-white"
-                }`}
-              />
-            </button>
-
-            <button
-              onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-neutral-700 hover:bg-neutral-600 rounded-full p-2 shadow-lg hover:shadow-xl transition-all z-10"
-              disabled={currentSlide >= totalSlides - 3}
-            >
-              <ChevronRight
-                className={`w-6 h-6 ${
-                  currentSlide >= totalSlides - 3
-                    ? "text-neutral-400"
-                    : "text-white"
-                }`}
-              />
-            </button>
-
-
           </div>
-        )}
 
+          {/* Navigation Buttons - moved towards center */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-12 top-1/2 -translate-y-1/2 bg-neutral-700 hover:bg-neutral-600 rounded-full p-2 shadow-lg hover:shadow-xl transition-all z-10"
+            disabled={isTransitioning}
+          >
+            <ChevronLeft className="w-6 h-6 text-white" />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-12 top-1/2 -translate-y-1/2 bg-neutral-700 hover:bg-neutral-600 rounded-full p-2 shadow-lg hover:shadow-xl transition-all z-10"
+            disabled={isTransitioning}
+          >
+            <ChevronRight className="w-6 h-6 text-white" />
+          </button>
+        </div>
+      )}
+
+      {/* Other tab content in container */}
+      <div className="container mx-auto px-6">
         {selectedTab === "Interactive courses" && (
           <div className="text-center py-16">
             <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
