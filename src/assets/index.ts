@@ -51,8 +51,9 @@ export { default as saveTime3Image } from './save-time3.png';
 export { default as teacherHeroImage } from './teacher-hero.svg';
 export { default as transformLessonsPic } from './transform-lessons-pic.png';
 export { default as transformLessonsBg } from './transfrom-lessons-bg.svg';
-
-// Game card images and icons from home/adventure
+export { default as phoneCallIcon } from './phone-call.svg';
+export { default as sharpEmailIcon } from './sharp-email.svg';
+export { default as locationFilledIcon } from './location-filled.svg';
 export { default as geometryGameCard } from './home/adventure/geometry-game-card.png';
 export { default as countingMoneyGameCard } from './home/adventure/counting-money-game-card.png';
 export { default as timeGameCard } from './home/adventure/time-game-card.png';
