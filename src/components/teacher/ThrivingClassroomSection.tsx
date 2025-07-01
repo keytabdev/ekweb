@@ -67,7 +67,7 @@ export default function ThrivingClassroomSection() {
         </div>
 
         <div className="text-center">
-          <button className="bg-[#5FBE7A] hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-colors">
+          <button className="bg-[#5FBE7A] hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-full transition-colors">
             Try for free
           </button>
         </div>

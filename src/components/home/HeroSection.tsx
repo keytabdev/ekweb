@@ -6,15 +6,15 @@ import { childImage, heroSectionSvg } from "@/assets";
 export default function HeroSection() {
   return (
     <>
-      <section className="relative bg-white overflow-hidden py-16" style={{ height: '785px' }}>
+      <section className="relative bg-white py-18 mt-10" style={{ height: '785px' }}>
         {/* Background SVG positioned to fill the exact hero section */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 z-20">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute z-20" style={{ top: '-10%', left: '-5%', width: '110%', height: '120%' }}>
             <Image
               src={heroSectionSvg}
               alt="Hero Section Background"
               fill
-              className="object-cover object-center w-full h-full scale-x-110 sm:scale-x-105 md:scale-x-100"
+              className="object-cover object-center w-full h-full"
               priority
             />
           </div>

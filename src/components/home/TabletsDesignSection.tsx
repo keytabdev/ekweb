@@ -26,7 +26,7 @@ export default function TabletsDesignSection() {
               style={{
                 color: '#1A1A1A',
                 textAlign: 'center',
-                fontFamily: 'Graphie',
+                
                 fontSize: '36px',
                 fontStyle: 'normal',
                 fontWeight: 700,
@@ -49,7 +49,7 @@ export default function TabletsDesignSection() {
               style={{
                 color: '#1A1A1A',
                 textAlign: 'center',
-                fontFamily: 'Graphie',
+                
                 fontSize: '21px',
                 fontStyle: 'normal',
                 fontWeight: 400,
@@ -86,7 +86,7 @@ export default function TabletsDesignSection() {
               <span 
                 style={{
                   color: '#1A1A1A',
-                  fontFamily: 'Graphie',
+                  
                   fontSize: '16px',
                   fontWeight: 600,
                   lineHeight: '1.625',
@@ -99,7 +99,7 @@ export default function TabletsDesignSection() {
               <span 
                 style={{
                   color: '#1A1A1A',
-                  fontFamily: 'Graphie',
+                  
                   fontSize: '16px',
                   fontWeight: 400,
                   lineHeight: '1.625',
@@ -117,7 +117,7 @@ export default function TabletsDesignSection() {
               <span 
                 style={{
                   color: '#1A1A1A',
-                  fontFamily: 'Graphie',
+                  
                   fontSize: '16px',
                   fontWeight: 600,
                   lineHeight: '1.625',
@@ -130,7 +130,7 @@ export default function TabletsDesignSection() {
               <span 
                 style={{
                   color: '#1A1A1A',
-                  fontFamily: 'Graphie',
+                  
                   fontSize: '16px',
                   fontWeight: 400,
                   lineHeight: '1.625',
@@ -148,7 +148,7 @@ export default function TabletsDesignSection() {
               <span 
                 style={{
                   color: '#1A1A1A',
-                  fontFamily: 'Graphie',
+                  
                   fontSize: '16px',
                   fontWeight: 600,
                   lineHeight: '1.625',
@@ -161,7 +161,7 @@ export default function TabletsDesignSection() {
               <span 
                 style={{
                   color: '#1A1A1A',
-                  fontFamily: 'Graphie',
+                  
                   fontSize: '16px',
                   fontWeight: 400,
                   lineHeight: '1.625',
@@ -179,7 +179,7 @@ export default function TabletsDesignSection() {
               <span 
                 style={{
                   color: '#1A1A1A',
-                  fontFamily: 'Graphie',
+                  
                   fontSize: '16px',
                   fontWeight: 600,
                   lineHeight: '1.625',
@@ -192,7 +192,7 @@ export default function TabletsDesignSection() {
               <span 
                 style={{
                   color: '#1A1A1A',
-                  fontFamily: 'Graphie',
+                  
                   fontSize: '16px',
                   fontWeight: 400,
                   lineHeight: '1.625',
@@ -210,7 +210,7 @@ export default function TabletsDesignSection() {
               <span 
                 style={{
                   color: '#1A1A1A',
-                  fontFamily: 'Graphie',
+                  
                   fontSize: '16px',
                   fontWeight: 600,
                   lineHeight: '1.625',
@@ -223,7 +223,7 @@ export default function TabletsDesignSection() {
               <span 
                 style={{
                   color: '#1A1A1A',
-                  fontFamily: 'Graphie',
+                  
                   fontSize: '16px',
                   fontWeight: 400,
                   lineHeight: '1.625',
@@ -241,7 +241,7 @@ export default function TabletsDesignSection() {
               <span 
                 style={{
                   color: '#1A1A1A',
-                  fontFamily: 'Graphie',
+                  
                   fontSize: '16px',
                   fontWeight: 600,
                   lineHeight: '1.625',
@@ -254,7 +254,7 @@ export default function TabletsDesignSection() {
               <span 
                 style={{
                   color: '#1A1A1A',
-                  fontFamily: 'Graphie',
+                  
                   fontSize: '16px',
                   fontWeight: 400,
                   lineHeight: '1.625',
