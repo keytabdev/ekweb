@@ -6,15 +6,15 @@ import { childImage, heroSectionSvg } from "@/assets";
 export default function HeroSection() {
   return (
     <>
-      <section className="relative bg-white py-18 mt-10" style={{ height: '785px' }}>
+      <section className="relative bg-white overflow-hidden py-18 " style={{ height: '905px' }}>
         {/* Background SVG positioned to fill the exact hero section */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute z-20" style={{ top: '-10%', left: '-5%', width: '110%', height: '120%' }}>
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 z-20">
             <Image
               src={heroSectionSvg}
               alt="Hero Section Background"
               fill
-              className="object-cover object-center w-full h-full"
+              className="object-cover object-center w-full h-full scale-x-110 sm:scale-x-105 md:scale-x-100"
               priority
             />
           </div>
@@ -62,8 +62,8 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Child image - moved up another 3% more */}
-            <div className="absolute z-30 right-[8%] sm:right-[10%] md:right-[12%] lg:right-[15%] xl:left-[800px] top-[0%] sm:top-[0%] md:top-[0%] lg:top-[0%] xl:top-[22px] w-[35%] sm:w-[36%] md:w-[36%] lg:w-[36%] xl:w-[522px] h-[75%] sm:h-[80%] md:h-[85%] lg:h-[90%] xl:h-[732px]">
+            {/* Child image - positioned to sit on section edge */}
+            <div className="absolute z-30 right-[8%] sm:right-[10%] md:right-[12%] lg:right-[15%] xl:right-[8%] top-[25%] sm:top-[20%] md:top-[15%] lg:top-[10%] xl:top-[150px] w-[35%] sm:w-[36%] md:w-[36%] lg:w-[36%] xl:w-[522px] h-[75%] sm:h-[80%] md:h-[85%] lg:h-[90%] xl:h-[732px]">
               <Image
                 src={childImage}
                 alt="Child"
