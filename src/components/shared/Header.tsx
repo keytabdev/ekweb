@@ -65,7 +65,6 @@ function Header() {
                   : "text-eklavya-text-primary hover:text-green-600"
               } transition-all duration-200 ease-in`}
               style={{
-                fontFamily: "Graphie",
                 fontSize: "16px",
                 fontWeight: pathname === link.href ? 700 : 400,
                 lineHeight: "24px",
@@ -100,7 +99,6 @@ function Header() {
               borderRadius: "8px",
               outline: "1px #5FBE7A solid",
               outlineOffset: "-1px",
-              fontFamily: "Graphie",
               fontSize: "16px",
               fontWeight: 600,
               lineHeight: "16px",

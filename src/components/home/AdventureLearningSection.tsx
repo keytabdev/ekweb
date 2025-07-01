@@ -117,12 +117,11 @@ export default function AdventureLearningSection() {
             alt="Blue star" 
             width={90.814} 
             height={91.762}
-            className="absolute left-1/2"
+            className="absolute left-[10%] sm:left-[15%] md:left-[20%] lg:left-[25%]"
             style={{ 
               width: '160px',
               height: '160px',
               flexShrink: 0,
-              transform: 'translateX(calc(-440%))',
               top: '-40%'
             }}
           />
@@ -232,7 +231,6 @@ export default function AdventureLearningSection() {
             className="max-w-3xl mx-auto" 
             style={{ 
               color: '#1A1A1A',
-              fontFamily: 'Graphie',
               fontSize: '21px',
               fontStyle: 'normal',
               fontWeight: 400,
@@ -280,10 +278,9 @@ export default function AdventureLearningSection() {
 
                   <div className="p-2">
                     <h3 
-                      className="mb-1" 
+                      className="mb-6" 
                       style={{ 
                         color: '#1A1A1A',
-                        fontFamily: 'Graphie',
                         fontSize: '32px',
                         fontStyle: 'normal',
                         fontWeight: 600,

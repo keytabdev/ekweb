@@ -49,7 +49,6 @@ export default function MeetEkAiSection() {
               <h2 
                 className="text-white"
                 style={{
-                  fontFamily: 'Graphie',
                   fontSize: '36px',
                   fontStyle: 'normal',
                   lineHeight: '56px',

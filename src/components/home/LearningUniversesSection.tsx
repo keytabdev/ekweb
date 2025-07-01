@@ -126,7 +126,7 @@ export default function LearningUniversesSection() {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-eklavya-purple hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-3xl transition-colors">
+          <button className="bg-eklavya-purple hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-3xl transition-colors">
             Try for Free
           </button>
         </div>

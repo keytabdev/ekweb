@@ -95,7 +95,7 @@ export default function CallToActionSection() {
               </div>
             </div>
 
-            <button className="bg-[#FF5F71] hover:bg-[#FF5F71] text-white font-bold py-4 px-8 rounded-full text-lg transition-colors">
+            <button className="bg-[#FF5F71] hover:bg-[#FF5F71] text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-150 transform hover:scale-105 active:scale-95 active:shadow-inner">
               Sign up for free
             </button>
           </div>

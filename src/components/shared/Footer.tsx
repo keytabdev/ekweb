@@ -43,7 +43,7 @@ const Footer = () => {
               />
               <span style={{
                 color: '#FFF',
-                fontFamily: 'Graphie',
+                
                 fontSize: '16px',
                 fontStyle: 'normal',
                 fontWeight: 400,
@@ -60,7 +60,7 @@ const Footer = () => {
               />
               <span style={{
                 color: '#FFF',
-                fontFamily: 'Graphie',
+                
                 fontSize: '16px',
                 fontStyle: 'normal',
                 fontWeight: 400,
@@ -78,7 +78,7 @@ const Footer = () => {
               />
               <span style={{
                 color: '#FFF',
-                fontFamily: 'Graphie',
+                
                 fontSize: '16px',
                 fontStyle: 'normal',
                 fontWeight: 400,
@@ -102,7 +102,7 @@ const Footer = () => {
             <li>
               <a href="#" style={{
                 color: '#FFF',
-                fontFamily: 'Graphie',
+                
                 fontSize: '16px',
                 fontStyle: 'normal',
                 fontWeight: 400,
@@ -113,7 +113,7 @@ const Footer = () => {
             <li>
               <a href="#" style={{
                 color: '#FFF',
-                fontFamily: 'Graphie',
+                
                 fontSize: '16px',
                 fontStyle: 'normal',
                 fontWeight: 400,
@@ -124,7 +124,7 @@ const Footer = () => {
             <li>
               <a href="#" style={{
                 color: '#FFF',
-                fontFamily: 'Graphie',
+                
                 fontSize: '16px',
                 fontStyle: 'normal',
                 fontWeight: 400,
@@ -142,7 +142,7 @@ const Footer = () => {
             <li>
               <a href="#" style={{
                 color: '#FFF',
-                fontFamily: 'Graphie',
+                
                 fontSize: '16px',
                 fontStyle: 'normal',
                 fontWeight: 400,
@@ -153,7 +153,7 @@ const Footer = () => {
             <li>
               <a href="#" style={{
                 color: '#FFF',
-                fontFamily: 'Graphie',
+                
                 fontSize: '16px',
                 fontStyle: 'normal',
                 fontWeight: 400,
@@ -164,7 +164,7 @@ const Footer = () => {
             <li>
               <a href="#" style={{
                 color: '#FFF',
-                fontFamily: 'Graphie',
+                
                 fontSize: '16px',
                 fontStyle: 'normal',
                 fontWeight: 400,
@@ -182,7 +182,7 @@ const Footer = () => {
             <li>
               <a href="#" style={{
                 color: '#FFF',
-                fontFamily: 'Graphie',
+                
                 fontSize: '16px',
                 fontStyle: 'normal',
                 fontWeight: 400,
@@ -193,7 +193,7 @@ const Footer = () => {
             <li>
               <a href="#" style={{
                 color: '#FFF',
-                fontFamily: 'Graphie',
+                
                 fontSize: '16px',
                 fontStyle: 'normal',
                 fontWeight: 400,

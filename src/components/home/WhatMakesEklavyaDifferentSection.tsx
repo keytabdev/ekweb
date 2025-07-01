@@ -49,7 +49,7 @@ export default function WhatMakesEklavyaDifferentSection() {
           className="text-center mb-16"
           style={{
             color: '#1A1A1A',
-            fontFamily: 'Graphie',
+            
             fontSize: '36px',
             fontStyle: 'normal',
             fontWeight: 700,
@@ -77,7 +77,7 @@ export default function WhatMakesEklavyaDifferentSection() {
                 className="mb-6"
                 style={{
                   color: '#1A1A1A',
-                  fontFamily: 'Graphie',
+                  
                   fontSize: '21px',
                   fontStyle: 'normal',
                   fontWeight: 600,
@@ -92,7 +92,7 @@ export default function WhatMakesEklavyaDifferentSection() {
                   className="flex items-start"
                   style={{
                     color: '#1A1A1A',
-                    fontFamily: 'Graphie',
+                    
                     fontSize: '21px',
                     fontStyle: 'normal',
                     fontWeight: 400,
@@ -107,7 +107,7 @@ export default function WhatMakesEklavyaDifferentSection() {
                   className="flex items-start"
                   style={{
                     color: '#1A1A1A',
-                    fontFamily: 'Graphie',
+                    
                     fontSize: '21px',
                     fontStyle: 'normal',
                     fontWeight: 400,
@@ -122,7 +122,7 @@ export default function WhatMakesEklavyaDifferentSection() {
                   className="flex items-start"
                   style={{
                     color: '#1A1A1A',
-                    fontFamily: 'Graphie',
+                    
                     fontSize: '21px',
                     fontStyle: 'normal',
                     fontWeight: 400,
@@ -137,7 +137,7 @@ export default function WhatMakesEklavyaDifferentSection() {
                   className="flex items-start"
                   style={{
                     color: '#1A1A1A',
-                    fontFamily: 'Graphie',
+                    
                     fontSize: '21px',
                     fontStyle: 'normal',
                     fontWeight: 400,
@@ -157,7 +157,7 @@ export default function WhatMakesEklavyaDifferentSection() {
                 className="mb-6"
                 style={{
                   color: '#1A1A1A',
-                  fontFamily: 'Graphie',
+                  
                   fontSize: '21px',
                   fontStyle: 'normal',
                   fontWeight: 600,
@@ -172,7 +172,7 @@ export default function WhatMakesEklavyaDifferentSection() {
                   className="flex items-start"
                   style={{
                     color: '#1A1A1A',
-                    fontFamily: 'Graphie',
+                    
                     fontSize: '21px',
                     fontStyle: 'normal',
                     fontWeight: 400,
@@ -187,7 +187,7 @@ export default function WhatMakesEklavyaDifferentSection() {
                   className="flex items-start"
                   style={{
                     color: '#1A1A1A',
-                    fontFamily: 'Graphie',
+                    
                     fontSize: '21px',
                     fontStyle: 'normal',
                     fontWeight: 400,
@@ -202,7 +202,7 @@ export default function WhatMakesEklavyaDifferentSection() {
                   className="flex items-start"
                   style={{
                     color: '#1A1A1A',
-                    fontFamily: 'Graphie',
+                    
                     fontSize: '21px',
                     fontStyle: 'normal',
                     fontWeight: 400,

@@ -6,16 +6,16 @@ export default function LearningThatFeelsLikePlaySection() {
   return (
     <section className="py-20 bg-white  relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-32 h-32 z-10">
+      <div className="absolute top-0 w-20 h-20 z-10" style={{ left: 'calc(50% - 600px)' }}>
         <Image
           src={greenSwirlImage}
           alt="Green swirl decoration"
-          width={128}
-          height={128}
+          width={100}
+          height={100}
           className="w-full h-full object-contain"
         />
       </div>
-      <div className="absolute top-0 right-0 w-32 h-32 z-10">
+      <div className="absolute top-0 w-32 h-32 z-10" style={{ left: 'calc(50% + 600px)' }}>
         <Image
           src={redCloudImage}
           alt="Red cloud decoration"

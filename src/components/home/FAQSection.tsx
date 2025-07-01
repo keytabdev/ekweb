@@ -42,7 +42,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16 lg:pb-20 bg-white relative">
+    <section className="pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16 lg:pb-20 overflow-hidden bg-white relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Blue swirl on left edge - hidden on mobile */}
         <div className="hidden md:block absolute left-0 top-0" style={{ transform: 'translateX(-80%)' }}>
