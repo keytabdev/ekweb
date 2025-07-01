@@ -232,7 +232,6 @@ export default function AdventureLearningSection() {
             className="max-w-3xl mx-auto" 
             style={{ 
               color: '#1A1A1A',
-              fontFamily: 'Graphie',
               fontSize: '21px',
               fontStyle: 'normal',
               fontWeight: 400,
@@ -283,7 +282,6 @@ export default function AdventureLearningSection() {
                       className="mb-1" 
                       style={{ 
                         color: '#1A1A1A',
-                        fontFamily: 'Graphie',
                         fontSize: '32px',
                         fontStyle: 'normal',
                         fontWeight: 600,

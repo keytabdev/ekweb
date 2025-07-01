@@ -4,9 +4,9 @@ import { cloudImage } from '@/assets'
 
 export default function StayInvolvedSection() {
   return (
-    <section className="py-20 md:py-40 lg:py-80 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-28 lg:py-50 bg-white relative overflow-hidden">
       {/* Decorative cloud elements */}
-      <div className="absolute top-12 md:top-24 left-2 md:left-4 w-32 h-32 md:w-60 md:h-60 z-10">
+      <div className="absolute top-12 md:top-24 left-2 md:left-4 w-20 h-20 md:w-40 md:h-40 z-10">
         <Image
           src={cloudImage}
           alt="Cloud decoration"
@@ -14,7 +14,7 @@ export default function StayInvolvedSection() {
           className="object-contain"
         />
       </div>
-      <div className="absolute top-8 md:top-12 right-2 md:right-4 w-32 h-32 md:w-60 md:h-60 z-10">
+      <div className="absolute top-8 md:top-12 right-2 md:right-4 w-20 h-20 md:w-40 md:h-40 z-10">
         <Image
           src={cloudImage}
           alt="Cloud decoration"
@@ -24,19 +24,45 @@ export default function StayInvolvedSection() {
       </div>
 
       <div className="container mx-auto px-6 relative z-20">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        <div className="text-center mb-10 md:mb-12">
+          <h2 
+            className="mb-4"
+            style={{
+              color: '#1A1A1A',
+              textAlign: 'center',
+              fontSize: '36px',
+              fontStyle: 'normal',
+              fontWeight: 700,
+              lineHeight: '44px',
+              letterSpacing: '0.36px'
+            }}
+          >
             Stay Involved and Informed
           </h2>
-          <p className="text-lg md:text-xl text-gray-600">
+          <p 
+            style={{
+              color: '#1A1A1A',
+              textAlign: 'center',
+              fontSize: '21px',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              lineHeight: '28px'
+            }}
+          >
             Know Exactly What They&apos;re Learning & When They Need Help
           </p>
-
-          <br />
         </div>
 
-        <div className="grid mt-8 md:mt-10 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-          <div className="text-center p-6 md:p-8 border border-gray-200 rounded-xl shadow-md shadow-blue-200/30 hover:shadow-lg hover:shadow-blue-600/40 transition-shadow">
+        <div className="grid mt-7 md:mt-9 md:grid-cols-3 gap-5 md:gap-7 max-w-6xl mx-auto">
+          <div 
+            className="text-center p-5 md:p-7"
+            style={{
+              borderRadius: '12px',
+              borderTop: '1px solid #E7E7FF',
+              background: '#FFF',
+              boxShadow: '1px 7.11px 6px 0px rgba(78, 180, 203, 0.16)'
+            }}
+          >
             <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
               Detailed Progress Reports
             </h3>
@@ -46,7 +72,15 @@ export default function StayInvolvedSection() {
             </p>
           </div>
 
-          <div className="text-center p-6 md:p-8 border border-gray-200 rounded-xl shadow-md shadow-blue-200/30 hover:shadow-lg hover:shadow-blue-600/40 transition-shadow">
+          <div 
+            className="text-center p-5 md:p-7"
+            style={{
+              borderRadius: '12px',
+              borderTop: '1px solid #E7E7FF',
+              background: '#FFF',
+              boxShadow: '1px 7.11px 6px 0px rgba(78, 180, 203, 0.16)'
+            }}
+          >
             <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
               Skill Balancing Insights
             </h3>
@@ -56,7 +90,15 @@ export default function StayInvolvedSection() {
             </p>
           </div>
 
-          <div className="text-center p-6 md:p-8 border border-gray-200 rounded-xl shadow-md shadow-blue-200/30 hover:shadow-lg hover:shadow-blue-600/40 transition-shadow">
+          <div 
+            className="text-center p-5 md:p-7"
+            style={{
+              borderRadius: '12px',
+              borderTop: '1px solid #E7E7FF',
+              background: '#FFF',
+              boxShadow: '1px 7.11px 6px 0px rgba(78, 180, 203, 0.16)'
+            }}
+          >
             <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
               Instant Notifications
             </h3>
