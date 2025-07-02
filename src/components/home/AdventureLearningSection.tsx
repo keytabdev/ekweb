@@ -122,7 +122,8 @@ export default function AdventureLearningSection() {
               width: '160px',
               height: '160px',
               flexShrink: 0,
-              top: '-40%'
+              top: '-40%',
+              left: 'calc(10% - 100px)'
             }}
           />
           <h2 className="text-4xl font-bold mb-18" style={{ color: '#3D3D3D' }}>
