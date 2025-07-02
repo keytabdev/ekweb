@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { transformLessonsPic, transformLessonsBg } from '@/assets';
+import DynamicBulletPoint from '@/components/shared/DynamicBulletPoint';
 
 export default function TransformLessonsSection() {
   return (
@@ -23,16 +24,18 @@ export default function TransformLessonsSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16 max-w-7xl mx-auto items-center">
+        <div className="flex w-[1152px] h-[615px] justify-between items-start flex-shrink-0 mx-auto overflow-visible">
           {/* Left side - Features */}
-          <div className="space-y-8">
-            <div className="flex items-start gap-4">
-              <div className="w-3 h-3 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
+          <div className="space-y-[10px] relative">
+            <div className="flex gap-4 relative">
+              <div className="flex-shrink-0 relative w-[29px] h-0">
+                <DynamicBulletPoint textHeight={60} className="w-[29px] absolute left-0 top-0" />
+              </div>
+              <div className="max-w-[500px] pl-[40px] overflow-visible">
+                <h3 className="text-[24px] font-semibold text-[#38393E] mb-2 font-graphie leading-[26px] capitalize">
                   AI-Powered Lesson Creation
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-[17px] font-normal text-[#38393E] font-graphie leading-[24px]">
                   Activities are designed to match school curriculums,
                   ensuring your child stays on track while developing
                   essential skills.
@@ -40,13 +43,15 @@ export default function TransformLessonsSection() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
-              <div className="w-3 h-3 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <div className="flex gap-4 relative">
+              <div className="flex-shrink-0 relative w-[29px] h-0">
+                <DynamicBulletPoint textHeight={80} className="w-[29px] absolute left-0 top-0" />
+              </div>
+              <div className="max-w-[500px] pl-[40px] overflow-visible">
+                <h3 className="text-[24px] font-semibold text-[#38393E] mb-2 font-graphie leading-[26px] capitalize">
                   Gamified Learning Made Simple
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-[17px] font-normal text-[#38393E] font-graphie leading-[24px]">
                   Choose from our extensive library of ready-to-play games,
                   craft your own with an intuitive drag-and-drop tool, or let
                   Eklavya AI handle it—just describe the game you want, and
@@ -55,13 +60,15 @@ export default function TransformLessonsSection() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
-              <div className="w-3 h-3 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <div className="flex gap-4 relative">
+              <div className="flex-shrink-0 relative w-[29px] h-0">
+                <DynamicBulletPoint textHeight={70} className="w-[29px] absolute left-0 top-0" />
+              </div>
+              <div className="max-w-[500px] pl-[40px] overflow-visible">
+                <h3 className="text-[24px] font-semibold text-[#38393E] mb-2 font-graphie leading-[26px] capitalize">
                   Explainer Videos Made Easy
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-[17px] font-normal text-[#38393E] font-graphie leading-[24px]">
                   Create engaging explainer videos using our AI to simplify
                   even the toughest topics and make them easy for your
                   students to understand.
@@ -69,13 +76,15 @@ export default function TransformLessonsSection() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
-              <div className="w-3 h-3 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <div className="flex gap-4 relative">
+              <div className="flex-shrink-0 relative w-[29px] h-0">
+                <DynamicBulletPoint textHeight={80} className="w-[29px] absolute left-0 top-0" />
+              </div>
+              <div className="max-w-[500px] pl-[40px] overflow-visible">
+                <h3 className="text-[24px] font-semibold text-[#38393E] mb-2 font-graphie leading-[26px] capitalize">
                   Turn Lessons Into Comics
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-[17px] font-normal text-[#38393E] font-graphie leading-[24px]">
                   Make History or any subject exciting by turning it into a
                   comic! Write your story, and our AI-powered comic creator
                   transforms it into an entertaining and educational comic
@@ -84,13 +93,15 @@ export default function TransformLessonsSection() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
-              <div className="w-3 h-3 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <div className="flex gap-4 relative">
+              <div className="flex-shrink-0 relative w-[29px] h-0">
+                <DynamicBulletPoint textHeight={60} className="w-[29px] absolute left-0 top-0" hideLine={true} />
+              </div>
+              <div className="max-w-[500px] pl-[40px] overflow-visible">
+                <h3 className="text-[24px] font-semibold text-[#38393E] mb-2 font-graphie leading-[26px] capitalize">
                   Built-In Library
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-[17px] font-normal text-[#38393E] font-graphie leading-[24px]">
                   Access a vast library of ready-made courses and lesson plans
                   tailored to various age groups and subjects.
                 </p>
@@ -99,7 +110,7 @@ export default function TransformLessonsSection() {
           </div>
 
           {/* Right side - Transform Lessons Image */}
-          <div className="relative h-[600px]">
+          <div className="relative h-full w-full max-w-[500px]">
             <Image
               src={transformLessonsPic}
               alt="Transform Lessons"
