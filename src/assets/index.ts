@@ -53,11 +53,11 @@ export { default as transformLessonsBg } from './teacher/transfrom-lessons-bg.sv
 export { default as phoneCallIcon } from './shared/phone-call.svg';
 export { default as sharpEmailIcon } from './shared/sharp-email.svg';
 export { default as locationFilledIcon } from './shared/location-filled.svg';
-export { default as geometryGameCard } from './adventure/geometry-game-card.png';
-export { default as countingMoneyGameCard } from './adventure/counting-money-game-card.png';
-export { default as timeGameCard } from './adventure/time-game-card.png';
-export { default as shapesGameCard } from './adventure/shapes-game-card.png';
-export { default as someGameCard } from './adventure/some-game-card.png';
-export { default as blueStar } from './adventure/blue-star.svg';
+export { default as geometryGameCard } from './home/geometry-game-card.png';
+export { default as countingMoneyGameCard } from './home/counting-money-game-card.png';
+export { default as timeGameCard } from './home/time-game-card.png';
+export { default as shapesGameCard } from './home/shapes-game-card.png';
+export { default as someGameCard } from './home/some-game-card.png';
+export { default as blueStar } from './home/blue-star.svg';
 export { default as blueBlobImage } from './decoration/blue-blob.svg';
 
