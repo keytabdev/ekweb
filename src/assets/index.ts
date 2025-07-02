@@ -42,7 +42,6 @@ export { default as classroom2Image } from './classroom2.svg';
 export { default as monitorGrowthContainers } from './monitor-growth-containers.svg';
 export { default as monitorGrowthContainer1 } from './monitor-growth-container1.svg';
 export { default as monitorGrowthContainer2 } from './monitor-growth-container2.svg';
-export { default as monitorGrowthContainer3 } from './monitor-growth-container3.svg';
 export { default as paperAirplaneImage } from './paper-airplane.svg';
 export { default as saveTimeBg } from './save-time-bg.svg';
 export { default as saveTime1Image } from './save-time1.png';
@@ -60,4 +59,5 @@ export { default as timeGameCard } from './home/adventure/time-game-card.png';
 export { default as shapesGameCard } from './home/adventure/shapes-game-card.png';
 export { default as someGameCard } from './home/adventure/some-game-card.png';
 export { default as blueStar } from './home/adventure/blue-star.svg';
+export { default as blueBlobImage } from './blue-blob.svg';
 

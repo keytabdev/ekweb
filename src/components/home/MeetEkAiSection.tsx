@@ -1,10 +1,26 @@
 import Image from 'next/image';
-import { helloImage, chatbotImage, smileyImage } from '@/assets';
+import { helloImage, chatbotImage, smileyImage, blueBlobImage } from '@/assets';
 
 export default function MeetEkAiSection() {
   return (
     <section className="py-28 mt-40 bg-white relative overflow-visible">
       <div className="container mx-auto px-6 relative">
+        {/* Blue Blob decoration - bottom left */}
+        <div 
+          className="absolute z-0 hidden xs:block sm:block sm:left-[-5vw] lg:left-[-10vw]"
+          style={{ 
+            bottom: '-5vw',
+          }}
+        >
+          <Image
+            src={blueBlobImage}
+            alt="Blue blob decoration"
+            width={180}
+            height={130}
+            className="opacity-100 sm:w-[180px] sm:h-[130px] md:w-[180px] md:h-[130px] lg:w-[180px] lg:h-[130px]"
+          />
+        </div>
+
         {/* Hello bubble positioned at middle of container */}
         <div 
           className="absolute z-35"
