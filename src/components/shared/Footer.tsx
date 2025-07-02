@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <footer className="bg-[#35113D] text-white pt-6 pb-10">
       <div 
-        className="mx-auto flex justify-center items-start"
+        className="mx-auto flex justify-center items-start max-w-[1924px] px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-36"
         style={{ 
-          width: '1924px', 
-          padding: '64px 144px',
+          paddingTop: '64px',
+          paddingBottom: '64px',
           gap: '114px'
         }}
       >
