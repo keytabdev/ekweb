@@ -60,4 +60,5 @@ export { default as shapesGameCard } from './home/shapes-game-card.png';
 export { default as someGameCard } from './home/some-game-card.png';
 export { default as blueStar } from './home/blue-star.svg';
 export { default as blueBlobImage } from './decoration/blue-blob.svg';
-
+export { default as aboutUsBg } from './about/about-us-bg.svg';
+export { default as aboutUsPic } from './about/about-us-pic.png';
