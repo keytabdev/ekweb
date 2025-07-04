@@ -8,25 +8,25 @@ const beliefs = [
     title: 'Curiosity Over Cramming',
     desc: 'Kids learn best when they&apos;re intrigued, challenged, and having fun.',
     bg: '#F3EFFF',
-    shadow: 'shadow-purple-200',
+    shadow: 'shadow-[6px_6px_0px_0px_rgba(223,204,248,1.00)]',
   },
   {
     title: 'Education Shouldn\'t Have Limits',
     desc: 'Every child deserves access to the tools that help them dream big and achieve bigger.',
     bg: '#FFF8E2',
-    shadow: 'shadow-yellow-200',
+    shadow: 'shadow-[6px_6px_0px_0px_rgba(248,228,204,1.00)]',
   },
   {
     title: 'Every Child Learns Differently',
     desc: 'AI should adapt to each learner, not the other way around.',
     bg: '#FFEFF6',
-    shadow: 'shadow-pink-200',
+    shadow: 'shadow-[6px_6px_0px_0px_rgba(248,204,246,1.00)]',
   },
   {
     title: 'Play Is Power',
     desc: 'Learning should feel like an adventure that sparks creativity and problem-solving.',
     bg: '#EFFFFA',
-    shadow: 'shadow-green-200',
+    shadow: 'shadow-[6px_6px_0px_0px_rgba(204,237,248,1.00)]',
   },
 ];
 
@@ -45,21 +45,48 @@ export default function AboutBeliefsSection() {
       <div className="absolute right-8 bottom-8 z-10 opacity-40">
         <Image src={flower} alt="Flower" width={48} height={48} />
       </div>
-      {/* Heading */}
-      <h2 className="text-3xl md:text-4xl font-bold text-[#1A7F4E] text-center mb-8">We&apos;re Not Just Building A Platform.<br />We&apos;re What Education Can Be.</h2>
-      {/* Belief cards */}
-      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        {beliefs.map((b, i) => (
-          <div key={i} className={`rounded-2xl p-8 ${b.shadow}`} style={{ background: b.bg }}>
-            <h3 className="font-semibold text-lg mb-2 text-[#2D1A47]">{b.title}</h3>
-            <p className="text-[#3D3D3D] text-base">{b.desc}</p>
-          </div>
-        ))}
+      
+      {/* Main heading */}
+      <div className="text-center mb-12">
+        <h2 className="text-[#1A7F4E] text-[48px] font-bold leading-[70px] tracking-wider capitalize">
+          We&apos;re not just building a platform. We&apos;re what education can be.
+        </h2>
       </div>
+
+      {/* Belief cards */}
+      <div className="max-w-7xl mx-auto">
+        <h3 className="text-[#1A1A1A] text-[36px] font-bold leading-[40px] tracking-tight text-center mb-12">
+          What We Believe In
+        </h3>
+        <div className="w-[1152px] mx-auto grid grid-cols-2 gap-11">
+          {beliefs.map((b, i) => (
+            <div 
+              key={i} 
+              className={`w-96 h-60 px-10 py-8 rounded-[32px] ${b.shadow} flex flex-col justify-center items-center gap-2.5`} 
+              style={{ background: b.bg }}
+            >
+              <h3 className="text-[#38393E] text-[24px] font-semibold leading-[26px] capitalize text-center">
+                {b.title}
+              </h3>
+              <p className="text-[#38393E] text-[16px] font-normal leading-[26px] text-center">
+                {b.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Subheading */}
       <div className="mt-12 text-center max-w-2xl mx-auto">
-        <h3 className="text-xl md:text-2xl font-bold mb-2">Join Us in Reimagining Education</h3>
-        <p className="text-[#222] text-base md:text-lg">Eklavya isn&apos;t just an app. It&apos;s a movement to make learning joyful, personal, and limitless. Because when kids love learning, they don&apos;t just pass tests. <span className="text-[#2D8A4B] font-bold">They Grow, Dream, and Create.</span></p>
+        <h3 className="text-[#1A1A1A] text-[36px] font-bold leading-[40px] tracking-tight mb-4">
+          Join Us in Reimagining Education
+        </h3>
+        <p className="text-[#1A1A1A] text-[21px] font-normal leading-[28px]">
+          Eklavya isn&apos;t just an app. It&apos;s a movement to make learning joyful, personal, and limitless. Because when kids love learning, they don&apos;t just pass tests.{' '}
+          <span className="text-[#80D261] font-bold">They Grow,</span>{' '}
+          <span className="text-[#D261CF] font-bold">Dream,</span>{' '}
+          <span className="text-[#6F61D2] font-bold">and Create.</span>
+        </p>
       </div>
     </section>
   );

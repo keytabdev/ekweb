@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { aboutUsBg, aboutUsPic, playUnderline, curiosityUnderline } from '@/assets';
-import heroWave from '../../assets/about/hero-wave.svg';
 
 export default function AboutHeroSection() {
   return (
@@ -15,112 +14,45 @@ export default function AboutHeroSection() {
           priority
         />
       </div>
+      
       {/* Content */}
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-center w-full max-w-[1920px] mx-auto px-6 py-12 gap-12">
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-center w-full max-w-[1440px] mx-auto px-[144px] py-12 gap-12">
         {/* Text */}
-        <div
-          className="text-center md:text-left"
-          style={{ transform: "translateY(calc(-9%))" }}
-        >
+        <div className="text-center md:text-left w-[612px]">
           {/* First Row */}
-          <div
-            className="flex items-center mb-2"
-            style={{
-              height: "43px",
-              width: "clamp(500px, 42vw, 613px)",
-            }}
-          >
-            <span
-              style={{
-                color: "#C6B6E0",
-                fontFamily: "Graphie",
-                fontSize: "clamp(24px, 2.2vw, 32px)",
-                fontStyle: "normal",
-                fontWeight: 400,
-                lineHeight: "21px",
-              }}
-            >
+          <div className="flex items-center mb-2 h-11">
+            <span className="text-[#C6B6E0] text-[32px] font-normal leading-tight">
               Learning that
             </span>
-            <div className="ml-5" style={{ width: "clamp(120px, 10vw, 150px)", height: "50px" }}>
-              <Image
-                src={heroWave}
-                alt="Hero Wave"
-                width={150}
-                height={50}
-                className="object-contain w-full h-full"
-              />
-            </div>
           </div>
 
           {/* Second Row */}
-          <div
-            className="mb-2 relative"
-            style={{
-              height: "80px",
-              width: "clamp(500px, 42vw, 613px)",
-              marginBottom: "24px",
-            }}
-          >
-            <span
-              style={{
-                color: "#C6B6E0",
-                fontFamily: "Graphie",
-                fontSize: "clamp(40px, 3.8vw, 55.49px)",
-                fontStyle: "normal",
-                fontWeight: 400,
-                lineHeight: "80px",
-              }}
-            >
+          <div className="mb-6 h-24 relative">
+            <span className="text-[#C6B6E0] text-[55.49px] font-normal leading-[80px]">
               Sparks{" "}
             </span>
-            <span
-              style={{
-                color: "#FFF",
-                fontFamily: "Graphie",
-                fontSize: "clamp(50px, 4.8vw, 69.49px)",
-                fontStyle: "italic",
-                fontWeight: 600,
-                lineHeight: "80px",
-              }}
-            >
-              Curiosity
+            <span className="text-[#FFF] text-[69.49px] font-semibold leading-[80px]">
+              Curiosity,
             </span>
-            <div className="absolute -bottom-2" style={{ left: "calc(40%)" }}>
+            <div className="absolute -bottom-2 left-[244px]">
               <Image
                 src={curiosityUnderline}
                 alt="Curiosity Underline"
                 width={150}
                 height={10}
-                className="object-contain w-full h-full"
+                className="object-contain"
               />
             </div>
           </div>
 
           {/* Third Row */}
-          <div
-            className="mb-2"
-            style={{
-              height: "80px",
-              width: "clamp(500px, 42vw, 613px)",
-              marginBottom: "24px",
-            }}
-          >
-            <span
-              style={{
-                color: "#C6B6E0",
-                fontFamily: "Graphie",
-                fontSize: "clamp(40px, 3.8vw, 55.49px)",
-                fontStyle: "normal",
-                fontWeight: 400,
-                lineHeight: "80px",
-              }}
-            >
+          <div className="mb-6 h-24 relative">
+            <span className="text-[#C6B6E0] text-[55.49px] font-normal leading-[80px]">
               Builds{" "}
             </span>
             <div className="inline-block relative">
               <svg
-                width="clamp(350px, 30vw, 429px)"
+                width="429"
                 height="98"
                 viewBox="0 0 429 98"
                 fill="none"
@@ -133,12 +65,12 @@ export default function AboutHeroSection() {
                 style={{
                   color: "#5BB775",
                   fontFamily: "Graphie",
-                  fontSize: "clamp(50px, 4.8vw, 69.49px)",
+                  fontSize: "69.49px",
                   fontStyle: "normal",
                   fontWeight: 700,
                   lineHeight: "80px",
                   letterSpacing: "1px",
-                  width: "clamp(350px, 30vw, 429px)",
+                  width: "429px",
                   height: "98px",
                 }}
               >
@@ -148,39 +80,14 @@ export default function AboutHeroSection() {
           </div>
 
           {/* Fourth Row */}
-          <div
-            className="mb-6"
-            style={{
-              height: "80px",
-              width: "clamp(500px, 42vw, 613px)",
-              marginBottom: "53px"
-            }}
-          >
-            <span
-              style={{
-                color: "#C6B6E0",
-                fontFamily: "Graphie",
-                fontSize: "clamp(40px, 3.8vw, 55.49px)",
-                fontStyle: "normal",
-                fontWeight: 400,
-                lineHeight: "80px",
-              }}
-            >
-              and &nbsp;
+          <div className="mb-6 h-24">
+            <span className="text-[#C6B6E0] text-[55.49px] font-normal leading-[80px]">
+              and{" "}
             </span>
-            <span
-              style={{
-                color: "#FFF",
-                fontFamily: "Graphie",
-                fontSize: "clamp(50px, 4.8vw, 69.49px)",
-                fontStyle: "normal",
-                fontWeight: 350,
-                lineHeight: "80px",
-              }}
-            >
+            <span className="text-[#FFF] text-[69.49px] font-normal leading-[80px]">
               Feels Like Play.
             </span>
-            <div className="mt-2" style={{ transform: "translateX(calc(60% ))" }}>
+            <div className="mt-2 ml-[60%]">
               <Image
                 src={playUnderline}
                 alt="Play Underline"
@@ -191,65 +98,25 @@ export default function AboutHeroSection() {
             </div>
           </div>
 
-          <p
-            style={{
-              color: "#FFF",
-              fontFamily: "Graphie",
-              fontSize: "clamp(14px, 1.1vw, 16px)",
-              fontStyle: "normal",
-              fontWeight: 400,
-              lineHeight: "20px",
-              letterSpacing: "0.16px",
-              width: "clamp(500px, 42vw, 613px)",
-              height: "83px",
-              marginBottom: "53px",
-            }}
-          >
+          <p className="text-[#FFF] text-[16px] font-normal leading-[20px] tracking-[0.16px] w-[588px] h-20 mb-6">
             Imagine a world where learning is as exciting as unlocking a new
             game level, as rewarding as solving a mystery, and as limitless as a
             child&apos;s imagination.{" "}
-            <span
-              style={{
-                color: "#FFF",
-                fontFamily: "Graphie",
-                fontSize: "clamp(14px, 1.1vw, 16px)",
-                fontStyle: "italic",
-                fontWeight: 600,
-                lineHeight: "20px",
-                letterSpacing: "0.16px",
-              }}
-            >
+            <span className="text-[#FFF] text-[16px] font-semibold leading-[20px] tracking-[0.16px]">
               That&apos;s the world we&apos;re building at Eklavya.
-            </span>
-            We believe that education shouldn&apos;t feel like a task- it should feel like a discovery.
+            </span>{" "}
+            We believe that education shouldn&apos;t feel like a task—it should feel like discovery.
           </p>
         </div>
+        
         {/* Main Image */}
-        <div
-          className="relative w-full md:w-[45%] max-w-[500px]"
-          style={{ marginRight: "px", transform: "translateX(140px)" }}
-        >
-          {/* Decorative Rectangle */}
-          <div
-            className="absolute border-4 border-[#F8F8F8] rounded-xl"
-            style={{
-              width: "clamp(280px, 24vw, 351.9px)",
-              height: "clamp(456px, 40vw, 570.1401px)",
-              transform: "rotate(-4.219deg)",
-              flexShrink: 0,
-              bottom: "0",
-              left: "0",
-              transformOrigin: "bottom left",
-              zIndex: 15,
-            }}
-          />
+        <div className="relative w-[384px] h-[630px]">
           {/* Shadow Rectangle */}
           <div
             className="absolute"
             style={{
-              width: "clamp(274px, 24vw, 342.9px)",
-              height: "clamp(454px, 40vw, 567px)",
-              flexShrink: 0,
+              width: "384px",
+              height: "630px",
               borderRadius: "12px",
               backgroundColor: "#9984B3",
               position: "absolute",
@@ -258,12 +125,25 @@ export default function AboutHeroSection() {
               zIndex: 5,
             }}
           />
+          {/* Decorative Rectangle */}
+          <div
+            className="absolute border-4 border-[#F8F8F8] rounded-xl"
+            style={{
+              width: "384px",
+              height: "630px",
+              transform: "rotate(-4.219deg)",
+              flexShrink: 0,
+              bottom: "0",
+              left: "0",
+              transformOrigin: "bottom left",
+              zIndex: 15,
+            }}
+          />
           <div
             className="relative z-10"
             style={{
-              width: "clamp(274px, 24vw, 342.9px)",
-              height: "clamp(454px, 40vw, 567px)",
-              flexShrink: 0,
+              width: "384px",
+              height: "630px",
               borderRadius: "12px",
               backgroundColor: "#533681",
               position: "relative",
@@ -273,8 +153,8 @@ export default function AboutHeroSection() {
             <Image
               src={aboutUsPic}
               alt="About Us Main"
-              width={343}
-              height={567}
+              width={384}
+              height={630}
               style={{
                 objectFit: "contain",
                 width: "100%",
