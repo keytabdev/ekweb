@@ -62,3 +62,5 @@ export { default as blueStar } from './home/blue-star.svg';
 export { default as blueBlobImage } from './decoration/blue-blob.svg';
 export { default as aboutUsBg } from './about/about-us-bg.svg';
 export { default as aboutUsPic } from './about/about-us-pic.png';
+export { default as playUnderline } from './about/play-underline.svg';
+export { default as curiosityUnderline } from './about/curiosity-underline.svg';
