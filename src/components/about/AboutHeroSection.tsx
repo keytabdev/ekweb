@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { aboutUsBg, aboutUsPic, playUnderline, curiosityUnderline } from '@/assets';
+import heroWave from '../../assets/about/hero-wave.svg';
 
 export default function AboutHeroSection() {
   return (
@@ -24,6 +25,13 @@ export default function AboutHeroSection() {
             <span className="text-[#C6B6E0] text-[32px] font-normal leading-tight">
               Learning that
             </span>
+            <Image
+              src={heroWave}
+              alt="Hero Wave"
+              width={113}
+              height={56.5}
+              className="ml-2"
+            />
           </div>
 
           {/* Second Row */}
@@ -31,7 +39,16 @@ export default function AboutHeroSection() {
             <span className="text-[#C6B6E0] text-[55.49px] font-normal leading-[80px]">
               Sparks{" "}
             </span>
-            <span className="text-[#FFF] text-[69.49px] font-semibold leading-[80px]">
+            <span 
+              style={{
+                color: '#FFF',
+                fontFamily: 'Graphie',
+                fontSize: '69.49px',
+                fontStyle: 'italic',
+                fontWeight: 600,
+                lineHeight: '80px'
+              }}
+            >
               Curiosity,
             </span>
             <div className="absolute -bottom-2 left-[244px]">
