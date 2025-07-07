@@ -7,13 +7,13 @@ export default function AboutMissionSection() {
   return (
     <section className="relative flex items-center justify-center overflow-visible w-full h-[545px]">
       {/* Background SVG */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 flex items-center justify-center">
         <Image
           src={ourMissionBg}
           alt="Our Mission Background"
           width={1920}
           height={405}
-          className="w-full scale-y-110"
+          className="w-full scale-y-110 lg:scale-y-105 xl:scale-y-100 2xl:scale-y-80"
         />
       </div>
       {/* Decorative Images */}
@@ -22,16 +22,16 @@ export default function AboutMissionSection() {
         <Image src={greyFlower} alt="Grey Flower" width={56} height={56} />
       </div>
       {/* Content */}
-      <div className="relative z-20 flex flex-col items-center w-full text-center" style={{ marginTop: '-40px' }}>
+      <div className="relative z-20 flex flex-col items-center w-full text-center">
         <h2 className="text-[#1A1A1A] text-center font-sans text-[48px] font-bold leading-[44px] tracking-[0.48px] mb-8">
           Our Mission
         </h2>
         <div className="w-[936px] h-[98px] text-center mx-auto">
-          <p className="text-[#1A1A1A] text-center font-graphie text-[20px] font-sans leading-[24px] tracking-[-0.5px] mb-0" >
+          <p className="text-[#1A1A1A] text-center font-graphie text-[20px]  leading-[24px] tracking-[-0.5px] mb-0" >
             To make learning so immersive, exciting, and effective that children
             no longer resist it—they crave it.
           </p>
-          <p className="text-[#1A1A1A] text-center font-graphie text-[20px] font-sans leading-[24px] tracking-[-0.5px]">
+          <p className="text-[#1A1A1A] text-center font-graphie text-[20px]  leading-[24px] tracking-[-0.5px]">
             To create an inclusive, accessible, and engaging education platform
             that meets every child where <br></br> they are and helps them go further than
             they ever imagined.

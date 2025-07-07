@@ -64,3 +64,7 @@ export { default as aboutUsBg } from './about/about-us-bg.svg';
 export { default as aboutUsPic } from './about/about-us-pic.png';
 export { default as playUnderline } from './about/play-underline.svg';
 export { default as curiosityUnderline } from './about/curiosity-underline.svg';
+export { default as chat1 } from './about/chat1.png';
+export { default as chat2 } from "./about/chat2.png";
+export { default as chat3 } from "./about/chat3.png";
+export { default as cloud } from './about/clouds (very light color).png';
