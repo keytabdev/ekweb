@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import greenPastryRight from '../../assets/about/green-pastry-right.svg';
 import pinkPastryRight from '../../assets/about/pink-pastry-right.svg';
-import yellowPastryRight from '../../assets/about/yellow-pastry-right.svg';
+import yellowPastryRightFacing from '../../assets/about/yellow-pastry-right-facing.svg';
 import greyFlower from '../../assets/about/grey-flower.svg';
 
 export default function AboutStorySection() {
@@ -28,7 +28,7 @@ export default function AboutStorySection() {
           </div>
         </div>
         <div className="flex-1 flex items-start gap-[11px]">
-          <Image src={yellowPastryRight} alt="Yellow Pastry" width={27.274} height={49.157} className="flex-shrink-0" />
+          <Image src={yellowPastryRightFacing} alt="Yellow Pastry" width={27.274} height={49.157} className="flex-shrink-0" />
           <div className="w-[274.72px] h-[52px] flex items-center">
             <span className="text-[#38393E] text-[24px] font-semibold leading-[26px]">Reading isn&apos;t a chore, but an adventure into new worlds.</span>
           </div>

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import logo from '../../assets/shared/eklavya.png';
 import spiral from '../../assets/about/spiral-arrow.svg';
 import redPastry from '../../assets/about/red-pastry.svg';
+import yellowPastryLeftFacing from '../../assets/about/yellow-pastry-left-facing.svg';
 
 const beliefs = [
   {
@@ -101,18 +102,43 @@ export default function AboutBeliefsSection() {
         </div>
 
         {/* Subheading */}
-        <div className="mt-12 text-center max-w-2xl mx-auto">
-          <h3 className="text-[#1A1A1A] text-[36px] font-bold leading-[40px] tracking-tight mb-4">
-            Join Us in Reimagining Education
-          </h3>
-          <p className="text-[#1A1A1A] text-[21px] font-normal leading-[28px]">
-            Eklavya isn&apos;t just an app. It&apos;s a movement to make
-            learning joyful, personal, and limitless. Because when kids love
-            learning, they don&apos;t just pass tests.{" "}
-            <span className="text-[#80D261] font-bold">They Grow,</span>{" "}
-            <span className="text-[#D261CF] font-bold">Dream,</span>{" "}
-            <span className="text-[#6F61D2] font-bold">and Create.</span>
-          </p>
+        <div className="relative w-full flex justify-center items-center mt-40">
+          {/* Yellow pastry left - 10% visible */}
+          <div className="absolute left-0 top-[calc(50%+2rem)] transform -translate-y-1/2 -translate-x-[70%] z-10">
+            <Image 
+              src={yellowPastryLeftFacing} 
+              alt="Yellow Pastry Left" 
+              width={191} 
+              height={191}
+              className="scale-x-[-1]"
+            />
+          </div>
+          
+          {/* Yellow pastry right - 10% visible */}
+          <div className="absolute right-0 top-[calc(50%+2rem)] transform -translate-y-1/2 translate-x-[70%] z-10">
+            <Image 
+              src={yellowPastryLeftFacing} 
+              alt="Yellow Pastry Right" 
+              width={191} 
+              height={191}
+            />
+          </div>
+          
+          {/* Centered content */}
+          <div className="w-[896px] px-36 inline-flex flex-col justify-start items-center gap-4">
+            <div className="self-stretch text-center justify-start text-zinc-900 text-4xl font-bold font-['Graphie'] leading-10 tracking-tight">Join Us in Reimagining Education</div>
+            <div className="w-[776px] text-center justify-start text-zinc-900 text-xl font-normal font-['Graphie'] leading-7">Eklavya isn&apos;t just an app. It&apos;s a movement to make learning joyful, personal, and limitless. Because when kids love learning, they don&apos;t just pass tests.</div>
+          </div>
+        </div>
+        <div className="mx-auto mb-30 mt-6 text-center">
+          <span className="text-slate-300 text-4xl font-semibold font-['Graphie'] leading-10 tracking-wide">They </span>
+          <span className="text-lime-400 text-4xl font-bold font-['Graphie'] leading-10 tracking-wide">Grow</span>
+          <span className="text-lime-400 text-4xl font-semibold font-['Graphie'] leading-10 tracking-wide">,</span>
+          <span className="text-fuchsia-500 text-4xl font-bold font-['Graphie'] leading-10 tracking-wide"> Dream</span>
+          <span className="text-fuchsia-500 text-4xl font-semibold font-['Graphie'] leading-10 tracking-wide">,</span>
+          <span className="text-slate-300 text-4xl font-semibold font-['Graphie'] leading-10 tracking-wide"> and </span>
+          <span className="text-indigo-500 text-4xl font-bold font-['Graphie'] leading-10 tracking-wide">Create</span>
+          <span className="text-indigo-500 text-4xl font-semibold font-['Graphie'] leading-10 tracking-wide">.</span>
         </div>
       </section>
     </>
