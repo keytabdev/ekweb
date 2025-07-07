@@ -1,25 +1,27 @@
 import Image from 'next/image';
-import yellowPastryLeftFacing from '../../assets/about/yellow-pastry-left-facing.svg';
-import yellowPastryRightFacing from '../../assets/about/yellow-pastry-right-facing.svg';
+import welcome from '@/assets/about/welcome-to-eklavya-bg.svg';
+import welcomeText from '@/assets/about/welcome-text.svg';
 
 export default function AboutWelcomeSection() {
   return (
-    <section className="relative py-20 flex flex-col items-center justify-center overflow-hidden bg-[#FFF8E2]">
-      {/* Decorative pastries */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2">
-        <Image src={yellowPastryLeftFacing} alt="Yellow Pastry Left" width={80} height={80} />
+    <section className="relative h-[433px] flex flex-col items-center justify-center overflow-hidden w-full max-w-none">
+      {/* Background Image */}
+      <div className="absolute inset-0 w-full h-[433px]">
+        <Image 
+          src={welcome} 
+          alt="Welcome background" 
+          fill
+          className="2xl:scale-x-[1.35] xl:scale-x-[1.15] scale-x-[1.0] "
+        />
       </div>
-      <div className="absolute right-0 top-1/2 -translate-y-1/2">
-        <Image src={yellowPastryRightFacing} alt="Yellow Pastry Right" width={80} height={80} />
-      </div>
-      
+
       {/* Heading */}
-      <h1 className="text-[#F28C2B] text-[48px] font-normal leading-[48px] tracking-[3.84px] text-center mb-8" style={{ textShadow: '1px 1px 0px rgb(68 42 162 / 1.00)' }}>
-        Welcome to Eklavya.<br />Where curiosity leads the way.
-      </h1>
+      <div className="text-center z-2 mb-8">
+        <Image src={welcomeText} alt="Welcome to Eklavya. Where curiosity leads the way." width={720} height={120} />
+      </div>
       
       {/* Button */}
-      <button className="px-10 py-4 bg-[#FFF8E2] rounded-[50px] border-4 border-[#F28C2B] text-[#F28C2B] font-extrabold text-lg leading-tight hover:bg-[#FFF0D6] transition-all">
+      <button className="inline-flex px-8 py-[12px] justify-center items-center gap-2 rounded-[50px] border-4 border-[#DF6934] bg-[#FFFBEA] text-[#DF6934] font-extrabold text-lg leading-tight hover:bg-[#FFF0D6] transition-all z-2">
         Try for free
       </button>
     </section>
