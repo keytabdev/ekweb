@@ -9,10 +9,24 @@ export const metadata: Metadata = {
   keywords: ['about eklavya', 'educational innovation', 'learning technology', 'educational platform', 'mission', 'vision', 'team'],
 };
 
+import AboutHeroSection from '@/components/about/AboutHeroSection';
+import AboutStorySection from '@/components/about/AboutStorySection';
+import AboutMissionSection from '@/components/about/AboutMissionSection';
+import AboutVisionSection from '@/components/about/AboutVisionSection';
+import AboutBeliefsSection from '@/components/about/AboutBeliefsSection';
+import AboutWelcomeSection from '@/components/about/AboutWelcomeSection';
+import Footer from '@/components/shared/Footer';
+
 export default function About() {
   return (
     <div>
-      About page
+      <AboutHeroSection />
+      <AboutStorySection />
+      <AboutMissionSection />
+      <AboutVisionSection />
+      <AboutBeliefsSection />
+      <AboutWelcomeSection />
+      <Footer />
     </div>
   )
 }
