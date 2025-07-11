@@ -87,7 +87,7 @@ export { default as teachersPricingBg } from './pricing/teachers-pricing-bg.svg'
 export { default as belowHeroSection } from './pricing/below-hero-section.svg';
 export { default as whyChooseEklavya } from './pricing/Why chose eklavya.svg';
 export { default as faqSvg } from './pricing/FAQ.svg';
-export { default as schoolBackpack } from './pricing/13110270_1702.m10.i302.n009.S.c12.507806953 School backpack or kids schoolbag for education vector illustration 1.png';
-export { default as pricingImage1 } from './pricing/409097283_534d480b-edf1-4150-8ac4-82dfd9897aec 1.png';
-export { default as rocket3d } from './pricing/psd_3d_render_rocket_ioslated_on_background 1.png';
-export { default as stackBooksLightbulb } from './pricing/stack-books-lightbulb-3d-render-icon 1.png';
+export { default as schoolBackpack } from './pricing/backpack.png';
+export { default as trophy } from './pricing/trophy.png';
+export { default as rocket3d } from './pricing/rocket.png';
+export { default as stackBooksLightbulb } from './pricing/books.png';

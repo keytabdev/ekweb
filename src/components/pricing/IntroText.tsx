@@ -5,7 +5,7 @@ import { greyFlower, greenSwirlImage } from '@/assets';
 
 export default function IntroText() {
   return (
-    <div className="relative w-full max-w-4xl mx-auto px-4 py-16" style={{ height: '400px' }}>
+    <div className="relative w-full max-w-4xl mx-auto px-4 py-16">
             {/* Red Pastry in top right */}
       <div 
         className="absolute top-0 right-0 z-10"
@@ -51,7 +51,7 @@ export default function IntroText() {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 text-left" style={{ width: '841px', margin: '0 auto' }}>
+      <div className="relative z-10 text-center max-w-4xl mx-auto">
         <span style={{ 
           color: '#5FBE7A', 
           fontFamily: 'Graphie', 

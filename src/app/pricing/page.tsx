@@ -20,18 +20,20 @@ export const metadata: Metadata = {
 export default function Pricing() {
   return (
     <>
-      <div className=" relative bg-white overflow-hidden">
+      <div className="relative bg-white overflow-hidden">
 
         {/* Hero Section */}
         <PricingHeroSection />
-        
+        {/* Intro Text */}
+        <IntroText />        
         {/* Choose your Plan heading */}
-        <div className="w-[1152px] left-[147px] top-[1236px] absolute text-center justify-start text-zinc-900 text-4xl font-bold font-['Graphie'] leading-10 tracking-tight">
-          Choose your Plan
+        <div className="w-full flex justify-center items-center py-16">
+          <h2 className="text-zinc-900 text-4xl font-bold font-['Graphie'] leading-10 tracking-tight text-center">
+            Choose your Plan
+          </h2>
         </div>
         
-        {/* Intro Text */}
-        <IntroText />
+
         
         {/* Plan Selector */}
         <PlanSelector />
