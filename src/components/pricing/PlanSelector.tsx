@@ -7,7 +7,7 @@ interface PlanSelectorProps {
 
 export default function PlanSelector({ selectedPlan, onPlanChange }: PlanSelectorProps) {
   return (
-    <div className="w-full flex justify-center items-center py-8">
+    <div className="w-full flex justify-center items-center py-8 relative z-20">
       <div className="inline-flex justify-start items-center gap-6">
         <button
           onClick={() => onPlanChange('parents')}
