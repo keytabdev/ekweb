@@ -30,12 +30,6 @@ export default function WhyChooseEklavya() {
           </div>
         </div>
       </div>
-      
-      {/* Decorative elements */}
-      <div className="w-36 h-16 absolute right-4 top-20 opacity-90 bg-indigo-100" />
-      <div className="w-36 h-16 absolute left-4 bottom-20 opacity-90 bg-indigo-100" />
-      <div className="w-16 h-7 absolute right-8 top-16 opacity-90 bg-indigo-200" />
-      <div className="w-16 h-8 absolute left-8 bottom-16 opacity-90 bg-indigo-200" />
     </div>
   );
 } 

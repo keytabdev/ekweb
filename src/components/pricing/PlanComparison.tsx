@@ -9,7 +9,7 @@ export default function PlanComparison() {
       <div className="w-[532px] h-96 left-[22px] top-[63px] absolute bg-violet-50" />
       <div className="w-[1152px] h-[916px] left-0 top-[71px] absolute">
         <div className="w-[576px] h-96 px-10 py-8 left-0 top-0 absolute shadow-[0px_4px_12px_0px_rgba(0,255,178,0.10)] border-r inline-flex flex-col justify-center items-center gap-6">
-          <img className="w-36 h-40" src="https://placehold.co/145x161" alt="Free Adventure" />
+       
           <div className="justify-start text-sky-600 text-3xl font-semibold font-['Graphie'] capitalize leading-relaxed">Free Adventure</div>
           <div className="size-auto flex flex-col justify-start items-start gap-3">
             <div className="size-auto inline-flex justify-start items-start gap-2.5">

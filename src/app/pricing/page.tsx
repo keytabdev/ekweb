@@ -1,5 +1,6 @@
-import { Metadata } from 'next';
-import React from "react";
+'use client';
+
+import React, { useState } from "react";
 import PricingHeroSection from '@/components/pricing/PricingHeroSection';
 import IntroText from '@/components/pricing/IntroText';
 import PlanSelector from '@/components/pricing/PlanSelector';
@@ -9,15 +10,9 @@ import FAQSection from '@/components/pricing/FAQSection';
 import LearningThatFeelsLikePlaySection from '@/components/pricing/LearningThatFeelsLikePlaySection';
 import Footer from '@/components/shared/Footer';
 
-export const dynamic = "force-static"
-
-export const metadata: Metadata = {
-  title: 'Eklavya Pricing - Affordable Plans for Everyone',
-  description: 'Choose the perfect Eklavya plan for your needs. Flexible, value-driven pricing options for students, teachers, and parents. Start your free trial today!',
-  keywords: ['pricing', 'plans', 'subscription', 'affordable education', 'free trial', 'educational pricing', 'value', 'flexible plans'],
-};
-
 export default function Pricing() {
+  const [selectedPlan, setSelectedPlan] = useState<'parents' | 'teachers'>('parents');
+
   return (
     <>
       <div className="relative bg-white overflow-hidden">
@@ -36,10 +31,10 @@ export default function Pricing() {
 
         
         {/* Plan Selector */}
-        <PlanSelector />
+        <PlanSelector selectedPlan={selectedPlan} onPlanChange={setSelectedPlan} />
         
         {/* Pricing Table */}
-        <PricingTable />
+        <PricingTable planType={selectedPlan} />
         
         {/* Learning That Feels Like Play Section */}
         <LearningThatFeelsLikePlaySection />
