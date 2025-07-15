@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { eklavyaLogo } from "@/assets";
 
 const links = [
@@ -16,6 +16,12 @@ const links = [
 
 function Header() {
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleCreateAccount = () => {
+    router.push('/welcome');
+  };
+
   return (
     <header 
       className="bg-white"
@@ -103,6 +109,7 @@ function Header() {
               fontWeight: 600,
               lineHeight: "16px",
             }}
+            onClick={handleCreateAccount}
           >
             Create free account
           </button>

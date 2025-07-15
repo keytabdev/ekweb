@@ -91,3 +91,8 @@ export { default as schoolBackpack } from './pricing/backpack.png';
 export { default as trophy } from './pricing/trophy.png';
 export { default as rocket3d } from './pricing/rocket.png';
 export { default as stackBooksLightbulb } from './pricing/books.png';
+export { default as checkCircle } from './pricing/check-circle.svg';
+export { default as crossCircle } from './pricing/cross-circle.svg';
+export { default as studentIcon } from './welcome/student.svg';
+export { default as parentIcon } from './welcome/parent.svg';
+export { default as teacherIcon } from './welcome/teacher.svg';
