@@ -3,9 +3,9 @@ import { earningBg, trophyImage } from '@/assets';
 
 export default function TheEarningLearningSystemSection() {
   return (
-    <section className="py-32 bg-white">
+    <section className="pt-40 pb-32 bg-white">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center -mb-8">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             The Earning Learning System: Turning Knowledge into Rewards
           </h2>
@@ -30,9 +30,9 @@ export default function TheEarningLearningSystemSection() {
                 <Image 
                   src={trophyImage} 
                   alt="Trophy" 
-                  width={280}
-                  height={280}
-                  className="object-contain w-[clamp(180px,19.4vw,280px)] h-auto"
+                  width={308}
+                  height={308}
+                  className="object-contain w-[clamp(198px,21.34vw,308px)] h-auto"
                 />
               </div>
               
