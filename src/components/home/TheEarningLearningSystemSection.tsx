@@ -69,10 +69,10 @@ export default function TheEarningLearningSystemSection() {
               </div>
               
               {/* Step 5: Play & Explore - Left Container */}
-              <div className="absolute top-[43%] w-[clamp(140px,13.9vw,200px)] text-center" style={{ left: 'clamp(8%, 12.5vw, 12.5%)' }}>
+              <div className="absolute top-[43%] w-[clamp(160px,16vw,240px)] text-center" style={{ left: 'clamp(6%, 10vw, 11.5%)' }}>
                 <div className="text-[#1A1A1A] font-semibold whitespace-nowrap mb-1" style={{ fontSize: 'clamp(14px, 1.46vw, 18px)', lineHeight: 'clamp(16px, 1.67vw, 21px)' }}>5. Play & Explore</div>
                 <p className="text-[#1A1A1A] font-normal" style={{ fontSize: 'clamp(12px, 1.25vw, 15px)', lineHeight: 'clamp(14px, 1.53vw, 18px)' }}>
-                  Use their earned game time to dive into exciting adventures that blend fun with learning.
+                  Use their earned game time to dive into exciting adventures that blend fun with learning <br/> magic.
                 </p>
               </div>
             </div>
