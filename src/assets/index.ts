@@ -96,3 +96,9 @@ export { default as crossCircle } from './pricing/cross-circle.svg';
 export { default as studentIcon } from './welcome/student.svg';
 export { default as parentIcon } from './welcome/parent.svg';
 export { default as teacherIcon } from './welcome/teacher.svg';
+
+// Auth flow SVGs
+export { default as grassSvg } from './auth/grass.svg';
+export { default as authBgSvg } from './auth/auth-bg.svg';
+export { default as verificationSuccessfulSvg } from './auth/Verification successful.svg';
+export { default as socialMediaLogoSvg } from './auth/Social media logo.svg';

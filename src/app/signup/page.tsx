@@ -2,11 +2,14 @@
 
 import React, { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import AuthBackground from '@/components/shared/AuthBackground';
 
 export default function SignupPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const role = searchParams.get('role') || 'parent';
+  const [selectedRole, setSelectedRole] = useState(searchParams.get('role') || 'parent');
+
+
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -17,9 +20,13 @@ export default function SignupPage() {
     confirmPassword: ''
   });
 
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [showCountryDropdown, setShowCountryDropdown] = useState(false);
+  const [showRoleDropdown, setShowRoleDropdown] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState({
     code: '+91',
     flag: 'in',
@@ -39,94 +46,142 @@ export default function SignupPage() {
     { code: '+34', flag: 'es', name: 'Spain' }
   ];
 
+  const roleOptions = [
+    { value: 'parent', label: 'Parent' },
+    { value: 'student', label: 'Student' },
+    { value: 'teacher', label: 'Teacher' }
+  ];
+
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
     }));
+    
+    // Clear error when user starts typing
+    if (errors[field]) {
+      setErrors(prev => ({
+        ...prev,
+        [field]: ''
+      }));
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleBlur = (field: string) => {
+    // Skip validation in testing mode
+    setErrors(prev => ({ ...prev, [field]: '' }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    
+    try {
+      // Clear all errors
+      setErrors({});
+      
+      // Handle form submission
+      console.log('Form submitted:', formData);
+      
+      // Here you would typically make an API call
+      // await signupUser(formData);
+      
+      // Redirect to email verification page with email or default
+      const email = formData.email || 'test@example.com';
+      router.push(`/verify-email?email=${encodeURIComponent(email)}`);
+      
+    } catch (error) {
+      console.error('Submission error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleGoBack = () => {
     router.back();
   };
 
-  const getRoleTitle = () => {
-    switch (role) {
-      case 'student':
-        return 'Register as a Student';
-      case 'teacher':
-        return 'Register as a Teacher';
-      default:
-        return 'Register as a Parent';
-    }
-  };
-
   return (
     <div className="min-h-screen bg-green-700 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute inset-0">
-        {/* Large decorative shapes */}
-        <div className="absolute left-10 top-20 w-[624px] h-[654px] bg-[#5FB678] rounded-full opacity-20"></div>
-        <div className="absolute left-10 top-56 w-[624px] h-[520px] bg-[#5FB678] rounded-full opacity-20"></div>
-
-        {/* Small decorative elements */}
-        <div className="absolute left-[567px] top-[281px] w-11 h-20 bg-[#5FB678] rounded opacity-30"></div>
-        <div className="absolute left-[567px] top-[281px] w-11 h-20 bg-[#5FB678] rounded opacity-30"></div>
-        <div className="absolute left-[552px] top-[216px] w-36 h-28 bg-[#5FB678] rounded opacity-30"></div>
-        <div className="absolute left-[552px] top-[216px] w-36 h-28 bg-[#5FB678] rounded opacity-30"></div>
-        <div className="absolute left-[434px] top-[130px] w-2.5 h-4 bg-[#5FB678] rounded opacity-30"></div>
-        <div className="absolute left-[434px] top-[130px] w-2.5 h-4 bg-[#5FB678] rounded opacity-30"></div>
-
-        {/* Blurred circles */}
-        <div className="absolute left-[217px] top-[357px] w-72 h-72 bg-white/50 rounded-full blur-[100px] mix-blend-soft-light"></div>
-        <div className="absolute left-[246px] top-[386px] w-60 h-60 bg-white/50 rounded-full blur-[100px] mix-blend-soft-light"></div>
-        <div className="absolute left-[277px] top-[417px] w-44 h-44 bg-white/50 rounded-full blur-[100px] mix-blend-soft-light"></div>
-        <div className="absolute left-[304px] top-[444px] w-32 h-32 bg-white/50 rounded-full blur-[100px] mix-blend-soft-light"></div>
-
-        {/* Decorative images */}
-        <div className="absolute left-[228px] top-[399px] w-72 h-48 bg-white/20 rounded-lg"></div>
-        <div className="absolute left-[125px] top-[402px] w-24 h-16 bg-white/20 rounded-lg"></div>
-        <div className="absolute left-[461px] top-[296px] w-24 h-16 bg-white/20 rounded-lg transform rotate-[22.85deg]"></div>
-        <div className="absolute left-[228px] top-[223px] w-40 h-40 bg-white/20 rounded-lg"></div>
-      </div>
+      <AuthBackground />
 
       {/* Back button */}
       <div className="relative z-10 p-8">
         <button
           onClick={handleGoBack}
-          className="inline-flex items-center gap-2 text-white text-2xl font-bold underline"
+          className="inline-flex items-center gap-2 text-white text-2xl font-bold hover:text-gray-200 transition-colors"
         >
-          <div className="w-7 h-0.5 bg-white"></div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M19 12H5M12 19L5 12L12 5"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
           Back
         </button>
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 flex justify-center items-center min-h-screen px-4 py-8">
+      <div className="relative z-10 flex justify-end items-start pt-16 pr-16 lg:pt-20 lg:pr-20 xl:pt-24 xl:pr-24 2xl:pt-32 2xl:pr-32">
         <div className="w-full max-w-2xl bg-white rounded-3xl shadow-2xl p-8 lg:p-12">
           <form onSubmit={handleSubmit} className="space-y-8">
             {/* Header */}
-            <div className="flex justify-center items-center gap-2">
+            <div className="flex justify-center items-center gap-2 relative">
               <div className="text-center text-zinc-800 text-3xl font-medium font-['Graphie']">
-                {getRoleTitle()}
+                Register as a{' '}
+                <button
+                  type="button"
+                  onClick={() => setShowRoleDropdown(!showRoleDropdown)}
+                  className="inline-flex items-center gap-2 hover:text-green-700 transition-colors"
+                >
+                  {roleOptions.find(r => r.value === selectedRole)?.label || 'Parent'}
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M6 9L12 15L18 9"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
               </div>
-              <div className="w-12 h-12 flex items-center justify-center">
-                <svg width="24" height="14" viewBox="0 0 24 14" fill="none">
-                  <path
-                    d="M2 2L12 12L22 2"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
+              
+              {/* Role Dropdown */}
+              {showRoleDropdown && (
+                <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
+                  {roleOptions.map((roleOption) => (
+                    <button
+                      key={roleOption.value}
+                      type="button"
+                      onClick={() => {
+                        setSelectedRole(roleOption.value);
+                        setShowRoleDropdown(false);
+                      }}
+                      className={`w-full flex items-center px-4 py-3 text-left hover:bg-gray-50 transition-colors ${
+                        selectedRole === roleOption.value ? 'bg-green-50 text-green-700' : 'text-zinc-800'
+                      }`}
+                    >
+                      {roleOption.label}
+                      {selectedRole === roleOption.value && (
+                        <svg className="ml-auto w-4 h-4" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M20 6L9 17L4 12"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Google Signup Button */}
@@ -208,8 +263,14 @@ export default function SignupPage() {
                       onChange={(e) =>
                         handleInputChange("firstName", e.target.value)
                       }
-                      className="w-full h-12 pl-12 pr-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+                      onBlur={() => handleBlur("firstName")}
+                      className={`w-full h-12 pl-12 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent ${
+                        errors.firstName ? 'border-red-500' : 'border-neutral-300'
+                      }`}
                     />
+                    {errors.firstName && (
+                      <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
+                    )}
                   </div>
                 </div>
                 <div className="flex-1">
@@ -223,8 +284,14 @@ export default function SignupPage() {
                     onChange={(e) =>
                       handleInputChange("lastName", e.target.value)
                     }
-                    className="w-full h-12 px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+                    onBlur={() => handleBlur("lastName")}
+                    className={`w-full h-12 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent ${
+                      errors.lastName ? 'border-red-500' : 'border-neutral-300'
+                    }`}
                   />
+                  {errors.lastName && (
+                    <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
+                  )}
                 </div>
               </div>
 
@@ -261,8 +328,14 @@ export default function SignupPage() {
                     placeholder="Type here"
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
-                    className="w-full h-12 pl-12 pr-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+                    onBlur={() => handleBlur("email")}
+                    className={`w-full h-12 pl-12 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent ${
+                      errors.email ? 'border-red-500' : 'border-neutral-300'
+                    }`}
                   />
+                  {errors.email && (
+                    <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                  )}
                 </div>
               </div>
 
@@ -272,7 +345,7 @@ export default function SignupPage() {
                   Phone number
                 </label>
                 <div className="relative">
-                  <div className="absolute left-4 top-1/2 transform -translate-y-1/2 flex items-center gap-4">
+                  <div className="absolute left-4 top-1/2 transform -translate-y-1/2 flex items-center gap-1 z-10">
                     <button
                       type="button"
                       onClick={() => setShowCountryDropdown(!showCountryDropdown)}
@@ -281,10 +354,15 @@ export default function SignupPage() {
                       <img 
                         src={`https://flagcdn.com/w20/${selectedCountry.flag}.png`}
                         alt={`${selectedCountry.name} flag`}
-                        className="w-5 h-4 object-cover rounded-sm"
+                        className="w-10 h-6 object-cover rounded cursor-pointer"
                       />
-                      <span className="text-zinc-600 text-base font-['Graphie']">{selectedCountry.code}</span>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setShowCountryDropdown(!showCountryDropdown)}
+                      className="flex items-center"
+                    >
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                         <path
                           d="M6 9L12 15L18 9"
                           stroke="currentColor"
@@ -296,9 +374,28 @@ export default function SignupPage() {
                     </button>
                   </div>
                   
+                  <div className="relative">
+                    <div className="absolute left-20 top-1/2 transform -translate-y-1/2 text-zinc-400 text-base font-['Graphie']">
+                      {selectedCountry.code}
+                    </div>
+                    <input
+                      type="tel"
+                      placeholder="Enter phone number"
+                      value={formData.phone}
+                      onChange={(e) => handleInputChange("phone", e.target.value)}
+                      onBlur={() => handleBlur("phone")}
+                      className={`w-full h-14 pl-28 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent ${
+                        errors.phone ? 'border-red-500' : 'border-stone-500/30'
+                      }`}
+                    />
+                    {errors.phone && (
+                      <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                    )}
+                  </div>
+                  
                   {/* Country Dropdown */}
                   {showCountryDropdown && (
-                    <div className="absolute left-4 top-full mt-1 w-64 bg-white border border-gray-300 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
+                    <div className="absolute left-4 top-16 w-64 bg-white border border-gray-300 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
                       {countries.map((country, index) => (
                         <button
                           key={index}
@@ -312,22 +409,13 @@ export default function SignupPage() {
                           <img 
                             src={`https://flagcdn.com/w20/${country.flag}.png`}
                             alt={`${country.name} flag`}
-                            className="w-5 h-4 object-cover rounded-sm"
+                            className="w-8 h-6 object-cover rounded"
                           />
-                          <span className="text-zinc-600 text-base font-['Graphie']">{country.code}</span>
                           <span className="text-zinc-800 text-sm font-['Graphie']">{country.name}</span>
                         </button>
                       ))}
                     </div>
                   )}
-                  
-                  <input
-                    type="tel"
-                    placeholder="Enter phone number"
-                    value={formData.phone}
-                    onChange={(e) => handleInputChange("phone", e.target.value)}
-                    className="w-full h-14 pl-32 pr-4 py-2 border border-stone-500/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
-                  />
                 </div>
               </div>
 
@@ -340,8 +428,38 @@ export default function SignupPage() {
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="text-stone-500/80 text-base font-normal font-['Graphie']"
+                    className="text-stone-500/80 text-base font-normal font-['Graphie'] flex items-center gap-2"
                   >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      {showPassword ? (
+                        <path
+                          d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      ) : (
+                        <>
+                          <path
+                            d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="3"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </>
+                      )}
+                    </svg>
                     {showPassword ? "Show" : "Hide"}
                   </button>
                 </div>
@@ -389,8 +507,14 @@ export default function SignupPage() {
                     onChange={(e) =>
                       handleInputChange("password", e.target.value)
                     }
-                    className="w-full h-12 pl-12 pr-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+                    onBlur={() => handleBlur("password")}
+                    className={`w-full h-12 pl-12 pr-8 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent ${
+                      errors.password ? 'border-red-500' : 'border-neutral-300'
+                    }`}
                   />
+                  {errors.password && (
+                    <p className="text-red-500 text-sm mt-1">{errors.password}</p>
+                  )}
                 </div>
                 <p className="text-stone-500 text-sm font-normal font-['Graphie'] mt-1">
                   Use 8 or more characters with a mix of letters, numbers &
@@ -407,8 +531,38 @@ export default function SignupPage() {
                   <button
                     type="button"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                    className="text-stone-500/80 text-base font-normal font-['Graphie']"
+                    className="text-stone-500/80 text-base font-normal font-['Graphie'] flex items-center gap-2"
                   >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      {showConfirmPassword ? (
+                        <path
+                          d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      ) : (
+                        <>
+                          <path
+                            d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="3"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </>
+                      )}
+                    </svg>
                     {showConfirmPassword ? "Show" : "Hide"}
                   </button>
                 </div>
@@ -456,8 +610,14 @@ export default function SignupPage() {
                     onChange={(e) =>
                       handleInputChange("confirmPassword", e.target.value)
                     }
-                    className="w-full h-12 pl-12 pr-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+                    onBlur={() => handleBlur("confirmPassword")}
+                    className={`w-full h-12 pl-12 pr-8 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent ${
+                      errors.confirmPassword ? 'border-red-500' : 'border-neutral-300'
+                    }`}
                   />
+                  {errors.confirmPassword && (
+                    <p className="text-red-500 text-sm mt-1">{errors.confirmPassword}</p>
+                  )}
                 </div>
               </div>
             </div>
@@ -476,9 +636,14 @@ export default function SignupPage() {
               </div>
               <button
                 type="submit"
-                className="w-64 h-16 bg-green-700 hover:bg-green-800 rounded-[40px] text-white text-2xl font-medium font-['Graphie'] transition-colors"
+                disabled={isSubmitting}
+                className={`w-64 h-16 rounded-[40px] text-white text-2xl font-medium font-['Graphie'] transition-colors ${
+                  isSubmitting 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-eklavya-dark-green hover:bg-green-800'
+                }`}
               >
-                Sign up
+                {isSubmitting ? 'Signing up...' : 'Sign up'}
               </button>
             </div>
           </form>
