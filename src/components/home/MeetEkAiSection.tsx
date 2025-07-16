@@ -72,7 +72,7 @@ export default function MeetEkAiSection() {
                 }}
               >
                 <span style={{ fontWeight: 700 }}>Meet AskEk,</span>
-                <span style={{ fontWeight: 400 }}> your 24/7 AI Buddy to answer all your questions, help with homework, and inspire curiosity.</span>
+                <span style={{ fontWeight: 400 }}> your 24/7 AI <br/>Buddy to answer all your questions, help with homework, and inspire curiosity.</span>
               </h2>
             </div>
 
@@ -85,7 +85,7 @@ export default function MeetEkAiSection() {
         <div 
           className="absolute top-1/2 z-30"
           style={{ 
-            left: 'calc(50% + 595.5px - 119px - 450px)', // Center + half container width (595.5px) - 10% of container width (119px) - half chatbot width (250px)
+            left: 'calc(50% + 595.5px - 126px - 350px)', // Center + half container width (595.5px) - 10% of container width (119px) - half chatbot width (250px) - 100px offset
             transform: 'translateY(-37.5%)'
           }}
         >

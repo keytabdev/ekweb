@@ -72,7 +72,7 @@ export default function WhatMakesEklavyaDifferentSection() {
             }}
           >
             {/* For Kids Content - Left Side */}
-            <div className="absolute left-[5%] top-[15%] w-[40%] p-6">
+            <div className="absolute left-[4%] top-[15%] w-[calc(40%+60px)] p-6">
               <h3 
                 className="mb-6"
                 style={{
@@ -81,7 +81,7 @@ export default function WhatMakesEklavyaDifferentSection() {
                   fontSize: '21px',
                   fontStyle: 'normal',
                   fontWeight: 600,
-                  lineHeight: '24px'
+                  lineHeight: '32px',
                 }}
               >
                 For Kids: They Think They&apos;re Playing
@@ -92,12 +92,13 @@ export default function WhatMakesEklavyaDifferentSection() {
                   className="flex items-start"
                   style={{
                     color: '#1A1A1A',
-                    
-                    fontSize: '21px',
+                    fontFamily: 'Graphie, sans-serif',
+                    fontSize: '19px',
                     fontStyle: 'normal',
                     fontWeight: 400,
-                    lineHeight: '28px',
-                    letterSpacing: '0.21px'
+                    lineHeight: '36px',
+                    letterSpacing: '1px',
+
                   }}
                 >
                   <span className="mr-3 mt-1">•</span>
@@ -107,12 +108,13 @@ export default function WhatMakesEklavyaDifferentSection() {
                   className="flex items-start"
                   style={{
                     color: '#1A1A1A',
-                    
-                    fontSize: '21px',
+                    fontFamily: 'Graphie, sans-serif',
+                    fontSize: '19px',
                     fontStyle: 'normal',
                     fontWeight: 400,
-                    lineHeight: '28px',
-                    letterSpacing: '0.21px'
+                    lineHeight: '26px',
+                    letterSpacing: '1px',
+
                   }}
                 >
                   <span className="mr-3 mt-1">•</span>
@@ -122,12 +124,13 @@ export default function WhatMakesEklavyaDifferentSection() {
                   className="flex items-start"
                   style={{
                     color: '#1A1A1A',
-                    
-                    fontSize: '21px',
+                    fontFamily: 'Graphie, sans-serif',
+                    fontSize: '19px',
                     fontStyle: 'normal',
                     fontWeight: 400,
-                    lineHeight: '28px',
-                    letterSpacing: '0.21px'
+                    lineHeight: '26px',
+                    letterSpacing: '1px',
+
                   }}
                 >
                   <span className="mr-3 mt-1">•</span>
@@ -137,12 +140,13 @@ export default function WhatMakesEklavyaDifferentSection() {
                   className="flex items-start"
                   style={{
                     color: '#1A1A1A',
-                    
-                    fontSize: '21px',
+                    fontFamily: 'Graphie, sans-serif',
+                    fontSize: '19px',
                     fontStyle: 'normal',
                     fontWeight: 400,
-                    lineHeight: '28px',
-                    letterSpacing: '0.21px'
+                    lineHeight: '26px',
+                    letterSpacing: '1px',
+
                   }}
                 >
                   <span className="mr-3 mt-1">•</span>
@@ -152,7 +156,7 @@ export default function WhatMakesEklavyaDifferentSection() {
             </div>
 
             {/* For Parents & Teachers Content - Right Side */}
-            <div className="absolute right-[5%] top-[15%] w-[40%] p-6">
+            <div className="absolute right-[0%] top-[15%] w-[calc(40%+60px)] p-6">
               <h3 
                 className="mb-6"
                 style={{
@@ -161,7 +165,7 @@ export default function WhatMakesEklavyaDifferentSection() {
                   fontSize: '21px',
                   fontStyle: 'normal',
                   fontWeight: 600,
-                  lineHeight: '24px'
+                  lineHeight: '26px'
                 }}
               >
                 For Parents & Teachers: You Know They&apos;re Learning
@@ -172,27 +176,29 @@ export default function WhatMakesEklavyaDifferentSection() {
                   className="flex items-start"
                   style={{
                     color: '#1A1A1A',
-                    
-                    fontSize: '21px',
+                    fontFamily: 'Graphie, sans-serif',
+                    fontSize: '19px',
                     fontStyle: 'normal',
                     fontWeight: 400,
-                    lineHeight: '28px',
-                    letterSpacing: '0.21px'
+                    lineHeight: '36px',
+                    letterSpacing: '1px',
+
                   }}
                 >
                   <span className="mr-3 mt-1">•</span>
-                  <span>Curriculum-aligned lessons ensure they stay on track with school requirements</span>
+                  <span>Curriculum-aligned lessons ensure they stay <br /> on track with school requirements</span>
                 </li>
                 <li 
                   className="flex items-start"
                   style={{
                     color: '#1A1A1A',
-                    
-                    fontSize: '21px',
+                    fontFamily: 'Graphie, sans-serif',
+                    fontSize: '19px',
                     fontStyle: 'normal',
                     fontWeight: 400,
-                    lineHeight: '28px',
-                    letterSpacing: '0.21px'
+                    lineHeight: '26px',
+                    letterSpacing: '1px',
+
                   }}
                 >
                   <span className="mr-3 mt-1">•</span>
@@ -202,12 +208,13 @@ export default function WhatMakesEklavyaDifferentSection() {
                   className="flex items-start"
                   style={{
                     color: '#1A1A1A',
-                    
-                    fontSize: '21px',
+                    fontFamily: 'Graphie, sans-serif',
+                    fontSize: '19px',
                     fontStyle: 'normal',
                     fontWeight: 400,
-                    lineHeight: '28px',
-                    letterSpacing: '0.21px'
+                    lineHeight: '36px',
+                    letterSpacing: '1px',
+
                   }}
                 >
                   <span className="mr-3 mt-1">•</span>
