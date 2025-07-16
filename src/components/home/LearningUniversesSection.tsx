@@ -121,9 +121,9 @@ export default function LearningUniversesSection() {
                 <Image 
                   src={quizImage} 
                   alt="Quizzes" 
-                  width={160} 
-                  height={160} 
-                  className="object-contain w-full h-full"
+                  width={128} 
+                  height={128} 
+                  className="object-contain w-4/5 h-4/5"
                 />
               </div>
             </div>
