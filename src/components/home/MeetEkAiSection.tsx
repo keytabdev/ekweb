@@ -72,7 +72,7 @@ export default function MeetEkAiSection() {
                 }}
               >
                 <span style={{ fontWeight: 700 }}>Meet AskEk,</span>
-                <span style={{ fontWeight: 400 }}> your 24/7 AI Buddy to answer all your questions, help with homework, and inspire curiosity.</span>
+                <span style={{ fontWeight: 400 }}> your 24/7 AI <br/>Buddy to answer all your questions, help with homework, and inspire curiosity.</span>
               </h2>
             </div>
 
