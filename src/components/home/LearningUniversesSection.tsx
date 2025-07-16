@@ -41,13 +41,15 @@ export default function LearningUniversesSection() {
         <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
           <div className="text-center space-y-4">
             <div className="flex justify-center mb-4">
-              <Image 
-                src={videosImage} 
-                alt="Videos" 
-                width={160} 
-                height={160} 
-                className="object-contain"
-              />
+              <div className="w-40 h-40 flex items-center justify-center">
+                <Image 
+                  src={videosImage} 
+                  alt="Videos" 
+                  width={160} 
+                  height={160} 
+                  className="object-contain w-full h-full"
+                />
+              </div>
             </div>
             <h3 className="text-xl font-semibold text-gray-900">Videos</h3>
             <p className="text-gray-600 text-sm">
@@ -58,13 +60,15 @@ export default function LearningUniversesSection() {
 
           <div className="text-center space-y-4">
             <div className="flex justify-center mb-4">
-              <Image 
-                src={gamesImage} 
-                alt="Games" 
-                width={160} 
-                height={160} 
-                className="object-contain"
-              />
+              <div className="w-40 h-40 flex items-center justify-center">
+                <Image 
+                  src={gamesImage} 
+                  alt="Games" 
+                  width={160} 
+                  height={160} 
+                  className="object-contain w-full h-full"
+                />
+              </div>
             </div>
             <h3 className="text-xl font-semibold text-gray-900">Games</h3>
             <p className="text-gray-600 text-sm">
@@ -75,13 +79,15 @@ export default function LearningUniversesSection() {
 
           <div className="text-center space-y-4">
             <div className="flex justify-center mb-4">
-              <Image 
-                src={booksImage} 
-                alt="Books" 
-                width={160} 
-                height={160} 
-                className="object-contain"
-              />
+              <div className="w-40 h-40 flex items-center justify-center">
+                <Image 
+                  src={booksImage} 
+                  alt="Books" 
+                  width={160} 
+                  height={160} 
+                  className="object-contain w-full h-full"
+                />
+              </div>
             </div>
             <h3 className="text-xl font-semibold text-gray-900">Books</h3>
             <p className="text-gray-600 text-sm">
@@ -92,13 +98,15 @@ export default function LearningUniversesSection() {
 
           <div className="text-center space-y-4">
             <div className="flex justify-center mb-4">
-              <Image 
-                src={codeImage} 
-                alt="Coding" 
-                width={160} 
-                height={160} 
-                className="object-contain"
-              />
+              <div className="w-40 h-40 flex items-center justify-center">
+                <Image 
+                  src={codeImage} 
+                  alt="Coding" 
+                  width={160} 
+                  height={160} 
+                  className="object-contain w-full h-full"
+                />
+              </div>
             </div>
             <h3 className="text-xl font-semibold text-gray-900">Coding</h3>
             <p className="text-gray-600 text-sm">
@@ -109,13 +117,15 @@ export default function LearningUniversesSection() {
 
           <div className="text-center space-y-4">
             <div className="flex justify-center mb-4">
-              <Image 
-                src={quizImage} 
-                alt="Quizzes" 
-                width={160} 
-                height={160} 
-                className="object-contain"
-              />
+              <div className="w-40 h-40 flex items-center justify-center">
+                <Image 
+                  src={quizImage} 
+                  alt="Quizzes" 
+                  width={160} 
+                  height={160} 
+                  className="object-contain w-full h-full"
+                />
+              </div>
             </div>
             <h3 className="text-xl font-semibold text-gray-900">Quizzes</h3>
             <p className="text-gray-600 text-sm">
