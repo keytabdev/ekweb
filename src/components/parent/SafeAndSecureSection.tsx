@@ -22,7 +22,7 @@ export default function SafeAndSecureSection() {
             A Safe and Secure Space for Growth
           </h2>
           <p className="text-lg md:text-xl text-gray-600">
-            Education Without Interruptions, Distractions, yet so Fun
+            Education Without Interruptions, Distractions, yet so fun
           </p>
         </div>
 
