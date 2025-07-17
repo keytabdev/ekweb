@@ -38,7 +38,7 @@ export default function ThrivingClassroomSection() {
 
         <div className="flex justify-center items-center gap-[60px] w-[1152px] h-[250px] flex-shrink-0 mx-auto mb-12">
           <div className="flex flex-col items-center gap-2 h-[166px] px-10 py-[30px] rounded-xl border-t border-[#DCF6D6] bg-white shadow-[1px_7.11px_6px_0px_rgba(78,203,113,0.16)]">
-            <h3 className="text-[24px] font-semibold leading-[26px] text-[#38393E] capitalize whitespace-nowrap mb-4 font-graphie">
+            <h3 className="text-[24px] font-normal leading-[26px] text-[#38393E] capitalize whitespace-nowrap mb-4 font-graphie">
               Safe Learning Environment
             </h3>
             <p className="text-[17px] font-normal leading-[24px] text-[#38393E] text-center font-graphie">
@@ -47,7 +47,7 @@ export default function ThrivingClassroomSection() {
           </div>
 
           <div className="flex flex-col items-center gap-2 h-[166px] px-10 py-[30px] rounded-xl border-t border-[#DCF6D6] bg-white shadow-[1px_7.11px_6px_0px_rgba(78,203,113,0.16)]">
-            <h3 className="text-[24px] font-semibold leading-[26px] text-[#38393E] capitalize whitespace-nowrap mb-4 font-graphie">
+            <h3 className="text-[24px] font-normal leading-[26px] text-[#38393E] capitalize whitespace-nowrap mb-4 font-graphie">
               Parental Collaboration
             </h3>
             <p className="text-[17px] font-normal leading-[24px] text-[#38393E] text-center font-graphie">
@@ -57,7 +57,7 @@ export default function ThrivingClassroomSection() {
           </div>
 
           <div className="flex flex-col items-center gap-2 h-[166px] px-10 py-[30px] rounded-xl border-t border-[#DCF6D6] bg-white shadow-[1px_7.11px_6px_0px_rgba(78,203,113,0.16)]">
-            <h3 className="text-[24px] font-semibold leading-[26px] text-[#38393E] capitalize whitespace-nowrap mb-4 font-graphie">
+            <h3 className="text-[24px] font-normal leading-[26px] text-[#38393E] capitalize whitespace-nowrap mb-4 font-graphie">
               Offline Access
             </h3>
             <p className="text-[17px] font-normal leading-[24px] text-[#38393E] text-center font-graphie">

@@ -34,44 +34,51 @@ export default function MonitorGrowthSection() {
               fill
               className="object-contain"
             />
-            
+
             {/* Text overlays positioned over the containers */}
             {/* Real-Time Dashboards - Left */}
-            <div className="absolute left-[4%] md:left-[1%] lg:left-[0%] xl:left-[2%] top-[55%] transform -translate-y-1/2 
+            <div
+              className="absolute left-[4%] md:left-[1%] lg:left-[0%] xl:left-[2%] top-[55%] transform -translate-y-1/2 
                            w-[25%] md:w-[28%] lg:w-[26%] xl:w-[24%] 
-                           flex flex-col items-center justify-center px-1 md:px-3 lg:px-4 py-2 md:py-4 lg:py-6 z-10">
+                           flex flex-col items-center justify-center px-1 md:px-3 lg:px-4 py-2 md:py-4 lg:py-6 z-10"
+            >
               <h3 className="text-[24px] text-[#7E15DC] font-semibold mb-1 md:mb-3 text-center whitespace-nowrap leading-[26px] capitalize font-graphie">
                 Real-Time Dashboards
               </h3>
               <p className="text-gray-700 text-center text-[10px] md:text-sm lg:text-base leading-tight md:leading-snug font-graphie">
-                Track student performance at a glance, identifying strengths
-                and areas needing improvement.
+                Track student performance at <br /> a glance, identifying their{" "}
+                <br /> strengths and areas needing <br /> improvement.
               </p>
             </div>
 
             {/* Balanced Skill Development - Center */}
-            <div className="absolute left-1/2 top-[55%] transform -translate-x-1/2 -translate-y-1/2 
-                           w-[25%] md:w-[28%] lg:w-[24%] xl:w-[22%] 
-                           flex flex-col items-center justify-center px-1 md:px-3 lg:px-4 py-2 md:py-4 lg:py-6 z-10">
+            <div
+              className="absolute left-1/2 top-[55%] transform -translate-x-1/2 -translate-y-1/2 
+                           w-[25%] md:w-[28%] lg:w-[25%] xl:w-[24%] 
+                           flex flex-col items-center justify-center px-1 md:px-3 lg:px-4 py-2 md:py-4 lg:py-6 z-10"
+            >
               <h3 className="text-[24px] text-[#159BDC] font-semibold mb-1 md:mb-3 text-center whitespace-nowrap leading-[26px] capitalize font-graphie">
                 Balanced Skill Development
               </h3>
               <p className="text-gray-700 text-center text-[10px] md:text-sm lg:text-base leading-tight md:leading-snug font-graphie">
-                Help students build confidence in weaker areas while
-                excelling in their strengths.
+                Help students build confidence in <br /> weaker areas while
+                excelling in their <br />
+                strengths.
               </p>
             </div>
 
             {/* Data-Driven Insights - Right */}
-            <div className="absolute right-[4%] md:right-[1%] lg:right-[0%] xl:right-[2%] top-[55%] transform -translate-y-1/2 
+            <div
+              className="absolute right-[4%] md:right-[1%] lg:right-[0%] xl:right-[2%] top-[55%] transform -translate-y-1/2 
                            w-[25%] md:w-[28%] lg:w-[26%] xl:w-[24%] 
-                           flex flex-col items-center justify-center px-1 md:px-3 lg:px-4 py-2 md:py-4 lg:py-6 z-10">
+                           flex flex-col items-center justify-center px-1 md:px-3 lg:px-4 py-2 md:py-4 lg:py-6 z-10"
+            >
               <h3 className="text-[24px] text-[#DC9215] font-semibold mb-1 md:mb-3 text-center whitespace-nowrap leading-[26px] capitalize font-graphie">
                 Data-Driven Insights
               </h3>
               <p className="text-gray-700 text-center text-[10px] md:text-sm lg:text-base leading-tight md:leading-snug font-graphie">
-                Use actionable analytics to refine lessons and maximize
-                learning outcomes.
+                Use actionable analytics to <br /> refine lessons and <br /> maximize learning
+                outcomes.
               </p>
             </div>
           </div>
