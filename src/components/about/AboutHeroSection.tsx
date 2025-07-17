@@ -148,7 +148,7 @@ export default function AboutHeroSection() {
             style={{
               width: "384px",
               height: "630px",
-              transform: "rotate(-4.219deg)",
+              transform: "rotate(-2deg)",
               flexShrink: 0,
               bottom: "0",
               left: "0",
