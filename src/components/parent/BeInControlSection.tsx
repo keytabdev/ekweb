@@ -4,9 +4,9 @@ import { controlBgImage } from '@/assets'
 
 export default function BeInControlSection() {
   return (
-    <section className="pb-20 xl:-mt-40 2xl:-mt-10 md:py-32 bg-white relative overflow-hidden min-h-[700px] md:min-h-[1050px]">
+    <section className="pb-[-100px] xl:-mt-40 2xl:-mt-10 pt-30 bg-white relative overflow-hidden min-h-[900px]">
       {/* Background SVG */}
-      <div className="absolute -top-40 w-full h-full">
+      <div className="absolute 2xl:-top-30 xl:-top-40 w-full h-full">
         <Image
           src={controlBgImage}
           alt="Be in control background"
