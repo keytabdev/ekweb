@@ -4,7 +4,7 @@ import heroWave from '../../assets/about/hero-wave.svg';
 
 export default function AboutHeroSection() {
   return (
-    <section className="relative bg-white overflow-hidden py-20 min-h-screen">
+    <section className="relative bg-white overflow-visible 2xl:mt-5 xl:mt-[-26] 2xl:py-20 xl:py-10 min-h-screen">
       {/* Background SVG */}
       <div className="absolute inset-0 z-0 -mt-5">
         <Image
@@ -17,12 +17,12 @@ export default function AboutHeroSection() {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-center w-full max-w-[1440px] mx-auto px-[144px] py-12 gap-12">
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-start w-full max-w-[1440px] mx-auto px-[124px] py-12 gap-46">
         {/* Text */}
-        <div className="text-center md:text-left w-[612px]">
+        <div className="text-center md:text-left w-[612px] -mt-16">
           {/* First Row */}
           <div className="flex items-center mb-2 h-11">
-            <span className="text-[#C6B6E0] text-[32px] font-normal leading-tight">
+            <span className="text-[#C6B6E0] text-[32px] font-normal leading-tight font-graphie">
               Learning that
             </span>
             <Image
@@ -36,7 +36,7 @@ export default function AboutHeroSection() {
 
           {/* Second Row */}
           <div className="mb-6 h-24 relative">
-            <span className="text-[#C6B6E0] text-[55.49px] font-normal leading-[80px]">
+            <span className="text-[#C6B6E0] text-[55.49px] font-normal leading-[80px] font-graphie">
               Sparks{" "}
             </span>
             <span 
@@ -51,12 +51,12 @@ export default function AboutHeroSection() {
             >
               Curiosity,
             </span>
-            <div className="absolute -bottom-2 left-[244px]">
+            <div className="absolute -bottom-0 left-[204px]">
               <Image
                 src={curiosityUnderline}
                 alt="Curiosity Underline"
-                width={150}
-                height={10}
+                width={180}
+                height={20}
                 className="object-contain"
               />
             </div>
@@ -64,7 +64,7 @@ export default function AboutHeroSection() {
 
           {/* Third Row */}
           <div className="mb-6 h-24 relative">
-            <span className="text-[#C6B6E0] text-[55.49px] font-normal leading-[80px]">
+            <span className="text-[#C6B6E0] text-[55.49px] font-normal leading-[80px] font-graphie">
               Builds{" "}
             </span>
             <div className="inline-block relative">
@@ -98,10 +98,10 @@ export default function AboutHeroSection() {
 
           {/* Fourth Row */}
           <div className="mb-6 h-24">
-            <span className="text-[#C6B6E0] text-[55.49px] font-normal leading-[80px]">
+            <span className="text-[#C6B6E0] text-[55.49px] font-normal leading-[80px] font-graphie">
               and{" "}
             </span>
-            <span className="text-[#FFF] text-[69.49px] font-normal leading-[80px]">
+            <span className="text-[#FFF] text-[69.49px] font-normal leading-[80px] font-graphie">
               Feels Like Play.
             </span>
             <div className="mt-2 ml-[60%]">
@@ -115,11 +115,11 @@ export default function AboutHeroSection() {
             </div>
           </div>
 
-          <p className="text-[#FFF] text-[16px] font-normal leading-[20px] tracking-[0.16px] w-[588px] h-20 mb-6">
+          <p className="text-[#FFF] text-[16px] font-normal leading-[20px] tracking-[0.16px] w-[588px] h-20 mb-6 font-graphie">
             Imagine a world where learning is as exciting as unlocking a new
             game level, as rewarding as solving a mystery, and as limitless as a
             child&apos;s imagination.{" "}
-            <span className="text-[#FFF] text-[16px] font-semibold leading-[20px] tracking-[0.16px]">
+            <span className="text-[#FFF] text-[16px] font-semibold leading-[20px] italic tracking-[0.16px] font-graphie">
               That&apos;s the world we&apos;re building at Eklavya.
             </span>{" "}
             We believe that education shouldn&apos;t feel like a task—it should feel like discovery.
@@ -148,7 +148,7 @@ export default function AboutHeroSection() {
             style={{
               width: "384px",
               height: "630px",
-              transform: "rotate(-4.219deg)",
+              transform: "rotate(-2deg)",
               flexShrink: 0,
               bottom: "0",
               left: "0",

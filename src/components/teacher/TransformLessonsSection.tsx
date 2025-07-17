@@ -16,10 +16,10 @@ export default function TransformLessonsSection() {
       </div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl font-bold text-gray-800 mb-4 font-graphie">
             Transform Lessons Effortlessly
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 font-graphie">
             Innovative Tools to Simplify, Gamify, and Enrich Learning.
           </p>
         </div>
@@ -31,7 +31,7 @@ export default function TransformLessonsSection() {
               <div className="flex-shrink-0 relative w-[29px] h-0">
                 <DynamicBulletPoint textHeight={60} className="w-[29px] absolute left-0 top-0" />
               </div>
-              <div className="max-w-[500px] pl-[40px] overflow-visible">
+              <div className="max-w-[500px] pl-[0px] overflow-visible">
                 <h3 className="text-[24px] font-semibold text-[#38393E] mb-2 font-graphie leading-[26px] capitalize">
                   AI-Powered Lesson Creation
                 </h3>
@@ -47,7 +47,7 @@ export default function TransformLessonsSection() {
               <div className="flex-shrink-0 relative w-[29px] h-0">
                 <DynamicBulletPoint textHeight={80} className="w-[29px] absolute left-0 top-0" />
               </div>
-              <div className="max-w-[500px] pl-[40px] overflow-visible">
+              <div className="max-w-[500px] pl-[0px] overflow-visible">
                 <h3 className="text-[24px] font-semibold text-[#38393E] mb-2 font-graphie leading-[26px] capitalize">
                   Gamified Learning Made Simple
                 </h3>
@@ -64,7 +64,7 @@ export default function TransformLessonsSection() {
               <div className="flex-shrink-0 relative w-[29px] h-0">
                 <DynamicBulletPoint textHeight={70} className="w-[29px] absolute left-0 top-0" />
               </div>
-              <div className="max-w-[500px] pl-[40px] overflow-visible">
+              <div className="max-w-[500px] pl-[0px] overflow-visible">
                 <h3 className="text-[24px] font-semibold text-[#38393E] mb-2 font-graphie leading-[26px] capitalize">
                   Explainer Videos Made Easy
                 </h3>
@@ -80,7 +80,7 @@ export default function TransformLessonsSection() {
               <div className="flex-shrink-0 relative w-[29px] h-0">
                 <DynamicBulletPoint textHeight={80} className="w-[29px] absolute left-0 top-0" />
               </div>
-              <div className="max-w-[500px] pl-[40px] overflow-visible">
+              <div className="max-w-[500px] pl-[0px] overflow-visible">
                 <h3 className="text-[24px] font-semibold text-[#38393E] mb-2 font-graphie leading-[26px] capitalize">
                   Turn Lessons Into Comics
                 </h3>
@@ -97,7 +97,7 @@ export default function TransformLessonsSection() {
               <div className="flex-shrink-0 relative w-[29px] h-0">
                 <DynamicBulletPoint textHeight={60} className="w-[29px] absolute left-0 top-0" hideLine={true} />
               </div>
-              <div className="max-w-[500px] pl-[40px] overflow-visible">
+              <div className="max-w-[500px] pl-[0px] overflow-visible">
                 <h3 className="text-[24px] font-semibold text-[#38393E] mb-2 font-graphie leading-[26px] capitalize">
                   Built-In Library
                 </h3>

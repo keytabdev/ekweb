@@ -15,31 +15,33 @@ export default function TeacherHeroSection() {
           priority
         />
       </div>
-      <div className="relative z-10 h-full flex items-center w-full">
+      <div className="relative z-10 h-full flex items-center w-full 2xl:left-40 2xl:bottom-30 xl:left-0 xl:bottom-20">
         <div className="absolute left-[6%] sm:left-[8%] md:left-[9.6%] lg:left-[9.6%] max-w-2xl">
-          <h1 className="text-4xl font-semibold sm:text-5xl md:text-6xl lg:text-7xl xl:text-[69.49px] text-[#0A7183] italic mb-6 leading-tight">
-            Smarter 
+          <h1 className="text-4xl font-semibold sm:text-5xl md:text-6xl lg:text-7xl xl:text-[69.49px] text-[#0A7183] italic mb-6 leading-tight font-graphie">
+            Smarter Tools
             <br />
-            <span className="text-white">Teaching</span>
             <div className="relative">
               <Image
                 src={underlineWave}
                 alt="Underline Wave"
                 width={110}
                 height={10}
-                className="absolute -bottom-2 left-0 object-contain"
+                className="absolute -bottom-2 left-80 object-contain"
               />
             </div>
+            <span className="text-white not-italic">Inspired Teaching!</span>
           </h1>
-          <p className="text-lg md:text-xl text-white mb-8">
-            Transform your classroom with AI-powered tools that make teaching more effective and engaging.
+          <p className="text-lg md:text-xl text-black mb-8 font-graphie">
+            With Eklavya, you&apos;re not just teaching—you&apos;re creating impactful,
+            unforgettable learning experiences. Start your journey with us
+            today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-[#4ECB71] hover:bg-[#45b866] text-white font-semibold text-lg py-3 px-8 rounded-lg transition-colors">
+            <button className="bg-[#fff] text-[#0A7183] font-semibold text-lg py-3 px-8 rounded-lg transition-colors font-graphie">
               Get Started
             </button>
-            <button className="text-white hover:text-[#4ECB71] font-semibold text-lg py-3 px-6 rounded-lg transition-colors">
-              Learn More
+            <button className="text-black font-semibold text-lg py-3 px-6 rounded-lg transition-colors font-graphie">
+              Check free material
             </button>
           </div>
         </div>

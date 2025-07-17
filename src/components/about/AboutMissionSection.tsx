@@ -23,7 +23,7 @@ export default function AboutMissionSection() {
       </div>
       {/* Content */}
       <div className="relative z-20 flex flex-col items-center w-full text-center">
-        <h2 className="text-[#1A1A1A] text-center font-sans text-[48px] font-bold leading-[44px] tracking-[0.48px] mb-8">
+        <h2 className="text-[#1A1A1A] text-center font-sans text-[48px] font-bold leading-[44px] tracking-[0.48px] mb-8 font-graphie">
           Our Mission
         </h2>
         <div className="w-[936px] h-[98px] text-center mx-auto">

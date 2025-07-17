@@ -3,14 +3,13 @@ import { saveTimeBg, saveTime1Image, saveTime2Image, saveTime3Image } from '@/as
 
 export default function SaveTimeSection() {
   return (
-    <section className="relative overflow-hidden w-[1440px] h-[731px] flex-shrink-0 mx-auto my-16 xl:w-full xl:max-w-none">
+    <section className="relative overflow-hidden w-full h-[731px] flex-shrink-0 mx-auto my-16 xl:w-full max-w-none">
       {/* Save Time Background */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-[730px]  2xl:scale-x-120">
         <Image
           src={saveTimeBg}
           alt="Save Time Background"
-          fill
-          className="w-full h-full object-cover"
+          className="w-full h-[730px] 2xl:scale-x-112"
           priority
         />
       </div>
@@ -43,8 +42,8 @@ export default function SaveTimeSection() {
             <h3 className="text-white font-graphie text-[24px] font-semibold leading-[26px] capitalize mb-4 whitespace-nowrap">
               Automated Grading
             </h3>
-            <p className="text-white text-center">
-              Say goodbye to tedious assessments. Eklavya handles them for
+            <p className="text-white text-center font-graphie">
+              Say goodbye to tedious assessments, Eklavya <br /> handles them for
               you.
             </p>
           </div>
@@ -63,8 +62,8 @@ export default function SaveTimeSection() {
             <h3 className="text-white font-graphie text-[24px] font-semibold leading-[26px] capitalize mb-4 whitespace-nowrap">
               Simplified Lesson Planning
             </h3>
-            <p className="text-white text-center">
-              Plan entire terms in minutes with intuitive tools that keep you
+            <p className="text-white text-center font-graphie">
+              Plan entire terms in minutes <br /> with intuitive tools that keep <br /> you
               organized.
             </p>
           </div>
@@ -83,7 +82,7 @@ export default function SaveTimeSection() {
             <h3 className="text-white font-graphie text-[24px] font-semibold leading-[26px] capitalize mb-4 whitespace-nowrap">
               Pre-Made Resources
             </h3>
-            <p className="text-white text-center">
+            <p className="text-white text-center font-graphie">
               Leverage Eklavya&apos;s repository of ready-to-use lessons,
               activities and quizzes.
             </p>

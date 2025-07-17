@@ -21,7 +21,7 @@ export default function AboutWelcomeSection() {
       </div>
       
       {/* Button */}
-      <button className="inline-flex px-8 py-[12px] justify-center items-center gap-2 rounded-[50px] border-4 border-[#DF6934] bg-[#FFFBEA] text-[#DF6934] font-extrabold text-lg leading-tight hover:bg-[#FFF0D6] transition-all z-2">
+      <button className="inline-flex px-8 py-[12px] justify-center items-center gap-2 rounded-[50px] border-4 border-[#DF6934] bg-[#FFFBEA] text-[#DF6934] font-extrabold text-lg leading-tight hover:bg-[#FFF0D6] transition-all z-2 font-graphie">
         Try for free
       </button>
     </section>

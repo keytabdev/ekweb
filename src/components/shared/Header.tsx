@@ -18,7 +18,7 @@ function Header() {
   const pathname = usePathname();
   return (
     <header 
-      className="bg-white"
+      className="bg-white relative z-50"
       style={{ borderBottom: '1px #EDEDED solid' }}
     >
       <div
