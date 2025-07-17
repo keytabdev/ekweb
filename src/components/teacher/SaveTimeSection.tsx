@@ -3,14 +3,13 @@ import { saveTimeBg, saveTime1Image, saveTime2Image, saveTime3Image } from '@/as
 
 export default function SaveTimeSection() {
   return (
-    <section className="relative overflow-hidden w-[1440px] h-[731px] flex-shrink-0 mx-auto my-16 xl:w-full xl:max-w-none">
+    <section className="relative overflow-hidden w-full h-[731px] flex-shrink-0 mx-auto my-16 xl:w-full max-w-none">
       {/* Save Time Background */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-[730px]  2xl:scale-x-120">
         <Image
           src={saveTimeBg}
           alt="Save Time Background"
-          fill
-          className="w-full h-full object-cover"
+          className="w-full h-[730px] 2xl:scale-x-112"
           priority
         />
       </div>
