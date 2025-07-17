@@ -17,7 +17,7 @@ export default function CelebrateAchievementSection() {
 
       <div className="w-[85%] md:w-[70%] xl:w-[80%] 2xl:w-full mx-auto px-6 relative z-10">
         <div className="text-center mb-16 md:mb-20 lg:mb-24">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+          <h2 className="text-3xl mt-4 md:text-4xl font-bold mb-4 text-black">
             Celebrate Every Achievement!
           </h2>
           <p className="text-lg md:text-xl text-black">
