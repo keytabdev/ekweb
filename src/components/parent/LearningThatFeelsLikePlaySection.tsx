@@ -4,7 +4,7 @@ import { gamesImage2, comicsImage, learningImage, rocketImage, greenSwirlImage, 
 
 export default function LearningThatFeelsLikePlaySection() {
   return (
-    <section className="py-20 bg-white  relative overflow-hidden">
+    <section className="pb-20 xl:-mt-20 2xl:mt-10 bg-white  relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 w-20 h-20 z-10" style={{ left: 'calc(50% - 600px)' }}>
         <Image
@@ -30,7 +30,7 @@ export default function LearningThatFeelsLikePlaySection() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Learning That Feels Like Play
           </h2>
-          <p className="text-lg md:text-xl text-gray-600">
+          <p className="text-lg py-4 md:text-xl text-gray-800">
             Where They&apos;ll be Asking for More Homework everyday!
           </p>
         </div>

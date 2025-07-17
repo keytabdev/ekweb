@@ -13,7 +13,7 @@ export default function WhyEklavyaSection() {
 
         {/* Text containers */}
         <div className="mx-24 flex justify-center gap-16 mb-16">
-          <div className="w-[420px] h-33 flex gap-3">
+          <div className="w-[460px] h-33 flex gap-3">
             <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
               <svg
                 width="12"
@@ -35,14 +35,14 @@ export default function WhyEklavyaSection() {
               <h3 className="text-neutral-700 text-2xl font-semibold font-['Graphie'] capitalize leading-relaxed text-left mb-2 whitespace-nowrap">
                 Smart & aligned learning
               </h3>
-              <p className="text-neutral-700 text-base font-normal font-['Graphie'] leading-relaxed text-left">
-                Activities are designed to match school curriculums, ensuring
-                your child stays on track while developing essential skills.
+              <p className="text-neutral-700 text-base font-normal font-['Graphie'] leading-relaxed text-left whitespace-nowrap">
+                Activities are designed to match <br /> school curriculums, ensuring
+                your <br /> child stays on track while developing <br /> essential skills.
               </p>
             </div>
           </div>
 
-          <div className="w-[420px] h-33 flex gap-3">
+          <div className="w-[460px] h-33 flex gap-3">
             <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
               <svg
                 width="12"
@@ -64,14 +64,14 @@ export default function WhyEklavyaSection() {
               <h3 className="text-neutral-700 text-2xl font-semibold font-['Graphie'] capitalize leading-relaxed text-left mb-2 whitespace-nowrap">
                 Engaging & insightful
               </h3>
-              <p className="text-neutral-700 text-base font-normal font-['Graphie'] leading-relaxed text-left">
-                Gamified experiences keep kids motivated, with real-time
-                progress tracking to help parents and teachers understand.
+              <p className="text-neutral-700 text-base font-normal font-['Graphie'] leading-relaxed text-left whitespace-nowrap">
+                Gamified experiences keep kids <br /> motivated, with real-time
+                progress <br /> tracking to help parents and <br /> teachers focus on what matters.
               </p>
             </div>
           </div>
 
-          <div className="w-[420px] h-33 flex gap-3">
+          <div className="w-[460px] h-33 flex gap-3">
             <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
               <svg
                 width="12"
@@ -93,10 +93,9 @@ export default function WhyEklavyaSection() {
               <h3 className="text-neutral-700 text-2xl font-semibold font-['Graphie'] capitalize leading-relaxed text-left mb-2 whitespace-nowrap">
                 Safe & personalized growth
               </h3>
-              <p className="text-neutral-700 text-base font-normal font-['Graphie'] leading-relaxed text-left">
-                A distraction-free environment with tailored learning supports
-                your child&apos;s unique journey from basics to advanced
-                concepts.
+              <p className="text-neutral-700 text-base font-normal font-['Graphie'] leading-relaxed text-left whitespace-nowrap">
+                A distraction-free environment with <br /> tailored learning supports
+                your <br /> child&apos;s unique journey from basics to <br /> brilliance.
               </p>
             </div>
           </div>

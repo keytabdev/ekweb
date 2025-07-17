@@ -4,7 +4,7 @@ import { cloudImage } from '@/assets'
 
 export default function StayInvolvedSection() {
   return (
-    <section className="py-16 md:py-28 lg:py-50 bg-white relative overflow-hidden">
+    <section className="pt-16 pb-8 md:pt-28 md:pb-12 lg:pt-50 lg:pb-16 bg-white relative overflow-hidden">
       {/* Decorative cloud elements */}
       <div className="absolute top-12 md:top-24 left-2 md:left-4 w-20 h-20 md:w-40 md:h-40 z-10">
         <Image

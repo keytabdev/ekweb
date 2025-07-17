@@ -6,20 +6,20 @@ export default function ParentHeroSection() {
   return (
     <section className="relative text-white py-60 min-h-[700px] overflow-hidden">
       {/* Background SVG */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full">
         <Image
           src={parentHeroSvg}
           alt="Parent hero background"
-          fill
-          className="object-cover"
+          height={731}
+          className="w-full"
           priority
         />
       </div>
 
       <div className="container mx-auto px-6 relative z-10 h-full">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center h-full">
-          <div className="pl-4 md:pl-10 text-center md:text-left -mt-40">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl text-[#C1FFB1] mb-4 md:mb-6">
+           <div className="pl-4 md:pl-10 text-center md:text-left 2xl:-mt-40 xl:-mt-80">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl text-[#C1FFB1] mb-6 md:mb-8 leading-tight whitespace-nowrap">
               Happier Kids, <br />
               <span className="italic text-white">Smarter Learning!</span>
             </h1>
@@ -27,17 +27,17 @@ export default function ParentHeroSection() {
               Eklavya transforms screen time into the most valuable part of your
               child&apos;s day, empowering you and delighting them.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <div className="flex flex-col sm:flex-row pt-8 gap-4 justify-center md:justify-start">
               <button className="bg-white text-purple-700 px-6 md:px-8 py-3 rounded-xs font-semibold hover:bg-gray-100 transition-colors">
                 Get Started
               </button>
-              <button className=" text-white px-6 md:px-8 py-3 rounded-xs font-semibold hover:bg-white hover:text-purple-700 transition-colors">
-                Check free material
-              </button>
+               <button className=" text-white px-6 md:px-8 py-3 rounded-xs font-semibold bg-transparent border border-white">
+                  Check free material
+                </button>
             </div>
           </div>
           <div className="relative flex items-center justify-center">
-            <div className="w-64 h-64 md:w-80 lg:w-96 md:h-80 lg:h-96 rounded-full overflow-hidden transform scale-150 translate-x-16 -translate-y-24">
+            <div className="w-64 h-64 md:w-80 lg:w-96 md:h-80 lg:h-96 rounded-full overflow-hidden xl:transform xl:scale-140 xl:translate-x-4 xl:-translate-y-38 2xl:scale-189 2xl:translate-x-15 2xl:-translate-y-14">
               <Image
                 src={parentHeroPic}
                 alt="Parent and child learning together"
