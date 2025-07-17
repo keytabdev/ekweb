@@ -17,7 +17,7 @@ export default function AboutHeroSection() {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-start w-full max-w-[1440px] mx-auto px-[124px] py-12 gap-36">
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-start w-full max-w-[1440px] mx-auto px-[124px] py-12 gap-46">
         {/* Text */}
         <div className="text-center md:text-left w-[612px] -mt-16">
           {/* First Row */}
