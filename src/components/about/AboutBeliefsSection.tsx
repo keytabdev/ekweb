@@ -126,19 +126,19 @@ export default function AboutBeliefsSection() {
           
           {/* Centered content */}
           <div className="w-[896px] px-36 inline-flex flex-col justify-start items-center gap-4">
-            <div className="self-stretch text-center justify-start text-zinc-900 text-4xl font-bold font-['Graphie'] leading-10 tracking-tight">Join Us in Reimagining Education</div>
-            <div className="w-[776px] text-center justify-start text-zinc-900 text-xl font-normal font-['Graphie'] leading-7">Eklavya isn&apos;t just an app. It&apos;s a movement to make learning joyful, personal, and limitless. Because when kids love learning, they don&apos;t just pass tests.</div>
+            <div className="self-stretch text-center justify-start text-zinc-900 text-4xl font-bold font-graphie leading-10 tracking-tight">Join Us in Reimagining Education</div>
+            <div className="w-[776px] text-center justify-start text-zinc-900 text-xl font-normal font-graphie leading-7">Eklavya isn&apos;t just an app. It&apos;s a movement to make learning joyful, personal, and limitless. Because when kids love learning, they don&apos;t just pass tests.</div>
           </div>
         </div>
         <div className="mx-auto mb-30 mt-6 text-center">
-          <span className="text-slate-300 text-4xl font-semibold font-['Graphie'] leading-10 tracking-wide">They </span>
-          <span className="text-lime-400 text-4xl font-bold font-['Graphie'] leading-10 tracking-wide">Grow</span>
-          <span className="text-lime-400 text-4xl font-semibold font-['Graphie'] leading-10 tracking-wide">,</span>
-          <span className="text-fuchsia-500 text-4xl font-bold font-['Graphie'] leading-10 tracking-wide"> Dream</span>
-          <span className="text-fuchsia-500 text-4xl font-semibold font-['Graphie'] leading-10 tracking-wide">,</span>
-          <span className="text-slate-300 text-4xl font-semibold font-['Graphie'] leading-10 tracking-wide"> and </span>
-          <span className="text-indigo-500 text-4xl font-bold font-['Graphie'] leading-10 tracking-wide">Create</span>
-          <span className="text-indigo-500 text-4xl font-semibold font-['Graphie'] leading-10 tracking-wide">.</span>
+          <span className="text-slate-300 text-4xl font-semibold font-graphie leading-10 tracking-wide">They </span>
+          <span className="text-lime-400 text-4xl font-bold font-graphie leading-10 tracking-wide">Grow</span>
+          <span className="text-lime-400 text-4xl font-semibold font-graphie leading-10 tracking-wide">,</span>
+          <span className="text-fuchsia-500 text-4xl font-bold font-graphie leading-10 tracking-wide"> Dream</span>
+          <span className="text-fuchsia-500 text-4xl font-semibold font-graphie leading-10 tracking-wide">,</span>
+          <span className="text-slate-300 text-4xl font-semibold font-graphie leading-10 tracking-wide"> and </span>
+          <span className="text-indigo-500 text-4xl font-bold font-graphie leading-10 tracking-wide">Create</span>
+          <span className="text-indigo-500 text-4xl font-semibold font-graphie leading-10 tracking-wide">.</span>
         </div>
       </section>
     </>
