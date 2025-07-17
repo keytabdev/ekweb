@@ -16,10 +16,10 @@ export default function TransformLessonsSection() {
       </div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl font-bold text-gray-800 mb-4 font-graphie">
             Transform Lessons Effortlessly
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 font-graphie">
             Innovative Tools to Simplify, Gamify, and Enrich Learning.
           </p>
         </div>

@@ -42,7 +42,7 @@ export default function SaveTimeSection() {
             <h3 className="text-white font-graphie text-[24px] font-semibold leading-[26px] capitalize mb-4 whitespace-nowrap">
               Automated Grading
             </h3>
-            <p className="text-white text-center">
+            <p className="text-white text-center font-graphie">
               Say goodbye to tedious assessments, Eklavya <br /> handles them for
               you.
             </p>
@@ -62,7 +62,7 @@ export default function SaveTimeSection() {
             <h3 className="text-white font-graphie text-[24px] font-semibold leading-[26px] capitalize mb-4 whitespace-nowrap">
               Simplified Lesson Planning
             </h3>
-            <p className="text-white text-center">
+            <p className="text-white text-center font-graphie">
               Plan entire terms in minutes <br /> with intuitive tools that keep <br /> you
               organized.
             </p>
@@ -82,7 +82,7 @@ export default function SaveTimeSection() {
             <h3 className="text-white font-graphie text-[24px] font-semibold leading-[26px] capitalize mb-4 whitespace-nowrap">
               Pre-Made Resources
             </h3>
-            <p className="text-white text-center">
+            <p className="text-white text-center font-graphie">
               Leverage Eklavya&apos;s repository of ready-to-use lessons,
               activities and quizzes.
             </p>
