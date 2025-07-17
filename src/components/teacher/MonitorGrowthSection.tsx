@@ -77,7 +77,7 @@ export default function MonitorGrowthSection() {
                 Data-Driven Insights
               </h3>
               <p className="text-gray-700 text-center text-[10px] md:text-sm lg:text-base leading-tight md:leading-snug font-graphie">
-                Use actionable analytics to <br /> refine lessons and <br /> maximize learning
+                Use actionable analytics to <br /> refine your lessons and <br /> maximize learning
                 outcomes.
               </p>
             </div>
