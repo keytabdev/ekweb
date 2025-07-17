@@ -87,7 +87,7 @@ export default function CelebrateAchievementSection() {
               Share Milestones
             </h3>
             <p className="text-sm md:text-base text-black text-center">
-              Celebrate their progress with friends and family to keep them
+              Celebrate their progress with friends and family to keep <br /> them
               motivated.
             </p>
           </div>
@@ -120,7 +120,7 @@ export default function CelebrateAchievementSection() {
               Encourage Curiosity
             </h3>
             <p className="text-sm md:text-base text-black text-center">
-              From coding programs to math concepts, we keep them excited to
+              From coding programs to math concepts, we keep <br /> them excited to
               learn.
             </p>
           </div>
