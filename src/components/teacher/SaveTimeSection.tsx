@@ -43,7 +43,7 @@ export default function SaveTimeSection() {
               Automated Grading
             </h3>
             <p className="text-white text-center">
-              Say goodbye to tedious assessments. Eklavya handles them for
+              Say goodbye to tedious assessments, Eklavya <br /> handles them for
               you.
             </p>
           </div>
@@ -63,7 +63,7 @@ export default function SaveTimeSection() {
               Simplified Lesson Planning
             </h3>
             <p className="text-white text-center">
-              Plan entire terms in minutes with intuitive tools that keep you
+              Plan entire terms in minutes <br /> with intuitive tools that keep <br /> you
               organized.
             </p>
           </div>
