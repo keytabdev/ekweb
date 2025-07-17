@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { pricingPlanBg } from '@/assets';
+import { pricingPlanBg, checkCircle, crossCircle } from '@/assets';
 
 interface PricingTableProps {
   planType: 'parents' | 'teachers';
@@ -250,11 +250,17 @@ export default function PricingTable({ planType }: PricingTableProps) {
                   {featureRows.map((row) => {
                     const keyStr: string = row.key;
                     const value: unknown = plan[keyStr];
-                    // Render booleans as colored dots
+                    // Render booleans as check/cross circles
                     if (typeof value === 'boolean') {
                       return (
                         <div key={keyStr} className="h-20 py-5 bg-white border-l border-r border-b border-slate-200 flex justify-center items-center gap-3">
-                          <div className={`w-6 h-6 rounded ${value ? 'bg-green-400' : 'bg-rose-500'}`}></div>
+                          <Image
+                            src={value ? checkCircle : crossCircle}
+                            alt={value ? "Available" : "Not available"}
+                            width={24}
+                            height={24}
+                            className="w-6 h-6"
+                          />
                         </div>
                       );
                     }

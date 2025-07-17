@@ -8,7 +8,7 @@ export default function IntroText() {
     <div className="relative w-full max-w-4xl mx-auto px-4 py-16">
             {/* Red Pastry in top right */}
       <div 
-        className="absolute top-0 right-0 z-10"
+        className="absolute top-0 right-0 z-5"
         style={{ transform: 'translateX(80%) translateY(-70%) ' }}
       >
         <Image 
@@ -22,7 +22,7 @@ export default function IntroText() {
 
       {/* Grey Flower in top left */}
       <div 
-        className="absolute top-0 left-0 z-10"
+        className="absolute top-0 left-0 z-5"
         style={{ transform: 'translateX(-50%) translateY(-50%) rotate(15deg)' }}
       >
         <Image 
@@ -37,7 +37,7 @@ export default function IntroText() {
 
       {/* Green Swirl in bottom left */}
       <div 
-        className="absolute bottom-0 left-0 z-10"
+        className="absolute bottom-0 left-0 z-5"
         style={{ transform: 'translateX(-30%) translateY(30%) rotate(-10deg)' }}
       >
         <Image 

@@ -55,8 +55,7 @@ export default function FAQSection() {
         </div>
       </div>
       
-      {/* Decorative element */}
-      <div className="w-14 h-16 absolute left-4 top-20 bg-cyan-400" />
+
     </section>
   );
 } 

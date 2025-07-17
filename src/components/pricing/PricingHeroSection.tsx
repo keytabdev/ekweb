@@ -4,16 +4,18 @@ import { pricingHeroBg, pricingHeroImage } from '@/assets';
 
 export default function PricingHeroSection() {
   return (
-    <section className="relative w-full min-h-[560px] flex items-center justify-center py-16">
+    <section className="relative overflow-visible w-full min-h-[560px] flex items-center justify-center lg:py-16 xl:py-26">
       {/* Background SVG */}
-      <Image
-        src={pricingHeroBg}
-        alt="Background"
-        fill
-        className="object-cover object-center z-0"
-        priority
-        sizes="100vw"
-      />
+      <div className="absolute inset-0 z-0 xl:scale-y-100 xl:translate-y-[-30px]">
+        <Image
+          src={pricingHeroBg}
+          alt="Background"
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
+        />
+      </div>
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8 px-4 relative z-10 pb-10">
         {/* Left: Text Content */}
         <div className="flex-1 text-left lg:ml-[144px] lg:w-[651px] -mt-12">
