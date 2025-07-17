@@ -17,7 +17,7 @@ export default function TeacherHeroSection() {
       </div>
       <div className="relative z-10 h-full flex items-center w-full 2xl:left-40 2xl:bottom-30 xl:left-0 xl:bottom-20">
         <div className="absolute left-[6%] sm:left-[8%] md:left-[9.6%] lg:left-[9.6%] max-w-2xl">
-          <h1 className="text-4xl font-semibold sm:text-5xl md:text-6xl lg:text-7xl xl:text-[69.49px] text-[#0A7183] italic mb-6 leading-tight">
+          <h1 className="text-4xl font-semibold sm:text-5xl md:text-6xl lg:text-7xl xl:text-[69.49px] text-[#0A7183] italic mb-6 leading-tight font-graphie">
             Smarter Tools
             <br />
             <div className="relative">
@@ -31,16 +31,16 @@ export default function TeacherHeroSection() {
             </div>
             <span className="text-white not-italic">Inspired Teaching!</span>
           </h1>
-          <p className="text-lg md:text-xl text-black mb-8">
+          <p className="text-lg md:text-xl text-black mb-8 font-graphie">
             With Eklavya, you&apos;re not just teaching—you&apos;re creating impactful,
             unforgettable learning experiences. Start your journey with us
             today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-[#fff]  text-[#0A7183] font-semibold text-lg py-3 px-8 rounded-lg transition-colors">
+            <button className="bg-[#fff] text-[#0A7183] font-semibold text-lg py-3 px-8 rounded-lg transition-colors font-graphie">
               Get Started
             </button>
-            <button className="text-black font-semibold text-lg py-3 px-6 rounded-lg transition-colors">
+            <button className="text-black font-semibold text-lg py-3 px-6 rounded-lg transition-colors font-graphie">
               Check free material
             </button>
           </div>
