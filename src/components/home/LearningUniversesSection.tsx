@@ -5,7 +5,7 @@ export default function LearningUniversesSection() {
   return (
     <section className="mt-20 pt-20 pb-8 relative">
       <div
-        className="absolute -inset-20 -mx-[50vw] left-1/2 transform scale-x-50 sm:scale-x-65 md:scale-x-75 lg:scale-x-80 xl:scale-x-90 2xl:scale-x-100"
+        className="absolute -inset-20 transform scale-x-100 sm:scale-x-65 md:scale-x-75 lg:scale-x-100 xl:scale-x-110 2xl:scale-x-110"
         style={{
           backgroundImage: `url(${learningUniBg.src})`,
           backgroundSize: "1920px 731px",

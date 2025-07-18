@@ -1,15 +1,33 @@
 import React from 'react';
+import Image from 'next/image';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { blueSwirlImage, yellowBlobImage } from '@/assets';
 
 export default function FAQSection() {
   return (
-    <section className="w-full bg-white pt-20 pb-10 mb-100" style={{ height: '500px' }}>
-      <div className="container mx-auto px-6">
+    <section className="w-full bg-white pt-20 pb-10 mb-90 relative" style={{ height: '500px' }}>
+      {/* Decorative elements */}
+      <Image 
+        src={blueSwirlImage} 
+        alt="" 
+        width={128}
+        height={128}
+        className="absolute top-0 left-[-50] w-32 h-32 pointer-events-none"
+      />
+      <Image 
+        src={yellowBlobImage} 
+        alt="" 
+        width={128}
+        height={128}
+        className="absolute top-0 right-[-30] w-32 h-32 pointer-events-none"
+      />
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-8">
           <h2 className="text-zinc-900 text-4xl font-bold font-['Graphie'] leading-[76px] tracking-tight">Frequently asked questions</h2>
         </div>
