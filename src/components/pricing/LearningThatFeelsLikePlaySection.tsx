@@ -10,7 +10,7 @@ export default function LearningThatFeelsLikePlaySection() {
   return (
     <div className="w-full relative overflow-visible py-20 bg-white">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-4 z-10" style={{ width: '249.862px', height: '107.134px', flexShrink: 0 }}>
+      <div className="absolute top-[-60] left-4 z-10" style={{ width: '249.862px', height: '107.134px', flexShrink: 0 }}>
         <Image
           src={spiralArrow}
           alt="Spiral arrow decoration"
@@ -19,7 +19,7 @@ export default function LearningThatFeelsLikePlaySection() {
           className="w-full h-full object-contain"
         />
       </div>
-      <div className="absolute top-0 right-4 z-10" style={{ width: '59.911px', height: '64.915px', flexShrink: 0 }}>
+      <div className="absolute top-[-60] right-4 z-10" style={{ width: '59.911px', height: '64.915px', flexShrink: 0 }}>
         <Image
           src={greenSwirlImage}
           alt="Green swirl decoration"
