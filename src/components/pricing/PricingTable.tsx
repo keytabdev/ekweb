@@ -225,7 +225,7 @@ export default function PricingTable({ planType }: PricingTableProps) {
             {/* Action row */}
             <div className="h-24 px-8 py-5 bg-white flex justify-start items-center gap-2.5">
               <div className="flex-1 text-center text-[#64637E] text-sm font-normal font-['Graphie'] leading-6 break-words">
-                Action
+                
               </div>
             </div>
           </div>
