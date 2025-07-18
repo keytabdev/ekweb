@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import HeaderWrapper from "@/components/shared/HeaderWrapper";
+import ConditionalHeader from "@/components/shared/ConditionalHeader";
 
 const graphie = localFont({
   src: [
@@ -39,7 +39,7 @@ export default function RootLayout({
       <body
         className={`${graphie.variable} antialiased`}
       >
-        <HeaderWrapper />
+        <ConditionalHeader />
         {children}
       </body>
     </html>

@@ -3,21 +3,21 @@
 import React, { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import AuthBackground from '@/components/shared/AuthBackground';
+import { validateSignupForm, type SignupFormData } from '@/lib/validation';
 
 export default function SignupPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [selectedRole, setSelectedRole] = useState(searchParams.get('role') || 'parent');
 
-
-
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<SignupFormData>({
     firstName: '',
     lastName: '',
     email: '',
     phone: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    role: 'parent'
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -67,9 +67,33 @@ export default function SignupPage() {
     }
   };
 
+  const handleRoleChange = (role: string) => {
+    setSelectedRole(role);
+    setFormData(prev => ({
+      ...prev,
+      role: role as 'parent' | 'student' | 'teacher'
+    }));
+    setShowRoleDropdown(false);
+  };
+
   const handleBlur = (field: string) => {
-    // Skip validation in testing mode
-    setErrors(prev => ({ ...prev, [field]: '' }));
+    // Validate individual field on blur
+    const validationResult = validateSignupForm({
+      ...formData,
+      [field]: formData[field as keyof SignupFormData]
+    });
+    
+    if (!validationResult.success && validationResult.errors[field]) {
+      setErrors(prev => ({
+        ...prev,
+        [field]: validationResult.errors[field]
+      }));
+    } else if (validationResult.success) {
+      setErrors(prev => ({
+        ...prev,
+        [field]: ''
+      }));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -77,6 +101,15 @@ export default function SignupPage() {
     setIsSubmitting(true);
     
     try {
+      // Validate form
+      const validationResult = validateSignupForm(formData);
+      
+      if (!validationResult.success) {
+        setErrors(validationResult.errors);
+        setIsSubmitting(false);
+        return;
+      }
+      
       // Clear all errors
       setErrors({});
       
@@ -126,9 +159,9 @@ export default function SignupPage() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 flex justify-end items-start pt-16 pr-16 lg:pt-20 lg:pr-20 xl:pt-24 xl:pr-24 2xl:pt-32 2xl:pr-32">
-        <div className="w-full max-w-2xl bg-white rounded-3xl shadow-2xl p-8 lg:p-12">
-          <form onSubmit={handleSubmit} className="space-y-8">
+      <div className="relative z-10 flex justify-end items-start pt-0 pr-16 lg:pt-12 lg:pr-20 xl:pt-16 xl:pr-24 2xl:pt-0 2xl:pr-32">
+        <div className="w-full max-w-lg bg-white rounded-3xl shadow-2xl p-0 lg:p-8">
+          <form onSubmit={handleSubmit} className="space-y-6">
             {/* Header */}
             <div className="flex justify-center items-center gap-2 relative">
               <div className="text-center text-zinc-800 text-3xl font-medium font-['Graphie']">
@@ -158,10 +191,7 @@ export default function SignupPage() {
                     <button
                       key={roleOption.value}
                       type="button"
-                      onClick={() => {
-                        setSelectedRole(roleOption.value);
-                        setShowRoleDropdown(false);
-                      }}
+                      onClick={() => handleRoleChange(roleOption.value)}
                       className={`w-full flex items-center px-4 py-3 text-left hover:bg-gray-50 transition-colors ${
                         selectedRole === roleOption.value ? 'bg-green-50 text-green-700' : 'text-zinc-800'
                       }`}
@@ -342,7 +372,7 @@ export default function SignupPage() {
               {/* Phone Field */}
               <div>
                 <label className="block text-stone-500 text-lg font-normal font-['Graphie'] mb-1">
-                  Phone number
+                  Phone number<span className="text-red-700">*</span>
                 </label>
                 <div className="relative">
                   <div className="absolute left-4 top-1/2 transform -translate-y-1/2 flex items-center gap-1 z-10">
