@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Image from "next/image";
 import AuthBackground from '@/components/shared/AuthBackground';
 import { validateSignupForm, type SignupFormData } from '@/lib/validation';
 
@@ -381,9 +382,11 @@ export default function SignupPage() {
                       onClick={() => setShowCountryDropdown(!showCountryDropdown)}
                       className="flex items-center gap-2 text-left"
                     >
-                      <img 
+                      <Image 
                         src={`https://flagcdn.com/w20/${selectedCountry.flag}.png`}
                         alt={`${selectedCountry.name} flag`}
+                        width={40}
+                        height={24}
                         className="w-10 h-6 object-cover rounded cursor-pointer"
                       />
                     </button>
@@ -436,9 +439,11 @@ export default function SignupPage() {
                           }}
                           className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 text-left"
                         >
-                          <img 
+                          <Image 
                             src={`https://flagcdn.com/w20/${country.flag}.png`}
                             alt={`${country.name} flag`}
+                            width={32}
+                            height={24}
                             className="w-8 h-6 object-cover rounded"
                           />
                           <span className="text-zinc-800 text-sm font-['Graphie']">{country.name}</span>

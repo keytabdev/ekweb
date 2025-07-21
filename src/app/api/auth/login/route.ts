@@ -47,6 +47,7 @@ export async function POST(request: NextRequest) {
     const token = `token_${Date.now()}_${user.id}`; // Placeholder token
 
     // Return user data without password
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { password: userPassword, ...userWithoutPassword } = user;
     
     return NextResponse.json({

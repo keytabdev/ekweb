@@ -63,7 +63,7 @@ export default function HeroSection() {
             </div>
 
             {/* Child image - positioned to sit on section edge */}
-            <div className="absolute z-30 right-[8%] sm:right-[10%] md:right-[12%] lg:right-[15%] xl:right-[8%] top-[25%] sm:top-[20%] md:top-[15%] lg:top-[10%] xl:top-[150px] w-[35%] sm:w-[36%] md:w-[36%] lg:w-[36%] xl:w-[522px] h-[75%] sm:h-[80%] md:h-[85%] lg:h-[90%] xl:h-[732px]">
+            <div className="absolute z-30 right-[12%] sm:right-[10%] md:right-[12%] lg:right-[15%] xl:right-[4%] top-[25%] sm:top-[20%] md:top-[15%] lg:top-[10%] xl:top-[150px] w-[35%] sm:w-[36%] md:w-[36%] lg:w-[36%] xl:w-[522px] h-[75%] sm:h-[80%] md:h-[85%] lg:h-[90%] xl:h-[732px]">
               <Image
                 src={childImage}
                 alt="Child"

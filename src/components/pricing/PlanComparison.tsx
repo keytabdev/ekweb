@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function PlanComparison() {
   return (
@@ -27,7 +28,7 @@ export default function PlanComparison() {
           </div>
         </div>
         <div className="w-[576px] h-96 px-10 py-8 left-[576px] top-0 absolute shadow-[0px_4px_12px_0px_rgba(219,0,255,0.10)] border-l inline-flex flex-col justify-center items-center gap-6">
-          <img className="w-32 h-40" src="https://placehold.co/126x161" alt="Learning Explorer" />
+          <Image className="w-32 h-40" src="https://placehold.co/126x161" alt="Learning Explorer" width={126} height={161} />
           <div className="justify-start text-sky-600 text-3xl font-semibold font-['Graphie'] capitalize leading-relaxed">Learning Explorer</div>
           <div className="w-80 flex flex-col justify-start items-start gap-3">
             <div className="size-auto inline-flex justify-start items-start gap-2.5">
@@ -45,7 +46,7 @@ export default function PlanComparison() {
           </div>
         </div>
         <div className="w-[576px] h-96 px-10 py-8 left-0 top-[461px] absolute shadow-[0px_4px_12px_0px_rgba(255,230,0,0.10)] border-r border-t inline-flex flex-col justify-center items-center gap-6">
-          <img className="w-44 h-40" src="https://placehold.co/173x161" alt="Growth Champion" />
+          <Image className="w-44 h-40" src="https://placehold.co/173x161" alt="Growth Champion" width={173} height={161} />
           <div className="justify-start text-sky-600 text-3xl font-semibold font-['Graphie'] capitalize leading-relaxed">Growth Champion</div>
           <div className="w-80 flex flex-col justify-center items-center gap-3">
             <div className="w-72 inline-flex justify-start items-start gap-2.5">
@@ -91,7 +92,7 @@ export default function PlanComparison() {
           </div>
         </div>
       </div>
-      <div className="w-32 h-14 left-[46.27px] top-[-48.23px] absolute origin-top-left rotate-[117.55deg] outline outline-[5px] outline-offset-[-2.50px] outline-yellow-500" />
+      <div className="w-32 h-14 left-[46.27px] top-[-48.23px] absolute origin-top-left rotate-[117.55deg] outline-[5px] outline-offset-[-2.50px] outline-yellow-500" />
     </div>
   );
 } 

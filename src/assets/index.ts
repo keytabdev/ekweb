@@ -1,4 +1,4 @@
-export { default as childImage } from './shared/child.png';
+export { default as childImage } from './home/child.png';
 export { default as eklavyaLogo } from './shared/eklavya.png';
 export { default as waveImage } from './decoration/wave.svg';
 export { default as parentHeroPic } from './parent/parent-hero-pic.png';

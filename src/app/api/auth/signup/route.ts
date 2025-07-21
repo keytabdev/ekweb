@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 // Placeholder user storage (in production, use a database)
-const users: any[] = [];
+const users: Array<{
+  id: string;
+  name: string;
+  email: string;
+  password: string;
+  userType: string;
+  createdAt: string;
+}> = [];
 
 export async function POST(request: NextRequest) {
   try {
@@ -42,6 +49,7 @@ export async function POST(request: NextRequest) {
     users.push(newUser);
 
     // Return success without password
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { password: _, ...userWithoutPassword } = newUser;
     
     return NextResponse.json(

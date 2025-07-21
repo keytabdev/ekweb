@@ -153,7 +153,7 @@ export default function PricingSelectionPage() {
           </div>
 
           {/* Pricing Table */}
-          <div className="bg-white/95 rounded-xl shadow-[8px_8px_4px_0px_rgba(255,206,0,0.04)] outline outline-1 outline-offset-[-1px] outline-slate-200 overflow-hidden">
+          <div className="bg-white/95 rounded-xl shadow-[8px_8px_4px_0px_rgba(255,206,0,0.04)] outline-1 outline-offset-[-1px] outline-slate-200 overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-5">
               {/* Features Column */}
               <div className="border-r border-slate-200">
@@ -250,7 +250,7 @@ export default function PricingSelectionPage() {
                               router.push(`/child-details?plan=${encodeURIComponent(plan.name as string)}`);
                             }
                           }}
-                          className={`w-44 px-4 py-4 rounded-xl shadow-[0px_3px_6px_0px_rgba(7,0,110,0.03)] shadow-[inset_0px_4px_6px_0px_rgba(255,255,255,0.40)] shadow-[inset_0px_-2px_2px_0px_rgba(27,35,85,0.07)] outline outline-1 outline-Colors-Neutrals-Neutral-400 flex justify-center items-center gap-1.5 transition-colors ${
+                          className={`w-44 px-4 py-4 rounded-xl shadow-[0px_3px_6px_0px_rgba(7,0,110,0.03)] outline outline-Colors-Neutrals-Neutral-400 flex justify-center items-center gap-1.5 transition-colors ${
                             isSelected 
                               ? 'bg-eklavya-dark-green text-white' 
                               : 'bg-green-500 text-white hover:bg-green-600'
