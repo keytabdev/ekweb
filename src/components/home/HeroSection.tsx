@@ -56,7 +56,7 @@ export default function HeroSection() {
                 <button className="bg-[#4ECB71] hover:bg-[#45b866] text-white font-sans font-semibold text-[18px] py-4 px-10 rounded-lg transition-colors">
                   Get Started
                 </button>
-                <button className="text-white hover:text-[#4ECB71] font-sans font-semibold text-[18px] py-4 px-7 rounded-lg shadow-sm hover:shadow-md transition-all">
+                <button className="text-white hover:text-[#4ECB71] font-sans font-semibold text-[18px] py-4 px-7 rounded-lg shadow-sm hover:shadow-md transition-all border border-white">
                   Check free material
                 </button>
               </div>
