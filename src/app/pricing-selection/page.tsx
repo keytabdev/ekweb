@@ -116,7 +116,7 @@ export default function PricingSelectionPage() {
         {/* Back button */}
         <button
           onClick={() => router.back()}
-          className="inline-flex items-center gap-2 text-white text-2xl font-bold hover:text-gray-200 transition-colors underline"
+          className="inline-flex items-center gap-2 text-black text-2xl font-bold hover:text-gray-700 transition-colors underline"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path
@@ -133,7 +133,7 @@ export default function PricingSelectionPage() {
         {/* Skip button */}
         <button
           onClick={handleSkip}
-          className="inline-flex items-center gap-2 text-white text-2xl font-bold hover:text-gray-200 transition-colors underline"
+          className="inline-flex items-center gap-2 text-black text-2xl font-bold hover:text-gray-700 transition-colors underline"
         >
           Skip
         </button>
