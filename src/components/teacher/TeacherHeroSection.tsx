@@ -33,7 +33,7 @@ export default function TeacherHeroSection() {
                   className="absolute -bottom-2 left-80 object-contain"
                 />
               </div>
-              <span className="text-white not-italic">Inspired Teaching!</span>
+              <span className="text-white whitespace-nowrap not-italic">Inspired Teaching!</span>
             </h1>
             <p className="text-lg md:text-xl text-black mb-8 font-graphie">
               With Eklavya, you&apos;re not just teaching—you&apos;re creating impactful,
