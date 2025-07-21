@@ -34,7 +34,7 @@ export default function FAQSection() {
         
         <div className="mx-auto pb-8" style={{ width: '712px', height: '50px' }}>
           <Accordion type="single" collapsible className="space-y-3">
-            <AccordionItem value="item-1" className="px-4 py-2 rounded-[10px] outline outline-1 outline-offset-[-1px] outline-stone-300 border-none">
+            <AccordionItem value="item-1" className="px-4 py-2 rounded-[10px] outline-1 outline-offset-[-1px] outline-stone-300 border-none">
               <AccordionTrigger className="text-zinc-900 text-base font-semibold font-['Graphie'] leading-snug hover:no-underline">
                 What are credits used for?
               </AccordionTrigger>
@@ -43,7 +43,7 @@ export default function FAQSection() {
               </AccordionContent>
             </AccordionItem>
             
-            <AccordionItem value="item-2" className="px-4 py-2 rounded-[10px] outline outline-1 outline-offset-[-1px] outline-stone-300 border-none">
+            <AccordionItem value="item-2" className="px-4 py-2 rounded-[10px] outline-1 outline-offset-[-1px] outline-stone-300 border-none">
               <AccordionTrigger className="text-zinc-900 text-base font-semibold font-['Graphie'] leading-snug hover:no-underline">
                 Can I change my plan later?
               </AccordionTrigger>
@@ -52,7 +52,7 @@ export default function FAQSection() {
               </AccordionContent>
             </AccordionItem>
             
-            <AccordionItem value="item-3" className="px-4 py-2 rounded-[10px] outline outline-1 outline-offset-[-1px] outline-stone-300 border-none">
+            <AccordionItem value="item-3" className="px-4 py-2 rounded-[10px] outline-1 outline-offset-[-1px] outline-stone-300 border-none">
               <AccordionTrigger className="text-zinc-900 text-base font-semibold font-['Graphie'] leading-snug hover:no-underline">
                 Is there a discount for annual plans?
               </AccordionTrigger>
@@ -61,7 +61,7 @@ export default function FAQSection() {
               </AccordionContent>
             </AccordionItem>
             
-            <AccordionItem value="item-4" className="px-4 py-2 rounded-[10px] outline outline-1 outline-offset-[-1px] outline-stone-300 border-none">
+            <AccordionItem value="item-4" className="px-4 py-2 rounded-[10px] outline outline-offset-[-1px] outline-stone-300 border-none">
               <AccordionTrigger className="text-zinc-900 text-base font-semibold font-['Graphie'] leading-snug hover:no-underline">
                 How do schools get special pricing?
               </AccordionTrigger>

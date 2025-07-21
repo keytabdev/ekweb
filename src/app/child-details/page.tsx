@@ -21,7 +21,7 @@ export default function ChildDetailsPage() {
   const planConfigs = {
     'Free': { childCount: 1, planName: 'Free Plan' },
     'Basic': { childCount: 3, planName: 'Basic Plan' },
-    'Standard': { childCount: 5, planName: 'Standard Plan' },
+    'Standard': { childCount: 2, planName: 'Standard Plan' },
     'Advanced': { childCount: 7, planName: 'Advanced Plan' }
   };
 
@@ -104,8 +104,8 @@ export default function ChildDetailsPage() {
       console.log('Children data:', children);
       console.log('Selected plan:', selectedPlan);
       
-      // Navigate to next step (could be payment, dashboard, etc.)
-      router.push('/dashboard');
+      // Navigate to add more children page
+      router.push(`/add-more-children?plan=${encodeURIComponent(selectedPlan)}`);
     }
   };
 
@@ -118,9 +118,8 @@ export default function ChildDetailsPage() {
       {/* Background decorative elements */}
       <AuthBackground />
 
-      {/* Navigation buttons */}
-      <div className="relative z-10 flex justify-between items-start p-8">
-        {/* Back button */}
+      {/* Back button */}
+      <div className="relative z-10 p-8">
         <button
           onClick={handleGoBack}
           className="inline-flex items-center gap-2 text-white text-2xl font-bold hover:text-gray-200 transition-colors underline"
@@ -139,97 +138,96 @@ export default function ChildDetailsPage() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 flex justify-end items-start pt-16 pr-16 lg:pt-20 lg:pr-20 xl:pt-24 xl:pr-24 2xl:pt-32 2xl:pr-32">
-        <div className="w-full max-w-4xl">
-          {/* Form Container */}
-          <div className="bg-white/95 rounded-xl shadow-[8px_8px_4px_0px_rgba(255,206,0,0.04)] outline outline-1 outline-offset-[-1px] outline-slate-200 p-8 lg:p-12">
-            {/* Header */}
-            <div className="text-center mb-8">
-              <h1 className="text-zinc-800 text-4xl font-bold font-['Graphie'] mb-4">
-                Add Your Child&apos;s Details
-              </h1>
-              <p className="text-zinc-600 text-lg font-['Graphie']">
-                You have selected the {currentPlan.planName}, which includes {currentPlan.childCount} {currentPlan.childCount === 1 ? 'child' : 'children'}.
-              </p>
-            </div>
+      <div className="relative z-10 flex justify-end items-start pt-0 pr-16 lg:pt-12 lg:pr-20 xl:pt-16 xl:pr-24 2xl:pt-0 2xl:pr-32">
+        <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl p-0 lg:p-8 border border-black">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <h1 className="text-zinc-800 text-4xl font-bold font-['Graphie'] mb-4">
+              Add Your Child&apos;s Details
+            </h1>
+            <p className="text-zinc-600 text-lg font-['Graphie']">
+              You have selected the {currentPlan.planName}, which includes {currentPlan.childCount} {currentPlan.childCount === 1 ? 'child' : 'children'}.
+            </p>
+          </div>
 
-            {/* Children Forms */}
-            <div className="space-y-8">
-              {children.map((child, childIndex) => (
-                <div key={childIndex} className="border border-gray-200 rounded-lg p-6">
-                  <h2 className="text-zinc-800 text-2xl font-bold font-['Graphie'] mb-6">
-                    Child {childIndex + 1}
-                  </h2>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* First Name */}
-                    <div>
-                      <label className="block text-stone-500 text-lg font-normal font-['Graphie'] mb-2">
-                        First name<span className="text-red-700">*</span>
-                      </label>
-                      <div className="relative">
-                        <div className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6">
-                          <svg
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            className="w-5 h-5 text-zinc-600"
-                          >
-                            <path
-                              d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            <circle
-                              cx="12"
-                              cy="7"
-                              r="4"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </div>
-                        <input
-                          type="text"
-                          placeholder="First name"
-                          value={child.firstName}
-                          onChange={(e) => handleChildChange(childIndex, 'firstName', e.target.value)}
-                          className={`w-full h-12 pl-12 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent ${
-                            errors[childIndex]?.firstName ? 'border-red-500' : 'border-neutral-300'
-                          }`}
-                        />
+          {/* Children Forms */}
+          <div className="space-y-8">
+            {children.map((child, childIndex) => (
+              <div key={childIndex} className="border border-gray-200 rounded-lg p-6">
+                <h2 className="text-zinc-800 text-2xl font-bold font-['Graphie'] mb-6">
+                  Child {childIndex + 1}
+                </h2>
+                
+                <div className="space-y-6">
+                  {/* First Name */}
+                  <div>
+                    <label className="block text-stone-500 text-lg font-normal font-['Graphie'] mb-1">
+                      First name<span className="text-red-700">*</span>
+                    </label>
+                    <div className="relative">
+                      <div className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          className="w-5 h-5 text-zinc-600"
+                        >
+                          <path
+                            d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <circle
+                            cx="12"
+                            cy="7"
+                            r="4"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
                       </div>
-                      {errors[childIndex]?.firstName && (
-                        <p className="text-red-500 text-sm mt-1">{errors[childIndex].firstName}</p>
-                      )}
-                    </div>
-
-                    {/* Last Name */}
-                    <div>
-                      <label className="block text-stone-500 text-lg font-normal font-['Graphie'] mb-2">
-                        Last name
-                      </label>
                       <input
                         type="text"
-                        placeholder="Last name"
-                        value={child.lastName}
-                        onChange={(e) => handleChildChange(childIndex, 'lastName', e.target.value)}
-                        className="w-full h-12 px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+                        placeholder="First name"
+                        value={child.firstName}
+                        onChange={(e) => handleChildChange(childIndex, 'firstName', e.target.value)}
+                        className={`w-full h-12 pl-12 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent ${
+                          errors[childIndex]?.firstName ? 'border-red-500' : 'border-neutral-300'
+                        }`}
                       />
                     </div>
+                    {errors[childIndex]?.firstName && (
+                      <p className="text-red-500 text-sm mt-1">{errors[childIndex].firstName}</p>
+                    )}
+                  </div>
 
-                    {/* Gender */}
-                    <div>
-                      <label className="block text-stone-500 text-lg font-normal font-['Graphie'] mb-2">
-                        Gender
-                      </label>
+                  {/* Last Name */}
+                  <div>
+                    <label className="block text-stone-500 text-lg font-normal font-['Graphie'] mb-1">
+                      Last name
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Last name"
+                      value={child.lastName}
+                      onChange={(e) => handleChildChange(childIndex, 'lastName', e.target.value)}
+                      className="w-full h-12 px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+                    />
+                  </div>
+
+                  {/* Gender */}
+                  <div>
+                    <label className="block text-stone-500 text-lg font-normal font-['Graphie'] mb-1">
+                      Gender
+                    </label>
+                    <div className="relative">
                       <select
                         value={child.gender}
                         onChange={(e) => handleChildChange(childIndex, 'gender', e.target.value)}
-                        className="w-full h-12 px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+                        className="w-full h-12 px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent appearance-none"
                       >
                         <option value="">Select Gender</option>
                         {genderOptions.map((gender) => (
@@ -238,17 +236,30 @@ export default function ChildDetailsPage() {
                           </option>
                         ))}
                       </select>
+                      <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M6 9L12 15L18 9"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
                     </div>
+                  </div>
 
-                    {/* Grade */}
-                    <div>
-                      <label className="block text-stone-500 text-lg font-normal font-['Graphie'] mb-2">
-                        Grade<span className="text-red-700">*</span>
-                      </label>
+                  {/* Grade */}
+                  <div>
+                    <label className="block text-stone-500 text-lg font-normal font-['Graphie'] mb-1">
+                      Grade<span className="text-red-700">*</span>
+                    </label>
+                    <div className="relative">
                       <select
                         value={child.grade}
                         onChange={(e) => handleChildChange(childIndex, 'grade', e.target.value)}
-                        className={`w-full h-12 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent ${
+                        className={`w-full h-12 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent appearance-none ${
                           errors[childIndex]?.grade ? 'border-red-500' : 'border-neutral-300'
                         }`}
                       >
@@ -259,20 +270,33 @@ export default function ChildDetailsPage() {
                           </option>
                         ))}
                       </select>
-                      {errors[childIndex]?.grade && (
-                        <p className="text-red-500 text-sm mt-1">{errors[childIndex].grade}</p>
-                      )}
+                      <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M6 9L12 15L18 9"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
                     </div>
+                    {errors[childIndex]?.grade && (
+                      <p className="text-red-500 text-sm mt-1">{errors[childIndex].grade}</p>
+                    )}
+                  </div>
 
-                    {/* Avatar */}
-                    <div className="md:col-span-2">
-                      <label className="block text-stone-500 text-lg font-normal font-['Graphie'] mb-2">
-                        Avatar
-                      </label>
+                  {/* Avatar */}
+                  <div>
+                    <label className="block text-stone-500 text-lg font-normal font-['Graphie'] mb-1">
+                      Avatar
+                    </label>
+                    <div className="relative">
                       <select
                         value={child.avatar}
                         onChange={(e) => handleChildChange(childIndex, 'avatar', e.target.value)}
-                        className="w-full h-12 px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+                        className="w-full h-12 px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent appearance-none"
                       >
                         <option value="">Select Avatar</option>
                         {avatarOptions.map((avatar) => (
@@ -281,21 +305,32 @@ export default function ChildDetailsPage() {
                           </option>
                         ))}
                       </select>
+                      <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M6 9L12 15L18 9"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
 
-            {/* Submit Button */}
-            <div className="flex justify-center mt-8">
-              <button
-                onClick={handleSubmit}
-                className="w-64 h-16 bg-eklavya-dark-green hover:bg-green-800 rounded-[40px] text-white text-2xl font-medium font-['Graphie'] transition-colors"
-              >
-                Next
-              </button>
-            </div>
+          {/* Submit Button */}
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={handleSubmit}
+              className="w-64 h-16 bg-eklavya-dark-green hover:bg-green-800 rounded-[40px] text-white text-2xl font-medium font-['Graphie'] transition-colors"
+            >
+              Next
+            </button>
           </div>
         </div>
       </div>
