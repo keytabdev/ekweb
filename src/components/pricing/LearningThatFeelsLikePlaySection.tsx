@@ -8,7 +8,7 @@ import { greenSwirlImage, redPastry, spiralArrow, bubblesImage } from '@/assets'
 
 export default function LearningThatFeelsLikePlaySection() {
   return (
-    <div className="w-full relative overflow-visible py-20 bg-white">
+    <div className="w-full relative overflow-visible pt-20 pb-30 bg-white">
       {/* Decorative elements */}
       <div className="absolute top-[-60] left-4 z-10" style={{ width: '249.862px', height: '107.134px', flexShrink: 0 }}>
         <Image
@@ -38,7 +38,7 @@ export default function LearningThatFeelsLikePlaySection() {
           style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(246deg) brightness(89%) contrast(101%)' }}
         />
       </div>
-      <div className="absolute bottom-60 right-0 z-10" style={{ width: '123.17px', height: '100.121px', transform: 'translateX(50%)', flexShrink: 0 }}>
+      <div className="absolute bottom-60 right-0 z-10" style={{ width: '123.17px', height: '100.121px', transform: 'translateX(40%)', flexShrink: 0 }}>
         <Image
           src={redPastry}
           alt="Red pastry decoration"
