@@ -53,7 +53,7 @@ export default function TheEarningLearningSystemSection() {
               </div>
               
               {/* Step 3: Conquer Quizzes - Bottom Right Container */}
-              <div className="absolute bottom-[15%] w-48 xl:w-54 2xl:w-70 text-center" style={{ right: '17%' }}>
+              <div className="absolute bottom-[16%] w-48 xl:w-54 2xl:w-70 text-center" style={{ right: '17%' }}>
                 <div className="text-[#1A1A1A] font-semibold whitespace-nowrap mb-1" style={{ fontSize: 'clamp(14px, 1.46vw, 18px)', lineHeight: 'clamp(16px, 1.67vw, 21px)' }}>3. Conquer Quizzes</div>
                 <p className="text-[#1A1A1A] font-normal" style={{ fontSize: 'clamp(12px, 1.25vw, 15px)', lineHeight: 'clamp(14px, 1.53vw, 18px)' }}>
                   Put their knowledge to the test, earn points, and feel the thrill of progress!
@@ -61,7 +61,7 @@ export default function TheEarningLearningSystemSection() {
               </div>
               
               {/* Step 4: Earn Play Time - Bottom Left Container */}
-              <div className="absolute bottom-[11%] w-48 xl:w-54 2xl:w-68 text-center" style={{ left: '17%' }}>
+              <div className="absolute bottom-[12%] w-48 xl:w-54 2xl:w-68 text-center" style={{ left: '17%' }}>
                 <div className="text-[#1A1A1A] font-semibold whitespace-nowrap mb-1" style={{ fontSize: 'clamp(14px, 1.46vw, 18px)', lineHeight: 'clamp(16px, 1.67vw, 21px)' }}>4. Earn Play Time</div>
                 <p className="text-[#1A1A1A] font-normal" style={{ fontSize: 'clamp(12px, 1.25vw, 15px)', lineHeight: 'clamp(14px, 1.53vw, 18px)' }}>
                   Participation equals rewards! Every activity adds up to more time for the games they love.
