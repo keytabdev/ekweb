@@ -4,14 +4,14 @@ import { parentHeroPic, parentHeroSvg } from '@/assets'
 
 export default function ParentHeroSection() {
   return (
-    <section className="relative text-white py-60 min-h-[700px] overflow-hidden">
+    <section className="relative text-white pb-60 pt-60 min-h-[700px] overflow-hidden">
       {/* Background SVG */}
       <div className="absolute inset-0 w-full">
         <Image
           src={parentHeroSvg}
           alt="Parent hero background"
           height={731}
-          className="w-full"
+          className="w-full "
           priority
         />
       </div>
@@ -37,7 +37,7 @@ export default function ParentHeroSection() {
             </div>
           </div>
           <div className="relative flex items-center justify-center">
-            <div className="w-64 h-64 md:w-80 lg:w-96 md:h-80 lg:h-96 rounded-full overflow-hidden xl:transform xl:scale-140 xl:translate-x-4 xl:-translate-y-38 2xl:scale-189 2xl:translate-x-15 2xl:-translate-y-14">
+            <div className="w-64 h-64 md:w-80 lg:w-96 md:h-80 lg:h-96 rounded-full overflow-hidden xl:transform xl:scale-136 xl:translate-x-4 xl:-translate-y-37 2xl:scale-184 2xl:translate-x-17 2xl:-translate-y-15">
               <Image
                 src={parentHeroPic}
                 alt="Parent and child learning together"

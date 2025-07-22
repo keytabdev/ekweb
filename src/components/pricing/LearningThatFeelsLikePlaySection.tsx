@@ -8,7 +8,7 @@ import { greenSwirlImage, redPastry, spiralArrow, bubblesImage } from '@/assets'
 
 export default function LearningThatFeelsLikePlaySection() {
   return (
-    <div className="w-full relative overflow-visible py-20 bg-white">
+    <div className="w-full relative overflow-visible pt-20 pb-30 bg-white">
       {/* Decorative elements */}
       <div className="absolute top-[-60] left-4 z-10" style={{ width: '249.862px', height: '107.134px', flexShrink: 0 }}>
         <Image
@@ -38,7 +38,7 @@ export default function LearningThatFeelsLikePlaySection() {
           style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(246deg) brightness(89%) contrast(101%)' }}
         />
       </div>
-      <div className="absolute bottom-60 right-0 z-10" style={{ width: '123.17px', height: '100.121px', transform: 'translateX(50%)', flexShrink: 0 }}>
+      <div className="absolute bottom-60 right-0 z-10" style={{ width: '123.17px', height: '100.121px', transform: 'translateX(40%)', flexShrink: 0 }}>
         <Image
           src={redPastry}
           alt="Red pastry decoration"
@@ -88,7 +88,7 @@ export default function LearningThatFeelsLikePlaySection() {
             </h3>
             <div className="text-left">
               <p 
-                className="mb-1 flex items-start"
+                className="mb-0 flex items-center"
                 style={{
                   color: '#38393E',
                   fontFamily: 'Graphie',
@@ -98,11 +98,11 @@ export default function LearningThatFeelsLikePlaySection() {
                   lineHeight: '20px'
                 }}
               >
-                <span className="mr-2 mt-1">•</span>
+                <span className="mr-2">•</span>
                 <span>Ideal to explore and get started.</span>
               </p>
               <p 
-                className="mb-1 flex items-start"
+                className="mb-1 flex items-center"
                 style={{
                   color: '#38393E',
                   fontFamily: 'Graphie',
@@ -112,11 +112,11 @@ export default function LearningThatFeelsLikePlaySection() {
                   lineHeight: '20px'
                 }}
               >
-                <span className="mr-2 mt-1">•</span>
+                <span className="mr-2">•</span>
                 <span>Access to essential lessons and activities.</span>
               </p>
               <p 
-                className="mb-1 flex items-start"
+                className="mb-1 flex items-center"
                 style={{
                   color: '#38393E',
                   fontFamily: 'Graphie',
@@ -126,7 +126,7 @@ export default function LearningThatFeelsLikePlaySection() {
                   lineHeight: '20px'
                 }}
               >
-                <span className="mr-2 mt-1">•</span>
+                <span className="mr-2">•</span>
                 <span>A taste of gamified learning.</span>
               </p>
             </div>
@@ -172,7 +172,7 @@ export default function LearningThatFeelsLikePlaySection() {
             </h3>
             <div className="text-left">
               <p 
-                className="mb-1 flex items-start"
+                className="mb-1 flex items-center"
                 style={{
                   color: '#38393E',
                   fontFamily: 'Graphie',
@@ -182,11 +182,11 @@ export default function LearningThatFeelsLikePlaySection() {
                   lineHeight: '20px'
                 }}
               >
-                <span className="mr-2 mt-1">•</span>
+                <span className="mr-2">•</span>
                 <span>Perfect for engaged learners.</span>
               </p>
               <p 
-                className="mb-1 flex items-start"
+                className="mb-1 flex items-center"
                 style={{
                   color: '#38393E',
                   fontFamily: 'Graphie',
@@ -196,11 +196,11 @@ export default function LearningThatFeelsLikePlaySection() {
                   lineHeight: '20px'
                 }}
               >
-                <span className="mr-2 mt-1">•</span>
+                <span className="mr-2">•</span>
                 <span>Balanced credits for regular learning.</span>
               </p>
               <p 
-                className="mb-1 flex items-start"
+                className="mb-1 flex items-center"
                 style={{
                   color: '#38393E',
                   fontFamily: 'Graphie',
@@ -210,7 +210,7 @@ export default function LearningThatFeelsLikePlaySection() {
                   lineHeight: '20px'
                 }}
               >
-                <span className="mr-2 mt-1">•</span>
+                <span className="mr-2">•</span>
                 <span>Full access to AI-powered study buddy and personalized learning paths.</span>
               </p>
             </div>
@@ -256,7 +256,7 @@ export default function LearningThatFeelsLikePlaySection() {
             </h3>
             <div className="text-left">
               <p 
-                className="mb-1 flex items-start"
+                className="mb-1 flex items-center"
                 style={{
                   color: '#38393E',
                   fontFamily: 'Graphie',
@@ -266,11 +266,11 @@ export default function LearningThatFeelsLikePlaySection() {
                   lineHeight: '20px'
                 }}
               >
-                <span className="mr-2 mt-1">•</span>
+                <span className="mr-2">•</span>
                 <span>Best for consistent learning and unlimited exploration.</span>
               </p>
               <p 
-                className="mb-1 flex items-start"
+                className="mb-0 flex items-center"
                 style={{
                   color: '#38393E',
                   fontFamily: 'Graphie',
@@ -280,11 +280,11 @@ export default function LearningThatFeelsLikePlaySection() {
                   lineHeight: '20px'
                 }}
               >
-                <span className="mr-2 mt-1">•</span>
+                <span className="mr-2">•</span>
                 <span>Unlimited credits for uninterrupted learning.</span>
               </p>
               <p 
-                className="mb-1 flex items-start"
+                className="mb-1 flex items-center"
                 style={{
                   color: '#38393E',
                   fontFamily: 'Graphie',
@@ -294,7 +294,7 @@ export default function LearningThatFeelsLikePlaySection() {
                   lineHeight: '20px'
                 }}
               >
-                <span className="mr-2 mt-1">•</span>
+                <span className="mr-2">•</span>
                 <span>Enhanced parental controls, weekly reports, and priority support.</span>
               </p>
             </div>
@@ -340,7 +340,7 @@ export default function LearningThatFeelsLikePlaySection() {
             </h3>
             <div className="text-left">
               <p 
-                className="mb-1 flex items-start"
+                className="mb-1 flex items-center"
                 style={{
                   color: '#38393E',
                   fontFamily: 'Graphie',
@@ -350,11 +350,11 @@ export default function LearningThatFeelsLikePlaySection() {
                   lineHeight: '20px'
                 }}
               >
-                <span className="mr-2 mt-1">•</span>
+                <span className="mr-2">•</span>
                 <span>Customized solutions for schools.</span>
               </p>
               <p 
-                className="mb-1 flex items-start"
+                className="mb-1 flex items-center"
                 style={{
                   color: '#38393E',
                   fontFamily: 'Graphie',
@@ -364,11 +364,11 @@ export default function LearningThatFeelsLikePlaySection() {
                   lineHeight: '20px'
                 }}
               >
-                <span className="mr-2 mt-1">•</span>
+                <span className="mr-2">•</span>
                 <span>Dedicated support and implementation.</span>
               </p>
               <p 
-                className="mb-1 flex items-start"
+                className="mb-1 flex items-center"
                 style={{
                   color: '#38393E',
                   fontFamily: 'Graphie',
@@ -378,7 +378,7 @@ export default function LearningThatFeelsLikePlaySection() {
                   lineHeight: '20px'
                 }}
               >
-                <span className="mr-2 mt-1">•</span>
+                <span className="mr-2">•</span>
                 <span>Special bulk pricing and tailored content alignment.</span>
               </p>
             </div>

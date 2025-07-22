@@ -6,7 +6,7 @@ export default function BeInControlSection() {
   return (
     <section className="pb-[-100px] xl:-mt-40 2xl:-mt-10 pt-30 bg-white relative overflow-hidden min-h-[900px]">
       {/* Background SVG */}
-      <div className="absolute 2xl:-top-30 xl:-top-40 w-full h-full">
+      <div className="absolute 2xl:-top-24 xl:-top-30 w-full h-full left-[100px] scale-x-120 scale-y-110">
         <Image
           src={controlBgImage}
           alt="Be in control background"
