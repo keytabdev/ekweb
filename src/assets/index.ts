@@ -48,7 +48,7 @@ export { default as saveTime1Image } from './teacher/save-time1.png';
 export { default as saveTime2Image } from './teacher/save-time2.png';
 export { default as saveTime3Image } from './teacher/save-time3.png';
 export { default as teacherHeroImageNew } from './teacher/teacher-hero-new.svg';
-export { default as teacherHeroImagePng } from './teacher/teacher-hero-image.png';
+export { default as teacherHeroImagePng } from './teacher/teacher.png';
 export { default as transformLessonsPic } from './teacher/transform-lessons-pic.png';
 export { default as transformLessonsBg } from './teacher/transfrom-lessons-bg.svg';
 export { default as phoneCallIcon } from './shared/phone-call.svg';

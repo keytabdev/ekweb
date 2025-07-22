@@ -49,7 +49,7 @@ export default function TeacherHeroSection() {
               alt="Teacher hero image"
               width={700}
               height={700}
-              className="w-[700px] h-[700px] rounded-3xl object-contain scale-x-[-1] 2xl:w-[700px] 2xl:h-[700px]"
+              className="w-[700px] h-[700px] rounded-3xl object-contain 2xl:w-[700px] 2xl:h-[700px]"
               sizes="700px"
               priority
             />
