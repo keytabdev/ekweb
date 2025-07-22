@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { teacherHeroImageNew, teacherHeroImagePng } from '@/assets';
-import underlineWave from '../../assets/shared/underline-wave.svg';
+
 
 export default function TeacherHeroSection() {
   return (
@@ -21,21 +21,13 @@ export default function TeacherHeroSection() {
         <div className="w-full max-w-none flex flex-col md:flex-row items-center justify-between gap-8 px-4 relative z-10">
           {/* Left: Text Content */}
           <div className="flex-1 text-left lg:ml-[144px] lg:w-[651px] xl:translate-y-[-95px] xl:translate-x-[-30px] 2xl:translate-x-[140px] 2xl:translate-y-[-150px]">
-            <h1 className="text-4xl font-semibold sm:text-5xl md:text-6xl lg:text-7xl xl:text-[69.49px] 2xl:text-[80px] text-[#0A7183] italic mb-6 leading-tight font-graphie">
+            <h1 className="text-4xl font-semibold sm:text-5xl md:text-6xl lg:text-7xl xl:text-[69.49px] 2xl:text-[80px] text-[#0A7183] italic mb-6 font-graphie xl:leading-[95.3px]">
               Smarter Tools
               <br />
-              <div className="relative">
-                <Image
-                  src={underlineWave}
-                  alt="Underline Wave"
-                  width={110}
-                  height={10}
-                  className="absolute -bottom-2 left-80 object-contain"
-                />
-              </div>
-              <span className="text-white whitespace-nowrap not-italic">Inspired Teaching!</span>
+             
+              <span className="text-white whitespace-nowrap not-italic font-bold">Inspired Teaching!</span>
             </h1>
-            <p className="text-base text-black mb-8 font-graphie w-[500px] 2xl:text-lg 2xl:w-[600px]">
+            <p className="text-base text-black mb-8 font-graphie font-normal leading-[20px] tracking-[0.01em] w-[500px] 2xl:text-lg 2xl:w-[600px]">
               With Eklavya, you&apos;re not just teaching—you&apos;re creating impactful,
               unforgettable learning experiences. Start your journey with us
               today!
