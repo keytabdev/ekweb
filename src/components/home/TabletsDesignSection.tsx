@@ -3,7 +3,7 @@ import { tabletsImage, tabletBg } from '@/assets';
 
 export default function TabletsDesignSection() {
   return (
-    <section className="mt-20 py-32 bg-white relative">
+    <section className="mt-20 pt-15 pb-32 bg-white relative">
       <div 
         className="absolute inset-0 -mx-[50vw] left-1/2"
         style={{
