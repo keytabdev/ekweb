@@ -110,3 +110,10 @@ export { default as grassSvg } from './auth/grass.svg';
 export { default as authBgSvg } from './auth/auth-bg.svg';
 export { default as verificationSuccessfulSvg } from './auth/Verification successful.svg';
 export { default as socialMediaLogoSvg } from './auth/Social media logo.svg';
+
+// Social Media Icons
+export { default as facebookIcon } from './shared/facebook.svg';
+export { default as twitterIcon } from './shared/twitter.svg';
+export { default as linkedinIcon } from './shared/linkedin.svg';
+export { default as youtubeIcon } from './shared/youtube.svg';
+export { default as instagramIcon } from './shared/instagram.svg';
