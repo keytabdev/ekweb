@@ -28,7 +28,7 @@ export { default as videosImage } from './home/videos.png';
 export { default as codeImage } from './home/code.png';
 export { default as learningUniBg } from './decoration/learning-uni-bg.svg';
 export { default as atomImage } from './home/atom.svg';
-export { default as earningBg } from './decoration/earning-bg.svg';
+export { default as earningBg } from './home/earning-bg.svg';
 export { default as trophyImage } from './home/trophy.png';
 export { default as differenceImage } from './decoration/difference.svg';
 export { default as tabletsImage } from './home/tablets.png';
@@ -97,6 +97,13 @@ export { default as crossCircle } from './pricing/cross-circle.svg';
 export { default as studentIcon } from './welcome/student.svg';
 export { default as parentIcon } from './welcome/parent.svg';
 export { default as teacherIcon } from './welcome/teacher.svg';
+
+// Earning Learning SVGs
+export { default as timeSvg } from './home/earning/time.svg';
+export { default as discoverSvg } from './home/earning/discover.svg';
+export { default as playSvg } from './home/earning/play.svg';
+export { default as quizSvg } from './home/earning/quiz.svg';
+export { default as readBookSvg } from './home/earning/read-book.svg';
 
 // Auth flow SVGs
 export { default as grassSvg } from './auth/grass.svg';
