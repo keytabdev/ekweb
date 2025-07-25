@@ -1,207 +1,160 @@
-import { eklavyaLogo, phoneCallIcon, sharpEmailIcon, locationFilledIcon } from "@/assets";
+import { 
+  eklavyaLogo, 
+  phoneCallIcon, 
+  sharpEmailIcon, 
+  locationFilledIcon,
+  facebookIcon,
+  twitterIcon,
+  linkedinIcon,
+  youtubeIcon,
+  instagramIcon
+} from "@/assets";
 import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#35113D] text-white pt-6 pb-10">
-      <div 
-        className="mx-auto flex justify-center items-start max-w-[1924px] px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-36"
-        style={{ 
-          paddingTop: '64px',
-          paddingBottom: '64px',
-          gap: '114px'
-        }}
-      >
-        {/* Column 1: Logo */}
-        <div className="flex flex-col items-start">
-          <div className="mb-4">
-            <div 
-              className="rounded-lg flex items-center justify-center bg-eklavya-dark-green"
-              style={{ width: '50px', height: '50px', borderRadius: '9.23px' }}
-            >
-              <Image
-                src={eklavyaLogo}
-                alt="Eklavya Logo"
-                width={39}
-                height={37}
-                className="brightness-0 invert"
-              />
+    <footer className="bg-[#35113D] text-white relative">
+      <div className="max-w-[1273px] pt-10 pb-16 mx-auto px-4">
+        <div className="flex justify-between items-start">
+          {/* Logo and Address Section */}
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-4">
+                <div className="relative size-14 mt-10" >
+                  <div className="absolute inset-0 bg-eklavya-dark-green rounded-xl" />
+                  <Image
+                    src={eklavyaLogo}
+                    alt="Eklavya Logo"
+                    width={47}
+                    height={44}
+                    className="absolute left-[6.46px] top-[7.38px] brightness-0 invert"
+                  />
+                </div>
+                <div className="text-5xl font-semibold font-Quicksand leading-[65.56px] tracking-wide">
+                  eklavya
+                </div>
+              </div>
+              <div className="text-sm font-semibold font-Quicksand leading-tight tracking-tight ml-[80px] mt-[-20px]">
+                making learning accessible
+              </div>
+            </div>
+            <div className="flex flex-col gap-6">
+              <div className="flex gap-6 items-start">
+                <Image
+                  src={locationFilledIcon}
+                  alt="Location"
+                  width={24}
+                  height={24}
+                  className="text-white"
+                />
+                <div className="max-w-[288px] text-base font-graphie tracking-tight">
+                  132 Dartmouth Street Boston, Massachusetts 02156 United States
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Column 2: Reach us */}
-        <div className="flex flex-col items-start">
-          <h3 className="font-semibold mb-4">Reach Us</h3>
-          <div className="space-y-6">
-            <div className="flex items-center" style={{ gap: '25px' }}>
-              <Image 
-                src={phoneCallIcon} 
-                alt="Phone" 
-                width={24} 
-                height={24} 
-              />
-              <span style={{
-                color: '#FFF',
-                
-                fontSize: '16px',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal',
-                letterSpacing: '0.16px'
-              }}>+1012 3456 789</span>
+          {/* Company Links */}
+          <div className="flex flex-col gap-6 w-24">
+            <div className="text-[#B289BB] text-lg font-graphie leading-relaxed tracking-tight">
+              Company
             </div>
-            <div className="flex items-center" style={{ gap: '25px' }}>
-              <Image 
-                src={sharpEmailIcon} 
-                alt="Email" 
-                width={24} 
-                height={24} 
-              />
-              <span style={{
-                color: '#FFF',
-                
-                fontSize: '16px',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal',
-                letterSpacing: '0.16px'
-              }}>demo@gmail.com</span>
+            <a
+              href="#"
+              className="text-white text-base font-graphie underline tracking-tight"
+            >
+              About
+            </a>
+            <a
+              href="#"
+              className="text-white text-base font-graphie underline tracking-tight"
+            >
+              FAQs
+            </a>
+            <a
+              href="#"
+              className="text-white text-base font-graphie underline tracking-tight"
+            >
+              Sitemap
+            </a>
+          </div>
+
+          {/* Legal Links */}
+          <div className="flex flex-col gap-6 w-32">
+            <div className="text-[#B289BB] text-lg font-graphie leading-relaxed tracking-tight">
+              Legal
             </div>
-            <div className="flex items-start" style={{ gap: '25px' }}>
-              <Image 
-                src={locationFilledIcon} 
-                alt="Location" 
-                width={24} 
-                height={24} 
-                className="mt-1"
-              />
-              <span style={{
-                color: '#FFF',
-                
-                fontSize: '16px',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal',
-                letterSpacing: '0.16px'
-              }}>
-                132 Dartmouth Street
-                <br />
-                Boston, Massachusetts 02156
-                <br />
-                United States
+            <a
+              href="#"
+              className="text-white text-base font-graphie underline tracking-tight"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="#"
+              className="text-white text-base font-graphie underline tracking-tight"
+            >
+              Terms & Services
+            </a>
+            <a
+              href="#"
+              className="text-white text-base font-graphie underline tracking-tight"
+            >
+              Terms of Use
+            </a>
+          </div>
+
+          {/* Help & Support Section */}
+          <div className="flex flex-col gap-6">
+            <div className="text-[#B289BB] text-lg font-graphie leading-relaxed tracking-tight">
+              Help & Support
+            </div>
+            <div className="flex items-center gap-6">
+              <Image src={phoneCallIcon} alt="Phone" width={24} height={24} />
+              <span className="text-white text-base font-graphie tracking-tight">
+                +1012 3456 789
               </span>
             </div>
+            <div className="flex items-center gap-6">
+              <Image src={sharpEmailIcon} alt="Email" width={24} height={24} />
+              <a
+                href="mailto:demo@gmail.com"
+                className="text-white text-base font-graphie underline tracking-tight"
+              >
+                demo@gmail.com
+              </a>
+            </div>
+            <button className="px-4 py-2.5 bg-[#5E256B] rounded-[10.05px] text-neutral-200 text-base font-bold font-graphie uppercase leading-none tracking-wide">
+              Send a message
+            </button>
           </div>
         </div>
+      </div>
 
-        {/* Column 3: Company */}
-        <div className="flex flex-col items-start">
-          <h3 className="font-semibold mb-4">Company</h3>
-          <ul className="space-y-6">
-            <li>
-              <a href="#" style={{
-                color: '#FFF',
-                
-                fontSize: '16px',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal',
-                letterSpacing: '0.16px'
-              }}>About</a>
-            </li>
-            <li>
-              <a href="#" style={{
-                color: '#FFF',
-                
-                fontSize: '16px',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal',
-                letterSpacing: '0.16px'
-              }}>Contact</a>
-            </li>
-            <li>
-              <a href="#" style={{
-                color: '#FFF',
-                
-                fontSize: '16px',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal',
-                letterSpacing: '0.16px'
-              }}>FAQs</a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Column 4: Legal */}
-        <div className="flex flex-col items-start">
-          <h3 className="font-semibold mb-4">Legal</h3>
-          <ul className="space-y-6">
-            <li>
-              <a href="#" style={{
-                color: '#FFF',
-                
-                fontSize: '16px',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal',
-                letterSpacing: '0.16px'
-              }}>Privacy Policy</a>
-            </li>
-            <li>
-              <a href="#" style={{
-                color: '#FFF',
-                
-                fontSize: '16px',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal',
-                letterSpacing: '0.16px'
-              }}>Terms & Services</a>
-            </li>
-            <li>
-              <a href="#" style={{
-                color: '#FFF',
-                
-                fontSize: '16px',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal',
-                letterSpacing: '0.16px'
-              }}>Terms of Use</a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Column 5: Help & Support */}
-        <div className="flex flex-col items-start">
-          <h3 className="font-semibold mb-4">Help & Support</h3>
-          <ul className="space-y-6">
-            <li>
-              <a href="#" style={{
-                color: '#FFF',
-                
-                fontSize: '16px',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal',
-                letterSpacing: '0.16px'
-              }}>Parents</a>
-            </li>
-            <li>
-              <a href="#" style={{
-                color: '#FFF',
-                
-                fontSize: '16px',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal',
-                letterSpacing: '0.16px'
-              }}>Teachers</a>
-            </li>
-          </ul>
+      {/* Bottom Section with Copyright and Social Links */}
+      <div className="max-w-[1255px] mx-auto px-4">
+        <div className="border-t border-white/30 pt-8 pb-8 flex justify-between items-center">
+          <div className="text-white text-base font-graphie tracking-tight">
+            © 2025 Eklavya. All rights reserved.
+          </div>
+          <div className="flex gap-2">
+            {/* Social Media Icons */}
+            <a href="#" className="hover:opacity-80">
+              <Image src={facebookIcon} alt="Facebook" width={24} height={24} className="" />
+            </a>
+            <a href="#" className="hover:opacity-80">
+              <Image src={twitterIcon} alt="X (Twitter)" width={24} height={24} className="" />
+            </a>
+            <a href="#" className="hover:opacity-80">
+              <Image src={linkedinIcon} alt="LinkedIn" width={24} height={24} className="" />
+            </a>
+            <a href="#" className="hover:opacity-80">
+              <Image src={youtubeIcon} alt="YouTube" width={24} height={24} className="" />
+            </a>
+            <a href="#" className="hover:opacity-80">
+              <Image src={instagramIcon} alt="Instagram" width={24} height={24} className="" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
